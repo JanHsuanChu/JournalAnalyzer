@@ -1,0 +1,10 @@
+# Journal Analyzer — API and Shiny app
+fastapi
+uvicorn
+pandas
+shiny
+shiny[theme]
+requests
+python-dotenv
+markdown
+plotly

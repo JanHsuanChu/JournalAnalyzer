@@ -1,0 +1,17 @@
+# Environment and secrets
+.env
+
+# Generated reports
+reports/
+
+# Python
+__pycache__/
+*.pyc
+.Python
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
