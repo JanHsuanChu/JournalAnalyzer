@@ -13,6 +13,7 @@ from pathlib import Path
 import pandas as pd
 from dotenv import load_dotenv
 from shiny import App, reactive, render, ui
+from starlette.responses import FileResponse, PlainTextResponse
 
 from report_builder import build_report
 from utils import filter_entries, filter_entries_by_date_only, fetch_entries, get_api_base
@@ -394,9 +395,26 @@ def server(input, output, session):
         path = report_path.get()
         if path is None:
             return ui.div()
-        api_base = get_api_base().rstrip("/")
-        filename = Path(path).name
-        open_url = f"{api_base}/reports/{filename}"
+
+        report_abs = Path(path).resolve()
+        reports_dir = (Path(__file__).resolve().parent / "reports").resolve()
+
+        def _report_handler(req):
+            try:
+                report_abs.relative_to(reports_dir)
+            except ValueError:
+                return PlainTextResponse("Report not found", status_code=404)
+            if not report_abs.is_file():
+                return PlainTextResponse("Report not found", status_code=404)
+            return FileResponse(
+                report_abs,
+                media_type="text/html",
+                headers={"Cache-Control": "no-store"},
+            )
+
+        filename = report_abs.name
+        route_id = f"reports/{report_abs.stem}"
+        open_url = session.dynamic_route(route_id, _report_handler)
         return ui.div(
             ui.download_button("download_report", "Download report", class_="btn-primary me-2"),
             ui.a("Open report in browser", href=open_url, target="_blank", class_="btn btn-outline-primary"),
