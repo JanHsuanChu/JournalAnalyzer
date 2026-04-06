@@ -2,9 +2,13 @@
 fastapi
 uvicorn
 pandas
+numpy
 shiny
 shiny[theme]
 requests
 python-dotenv
+supabase
+sentence-transformers
+openai
 markdown
 plotly

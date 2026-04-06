@@ -1,8 +1,14 @@
 # Environment and secrets
 .env
 
+# macOS
+.DS_Store
+
 # Generated reports
 reports/
+
+# Local vector indices / caches
+data/*.db
 
 # Python
 __pycache__/

@@ -1,12 +1,13 @@
 # app.py
 # Journal Analyzer — Shiny for Python
-# Two-panel layout: Filter the Journal (left 70%) | Analyze the Journal (right 30%).
+# Two-panel layout: Filter the Journal | Analyze the Journal (equal width: 6+6 on 12-col grid).
 # Includes AI Report (analysis date range, trend keywords, Ollama summaries).
 
 # 0. Setup #################################
 
 import html as html_module
 import os
+from datetime import date, timedelta
 from pathlib import Path
 
 import pandas as pd
@@ -15,6 +16,8 @@ from shiny import App, reactive, render, ui
 
 from report_builder import build_report
 from utils import filter_entries, filter_entries_by_date_only, fetch_entries, get_api_base
+
+from data_loader import DataLoadError, load_entries_from_supabase
 
 load_dotenv()
 
@@ -45,12 +48,21 @@ compact_css = ui.tags.style(
     .journal-table .col-date { width: 9%; }
     .journal-table .col-dow { width: 18%; white-space: nowrap; min-width: 8em; }
     .journal-table .col-tod { width: 14%; white-space: nowrap; min-width: 7.5em; }
-    .journal-table .col-text { width: 59%; }
-    .journal-table .text-clamp { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.3; max-height: 2.6em; }
+    .journal-table .col-text { width: 59%; word-break: break-word; overflow-wrap: anywhere; }
+    .journal-table .text-clamp {
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+      overflow: hidden; line-height: 1.3; max-height: 2.6em;
+      word-break: break-word; overflow-wrap: anywhere;
+    }
     """
 )
 
-# 2. UI: two panels (70% left, 30% right) #################################
+# 2. UI: two equal panels (12-column grid: 6 + 6) #################################
+
+# Default date windows: last 12 months anchored to today
+_TODAY = date.today()
+_DEFAULT_START = (_TODAY - timedelta(days=365)).isoformat()
+_DEFAULT_END = _TODAY.isoformat()
 
 panel_title_style = "color: #DD4633; font-weight: bold; font-size: 1.2rem;"
 
@@ -62,8 +74,8 @@ filters_column = ui.div(
         ui.input_date_range(
             "date_range",
             "Date range",
-            start=None,
-            end=None,
+            start=_DEFAULT_START,
+            end=_DEFAULT_END,
             format="yyyy-mm-dd",
         ),
     ),
@@ -106,21 +118,37 @@ left_panel = ui.card(
 right_panel = ui.card(
     ui.card_header("Analyze the Journal", style=panel_title_style),
     ui.p(
-        "Select the date range of entries to analyze and optional trend phrases. "
-        "Then generate an HTML report with AI summaries.",
+        "Choose diary entries to analyze, optional question and trends, then generate an HTML report (AI summaries when configured).",
         class_="small text-muted",
     ),
     ui.input_date_range(
         "analysis_date_range",
-        "Analysis date range (entries to analyze)",
-        start="2024-01-01",
-        end="2025-12-31",
+        "Diary entries to analyze (date range)",
+        start=_DEFAULT_START,
+        end=_DEFAULT_END,
         format="yyyy-mm-dd",
     ),
     ui.input_text(
         "trend_keywords",
-        "Trend(s) to analyze (comma-separated phrases)",
-        placeholder="e.g. OCD, productive, motivated",
+        "Trend(s) to analyze (comma-separated)",
+        placeholder="OCD, depression",
+    ),
+    ui.input_text(
+        "user_question",
+        "I am wondering about this from my journal… (short question)",
+        placeholder="how is my energy going?",
+    ),
+    ui.input_radio_buttons(
+        "include_k10",
+        "Include K10 summary in the report?",
+        {"yes": "Yes", "no": "No"},
+        selected="yes",
+    ),
+    ui.input_radio_buttons(
+        "include_k10_trends",
+        "Include K10 history chart? (requires snapshot history)",
+        {"yes": "Yes", "no": "No"},
+        selected="no",
     ),
     ui.input_action_button("generate_report", "Generate report", class_="btn-primary"),
     ui.output_ui("report_status_ui"),
@@ -133,7 +161,7 @@ app_ui = ui.page_fluid(
     ui.layout_columns(
         left_panel,
         right_panel,
-        col_widths=(8, 4),
+        col_widths=(6, 6),
         row_heights="auto",
     ),
     title="Journal Analyzer",
@@ -148,17 +176,30 @@ def server(input, output, session):
     # Hold raw entries from API; None until fetch completes (then None = error, DataFrame = success)
     entries_data = reactive.value(None)
     loaded = reactive.value(False)
+    # Set when SUPABASE_* is configured but load fails (no API/CSV fallback per project plan).
+    supabase_load_error = reactive.value(None)
     # AI Report state
     report_path = reactive.value(None)
     report_error = reactive.value(None)
     generating = reactive.value(False)
+    report_status_detail = reactive.value("")
 
     # Fetch entries once when the app is accessed
     @reactive.Effect
     def _fetch_on_load():
+        supabase_load_error.set(None)
+        use_sb = bool(os.environ.get("SUPABASE_URL") and os.environ.get("SUPABASE_KEY"))
+        if use_sb:
+            try:
+                df = load_entries_from_supabase()
+                entries_data.set(df)
+            except DataLoadError as e:
+                entries_data.set(None)
+                supabase_load_error.set(str(e))
+            loaded.set(True)
+            return
         base_url = get_api_base()
-        df = fetch_entries(base_url)
-        entries_data.set(df)
+        entries_data.set(fetch_entries(base_url))
         loaded.set(True)
 
     # Filtered table: depends on raw data and all filter inputs
@@ -202,10 +243,16 @@ def server(input, output, session):
                 ui.p("Loading journal entries…", class_="text-muted"),
                 class_="p-3",
             )
+        if supabase_load_error.get():
+            return ui.div(
+                ui.p(supabase_load_error.get(), class_="text-danger fw-bold"),
+                class_="p-3",
+            )
         if entries_data.get() is None:
             return ui.div(
                 ui.p(
-                    "Unable to load journal entries. Please ensure the API is running (e.g. uvicorn api:app) and try again.",
+                    "Unable to load journal entries. Start the Journal API (e.g. uvicorn api:app) "
+                    "or set SUPABASE_URL and SUPABASE_KEY to load from Supabase.",
                     class_="text-danger fw-bold",
                 ),
                 class_="p-3",
@@ -238,7 +285,8 @@ def server(input, output, session):
             tod_val = html_module.escape(str(row.get("time_of_day", "")))
             text_val = str(row.get("text", ""))
             text_escaped = html_module.escape(text_val)
-            text_title = html_module.escape(text_val).replace('"', "&quot;")
+            title_plain = " ".join(text_val.replace("\r\n", "\n").splitlines())
+            text_title = html_module.escape(title_plain).replace('"', "&quot;")
             rows.append(
                 f'<tr><td class="col-date">{date_val}</td><td class="col-dow">{dow_val}</td>'
                 f'<td class="col-tod">{tod_val}</td><td class="col-text"><span class="text-clamp" title="{text_title}">{text_escaped}</span></td></tr>'
@@ -264,6 +312,7 @@ def server(input, output, session):
     def _generate_report():
         report_error.set(None)
         report_path.set(None)
+        report_status_detail.set("")
         generating.set(True)
         try:
             raw = entries_data.get()
@@ -282,11 +331,23 @@ def server(input, output, session):
             keywords_str = input.trend_keywords() or ""
             trend_keywords = [k.strip() for k in keywords_str.split(",") if k.strip()]
             api_key = os.environ.get("OLLAMA_API_KEY")
-            path = build_report(subset, trend_keywords, api_key, date_from, date_to)
+            uq = (input.user_question() or "").strip() or None
+            path = build_report(
+                subset,
+                trend_keywords,
+                api_key,
+                date_from,
+                date_to,
+                user_question=uq,
+                include_k10_section=input.include_k10() == "yes",
+                include_k10_trends=input.include_k10_trends() == "yes",
+                status_callback=report_status_detail.set,
+            )
             report_path.set(path)
-        except Exception as e:
+        except Exception:
             report_error.set(
-                "Report generation failed. Check that the API is running and OLLAMA_API_KEY is set in .env."
+                "Report generation failed. If you use AI summaries, check OLLAMA_API_KEY and network access; "
+                "otherwise try a narrower date range and retry."
             )
         finally:
             generating.set(False)
@@ -296,14 +357,24 @@ def server(input, output, session):
     @render.ui
     def report_status_ui():
         if generating.get():
+            detail = (report_status_detail.get() or "").strip()
+            msg = detail if detail else "Generating report…"
             return ui.div(
-                ui.p("Generating report…", class_="text-muted"),
+                ui.p(msg, class_="text-muted"),
                 class_="p-3",
             )
         err = report_error.get()
         if err:
             return ui.div(
                 ui.p(err, class_="text-danger fw-bold"),
+                class_="p-3",
+            )
+        if report_path.get():
+            return ui.div(
+                ui.p(
+                    "Report ready — open the HTML report in your browser using the button below (or download).",
+                    class_="text-success fw-bold",
+                ),
                 class_="p-3",
             )
         if not os.environ.get("OLLAMA_API_KEY"):
@@ -328,7 +399,7 @@ def server(input, output, session):
         open_url = f"{api_base}/reports/{filename}"
         return ui.div(
             ui.download_button("download_report", "Download report", class_="btn-primary me-2"),
-            ui.a("Open report", href=open_url, target="_blank", class_="btn btn-outline-primary"),
+            ui.a("Open report in browser", href=open_url, target="_blank", class_="btn btn-outline-primary"),
             class_="p-3",
         )
 

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://journalanalyzer.local/schemas/insight_output.json",
+  "title": "Agent2InsightOutput",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "themes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "salience": { "type": "number", "minimum": 1, "maximum": 5 },
+          "order": { "type": "integer" }
+        }
+      }
+    },
+    "emerging_patterns": { "type": "array", "items": { "type": "string" } },
+    "fading_patterns": { "type": "array", "items": { "type": "string" } },
+    "trends": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "type": "string" },
+          {
+            "type": "object",
+            "properties": {
+              "label": { "type": "string" },
+              "text": { "type": "string" },
+              "direction": {
+                "type": "string",
+                "enum": ["up", "down", "flat", "unclear"]
+              },
+              "note": { "type": "string" }
+            }
+          }
+        ]
+      }
+    },
+    "query_answer": { "type": "string" },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "insight_schema_version": { "type": "integer" }
+  }
+}

@@ -1,174 +1,121 @@
 # report_builder.py
-# Builds the Journal Analyzer AI report: excerpts, life-activity/emotion summaries, trend-by-keyword charts.
+# Multi-agent journal report: Agent 1 (K10) || Agent 2 (insights), then Agent 3 HTML.
 # Used by app.py when the user clicks "Generate report".
 
-import json
-import re
+from __future__ import annotations
+
+import os
+from collections.abc import Callable
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
 
-from utils import ollama_chat
+from agents.agent1_k10 import run_agent1_k10
+from agents.agent2_insight import run_agent2_insight
+from agents.agent3_merge import build_agent3_report
+from context_builder import (
+    format_k10_per_item_rag_prompt,
+    format_rag_chunks_for_prompt,
+    slice_last_n_calendar_days,
+)
+from json_utils import normalize_insight_output
+from snapshot import fetch_k10_snapshots, save_k10_snapshot
 
 # Directory for saved reports (next to this file)
 _REPORTS_DIR = Path(__file__).resolve().parent / "reports"
-
-# Character limits per group for Ollama token safety
-_EXCERPT_CHARS_PER_GROUP = 600
-_OVERALL_SAMPLE_CHARS = 2500
-
-# Report CSS (match travel_friendliness_caucasus_report.html)
-_REPORT_CSS = """
-    body { font-family: Arial, sans-serif; max-width: 980px; margin: 40px auto; padding: 20px; background-color: #FEECEA; color: #333; }
-    h1 { color: #DD4633; border-bottom: 3px solid #DD4633; padding-bottom: 10px; }
-    h2 { color: #DD4633; margin-top: 28px; border-bottom: 2px solid #DD4633; padding-bottom: 5px; }
-    h3 { color: #DD4633; margin-top: 20px; }
-    hr { border: 2px solid #DD4633; margin: 30px 0; }
-    table { border-collapse: collapse; width: 100%; margin: 15px 0; background-color: white; }
-    th, td { border: 1px solid #ddd; padding: 8px 12px; }
-    th { background-color: #DD4633; color: white; text-align: left; font-weight: bold; }
-    tr:nth-child(even) { background-color: #f9f9f9; }
-    small { font-size: 0.85em; color: #666; display: block; margin-top: 10px; }
-    .appendix { color: #555; font-size: 0.9em; }
-    .appendix table { font-size: 0.9em; }
-    .appendix h2, .appendix h3 { color: #555; border-bottom-color: #999; }
-"""
 
 
 def _ensure_reports_dir():
     _REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def _bar_chart_html(df, x_col: str, y_col: str, title: str, color: str = "#DD4633") -> str:
-    """Build a Plotly bar chart and return HTML fragment (include_plotlyjs='cdn')."""
-    if df is None or df.empty:
-        fig = go.Figure().add_annotation(text="No data", showarrow=False)
-    else:
-        fig = px.bar(df, x=x_col, y=y_col, title=title)
-        fig.update_traces(marker_color=color)
-        fig.update_layout(margin=dict(t=40, b=60, l=60, r=40), xaxis_tickangle=-45)
-    return fig.to_html(full_html=False, include_plotlyjs="cdn")
-
-
-def _excerpt(text: str, max_chars: int) -> str:
-    """Return text truncated to max_chars, at word boundary if possible."""
-    if not text or len(text) <= max_chars:
-        return (text or "").strip()
-    s = text[:max_chars].rsplit(maxsplit=1)
-    return (s[0] if s else text[:max_chars]).strip()
-
-
-def _build_grouped_excerpts(df: pd.DataFrame, group_col: str, max_chars_per_group: int = _EXCERPT_CHARS_PER_GROUP) -> list[dict]:
-    """Build list of {group: label, excerpts: string} with excerpt text per group, capped at max_chars_per_group."""
-    result = []
-    for name, grp in df.groupby(group_col, sort=False):
-        parts = []
-        total = 0
-        for _, row in grp.iterrows():
-            t = (row.get("text") or "").strip()
-            if not t:
-                continue
-            take = min(len(t), max_chars_per_group - total)
-            if take <= 0:
-                break
-            parts.append(_excerpt(t, take))
-            total += len(parts[-1])
-            if total >= max_chars_per_group:
-                break
-        result.append({"group": str(name), "excerpts": " ".join(parts)})
-    return result
-
-
-def _overall_sample(df: pd.DataFrame, max_chars: int = _OVERALL_SAMPLE_CHARS) -> str:
-    """Concatenate truncated entry texts for overall activity/emotion prompt."""
-    parts = []
-    total = 0
-    for _, row in df.iterrows():
-        t = (row.get("text") or "").strip()
-        if not t:
-            continue
-        take = min(len(t), 200)
-        chunk = _excerpt(t, take)
-        parts.append(chunk)
-        total += len(chunk)
-        if total >= max_chars:
-            break
-    return " ".join(parts)
-
-
-def _phrase_matches_entry(text: str, phrase: str) -> bool:
-    """True if entry text contains every word of the phrase (case-insensitive). Enables flexible matching."""
-    if not text or not phrase:
+def _wants_trend_chart(user_question: str | None, trend_keywords: list[str]) -> bool:
+    if trend_keywords:
+        return True
+    if not user_question:
         return False
-    text_lower = (text or "").lower()
-    words = [w.strip().lower() for w in phrase.split() if w.strip()]
-    return all(word in text_lower for word in words)
+    t = user_question.lower()
+    return any(k in t for k in ("trend", "over time", "monthly", "each month", "over the months"))
 
 
-def _phrase_counts_by_month(df: pd.DataFrame, phrase: str) -> pd.DataFrame:
-    """Count entries per month where the phrase matches (all-words match)."""
-    df = df.copy()
-    df["month"] = df["date"].dt.to_period("M").astype(str)
-    df["match"] = df["text"].fillna("").apply(lambda t: _phrase_matches_entry(str(t), phrase))
-    out = df.groupby("month", as_index=False)["match"].sum()
-    out = out.rename(columns={"match": "count"})
-    out["count"] = out["count"].astype(int)
-    return out
+def _run_rag_context(
+    entries_df: pd.DataFrame,
+    trend_keywords: list[str],
+    user_question: str | None,
+    include_k10_section: bool,
+    status_callback: Callable[[str], None] | None,
+) -> tuple[str | None, str | None]:
+    """
+    Incremental embed + retrieval. Returns (rag_blob_for_agent1, rag_blob_for_agent2).
+    Either may be None if disabled, empty retrieval, or error (caller falls back to plaintext).
+    """
+    from embedding_pipeline import ensure_embeddings_for_entries, rag_available
 
-
-def _extract_json_from_reply(reply: str) -> dict | None:
-    """Try to extract a JSON object from the model reply (may be wrapped in markdown or extra text)."""
-    reply = (reply or "").strip()
-    # Strip markdown code fences (```json ... ``` or ``` ... ```)
-    for pattern in (r"```(?:json)?\s*([\s\S]*?)```", r"```\s*([\s\S]*?)```"):
-        match = re.search(pattern, reply)
-        if match:
-            try:
-                return json.loads(match.group(1).strip())
-            except json.JSONDecodeError:
-                pass
-    # Try to find {...} block
-    match = re.search(r"\{[\s\S]*\}", reply)
-    if match:
-        try:
-            return json.loads(match.group(0))
-        except json.JSONDecodeError:
-            pass
+    if not rag_available() or entries_df.empty:
+        return None, None
     try:
-        return json.loads(reply)
-    except json.JSONDecodeError:
-        return None
+        if status_callback:
+            status_callback("Indexing journal passages…")
+        ensure_embeddings_for_entries(entries_df)
+    except Exception:
+        return None, None
 
-
-def _observations_to_html_tables(parsed: dict, month_labels: list, dow_order: list, tod_order: list) -> str:
-    """Render one parsed observations JSON as HTML tables (by month, by day, by time)."""
-    def table_for(key: str, row_key: str, labels: list) -> str:
-        rows = parsed.get(key) or []
-        lookup = {str(r.get(row_key, "")).strip(): r.get("observation", "") for r in rows if isinstance(r, dict)}
-        name_col = "Month" if row_key == "month" else ("Day" if row_key == "day" else "Time")
-        lines = [f"<table><thead><tr><th>{name_col}</th><th>Observation</th></tr></thead><tbody>"]
-        for label in labels:
-            obs = lookup.get(str(label), "—")
-            lines.append(f"<tr><td>{label}</td><td>{obs}</td></tr>")
-        lines.append("</tbody></table>")
-        return "\n".join(lines)
-
-    return (
-        "<h4>By month</h4>" + table_for("by_month", "month", month_labels)
-        + "<h4>By day of week</h4>" + table_for("by_day_of_week", "day", dow_order)
-        + "<h4>By time of day</h4>" + table_for("by_time_of_day", "time", tod_order)
+    from k10_utils import K10_RAG_QUERIES
+    from retrieval import (
+        build_agent2_rag_queries,
+        date_range_from_dataframe,
+        retrieve_k10_per_item_rows,
+        retrieve_merged,
     )
 
+    rag_a1: str | None = None
+    rag_a2: str | None = None
 
-def _raw_to_bullet_list(raw: str) -> str:
-    """Turn raw reply into a simple bullet list for fallback."""
-    lines = [ln.strip() for ln in (raw or "").splitlines() if ln.strip()]
-    if not lines:
-        return f"<p>{raw}</p>" if raw else "<p>—</p>"
-    return "<ul>" + "".join(f"<li>{ln}</li>" for ln in lines) + "</ul>"
+    k10_top_k = int(os.environ.get("RAG_K10_TOP_K", "10"))
+    a2_top_k = int(os.environ.get("RAG_AGENT2_TOP_K", "15"))
+    k10_budget = int(os.environ.get("RAG_K10_CHAR_BUDGET", "12000"))
+    a2_budget = int(os.environ.get("RAG_AGENT2_CHAR_BUDGET", "120000"))
+
+    df_k10 = slice_last_n_calendar_days(entries_df, 30)
+    if include_k10_section and not df_k10.empty:
+        d0, d1 = date_range_from_dataframe(df_k10)
+        if d0 and d1:
+            try:
+                rows_per_item = retrieve_k10_per_item_rows(
+                    list(K10_RAG_QUERIES),
+                    d0,
+                    d1,
+                    top_k_per_query=k10_top_k,
+                )
+                if any(rows_per_item):
+                    blob = format_k10_per_item_rag_prompt(
+                        rows_per_item,
+                        list(K10_RAG_QUERIES),
+                        total_char_budget=k10_budget,
+                    )
+                    if blob.strip():
+                        rag_a1 = blob
+            except Exception:
+                rag_a1 = None
+
+    d2a, d2b = date_range_from_dataframe(entries_df)
+    q2 = build_agent2_rag_queries(user_question, trend_keywords)
+    if d2a and d2b and q2:
+        try:
+            rows2 = retrieve_merged(q2, d2a, d2b, top_k_per_query=a2_top_k)
+            blob2 = format_rag_chunks_for_prompt(
+                rows2,
+                "Retrieved passages for your question and trend keyword(s).",
+                char_budget=a2_budget,
+            )
+            if blob2.strip():
+                rag_a2 = blob2
+        except Exception:
+            rag_a2 = None
+
+    return rag_a1, rag_a2
 
 
 def build_report(
@@ -177,187 +124,105 @@ def build_report(
     api_key: str | None,
     date_from,
     date_to,
+    user_question: str | None = None,
+    include_k10_section: bool = True,
+    include_k10_trends: bool = False,
+    status_callback: Callable[[str], None] | None = None,
 ) -> str:
     """
-    Build the AI report: overall life activity and emotion (from excerpts), observations by month/day/time,
-    trends by keyword (charts + summaries), appendix. Writes HTML and returns the file path.
+    Multi-agent pipeline: Agent 1 (K10) || Agent 2 (insights), then Agent 3 HTML.
+    Writes HTML and returns the file path.
     """
     _ensure_reports_dir()
-    now = datetime.now()
-    filename = f"journal_report_{now.strftime('%Y%m%d_%H%M%S')}.html"
+    filename = f"journal_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.html"
     out_path = _REPORTS_DIR / filename
 
-    n_entries = len(entries_df)
-    date_from_str = date_from.isoformat() if hasattr(date_from, "isoformat") else str(date_from)
-    date_to_str = date_to.isoformat() if hasattr(date_to, "isoformat") else str(date_to)
+    model1 = os.environ.get("OLLAMA_MODEL_AGENT1", "nemotron-3-nano:30b-cloud")
+    model2 = os.environ.get("OLLAMA_MODEL_AGENT2", model1)
 
-    df = entries_df.copy()
-    df["month"] = df["date"].dt.to_period("M").astype(str)
+    correlation_sidecar: list = []
 
-    # Overall sample for activity and emotion
-    overall_text = _overall_sample(df, _OVERALL_SAMPLE_CHARS)
-
-    # Overall activity (life activity: what was documented, trends, changes — NOT writing frequency)
-    activity_summary = "Not available (set OLLAMA_API_KEY for AI summaries)."
-    if api_key and overall_text:
-        prompt = (
-            "You are summarizing LIFE ACTIVITY from journal entries: what types of things were documented "
-            "(e.g. work, exercise, social, routines), noteworthy observations, trends, and changes over the period. "
-            "Do NOT discuss how often or when the person wrote. Use ONLY the following journal excerpts.\n\n"
-            "JOURNAL EXCERPTS:\n" + overall_text + "\n\n"
-            "Write 3-5 sentences on overall life activity. Be concise and data-driven; do not invent details."
-        )
-        reply = ollama_chat(prompt, api_key)
-        if reply:
-            activity_summary = reply.strip()
-
-    # Overall emotion (3-5 sentences)
-    emotion_summary = "Not available (set OLLAMA_API_KEY for AI summaries)."
-    if api_key and overall_text:
-        prompt = (
-            "You are summarizing emotional or mood-related trends from journal entries. Use ONLY the following excerpts.\n\n"
-            "JOURNAL EXCERPTS:\n" + overall_text + "\n\n"
-            "Write 3-5 sentences on overall emotion or mood. Be concise and data-driven; do not invent details."
-        )
-        reply = ollama_chat(prompt, api_key)
-        if reply:
-            emotion_summary = reply.strip()
-
-    # Grouped excerpts and group labels for observations
-    by_month = _build_grouped_excerpts(df, "month")
-    dow_order = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    tod_order = ["morning", "afternoon", "evening"]
-    month_labels = sorted(df["month"].unique().tolist())
-    df_dow = df.copy()
-    df_dow["day_of_week"] = pd.Categorical(df_dow["day_of_week"], categories=dow_order, ordered=True)
-    df_dow = df_dow.sort_values("day_of_week").dropna(subset=["day_of_week"])
-    by_dow = _build_grouped_excerpts(df_dow, "day_of_week")
-    by_tod = _build_grouped_excerpts(df, "time_of_day")
-
-    # Observations by month / day of week / time of day — request JSON, render as tables
-    obs_activity = "Not available (set OLLAMA_API_KEY for AI summaries)."
-    obs_emotion = "Not available (set OLLAMA_API_KEY for AI summaries)."
-    if api_key and (by_month or by_dow or by_tod):
-        payload = {
-            "by_month": by_month,
-            "by_day_of_week": by_dow,
-            "by_time_of_day": by_tod,
-        }
-        json_instruction = (
-            f'Respond with ONLY a JSON object (no other text) with three arrays: "by_month", "by_day_of_week", "by_time_of_day". '
-            f'Each array has objects with a key (e.g. "month", "day", "time") and "observation" (1-2 sentences). '
-            f'Include one object per group. Months to include: {json.dumps(month_labels)}. '
-            f'Days: {json.dumps(dow_order)}. Times: {json.dumps(tod_order)}.'
-        )
-        # Activity
-        prompt_activity = (
-            "Based on the following journal excerpts grouped by month, day of week, and time of day, "
-            "write 1-2 sentences PER GROUP describing emerging trends in LIFE ACTIVITY "
-            "(what kinds of things were documented, notable patterns or changes). Do NOT discuss how often they wrote.\n\n"
-            "DATA (JSON): " + json.dumps(payload, ensure_ascii=False) + "\n\n" + json_instruction
-        )
-        reply_act = ollama_chat(prompt_activity, api_key)
-        if reply_act:
-            reply_act = reply_act.strip()
-            parsed_act = _extract_json_from_reply(reply_act)
-            if parsed_act:
-                obs_activity = _observations_to_html_tables(parsed_act, month_labels, dow_order, tod_order)
-            else:
-                obs_activity = _raw_to_bullet_list(reply_act)
-        # Emotion
-        prompt_emotion = (
-            "Based on the following journal excerpts grouped by month, day of week, and time of day, "
-            "write 1-2 sentences PER GROUP describing emotional or mood-related trends.\n\n"
-            "DATA (JSON): " + json.dumps(payload, ensure_ascii=False) + "\n\n" + json_instruction
-        )
-        reply_emo = ollama_chat(prompt_emotion, api_key)
-        if reply_emo:
-            reply_emo = reply_emo.strip()
-            parsed_emo = _extract_json_from_reply(reply_emo)
-            if parsed_emo:
-                obs_emotion = _observations_to_html_tables(parsed_emo, month_labels, dow_order, tod_order)
-            else:
-                obs_emotion = _raw_to_bullet_list(reply_emo)
-
-    # Per-phrase charts and AI summaries (all-words match)
-    trend_sections = []
-    for kw in trend_keywords:
-        kw_df = _phrase_counts_by_month(entries_df, kw)
-        chart_kw = _bar_chart_html(kw_df, "month", "count", f'Occurrences of "{kw}" by month')
-        summary = "Not available (set OLLAMA_API_KEY for AI summaries)."
-        if api_key and not kw_df.empty:
-            payload = kw_df.to_dict(orient="records")
-            prompt = (
-                "You are summarizing a trend from journal data. Use ONLY the given counts.\n"
-                f'Phrase: "{kw}". Monthly occurrence counts: '
-                + json.dumps(payload)
-                + "\nWrite 1-2 sentences summarizing this trend. Be concise and data-driven."
+    k10_payload = None
+    insight: dict = {}
+    if api_key:
+        rag_a1: str | None = None
+        rag_a2: str | None = None
+        try:
+            rag_a1, rag_a2 = _run_rag_context(
+                entries_df,
+                trend_keywords,
+                user_question,
+                include_k10_section,
+                status_callback,
             )
-            reply = ollama_chat(prompt, api_key)
-            if reply:
-                summary = reply.strip()
-        trend_sections.append({"keyword": kw, "chart_html": chart_kw, "summary": summary})
+        except Exception:
+            rag_a1, rag_a2 = None, None
+        if status_callback:
+            status_callback("Generating AI summaries…")
 
-    # Build HTML body: purpose -> Overall activity -> Overall emotion -> Observations by month/dow/tod -> Trends by keyword -> Appendix
-    parts = []
-    parts.append("<h1>Journal Analysis Report</h1>")
-    parts.append(f"<p><em>Generated: {now.strftime('%Y-%m-%d %H:%M')} (local time)</em></p>")
-    parts.append("<p><strong>Purpose of this report</strong></p>")
-    parts.append(
-        f"<p>This report summarizes journal entries from {date_from_str} to {date_to_str} "
-        f"({n_entries} entries). It provides AI-generated summaries of <strong>life activity</strong> (what was documented, trends, changes) and "
-        "<strong>emotion</strong>; observations by month, day of week, and time of day; and trends for user-specified phrases with occurrence counts by month. "
-        "Conclusions are based on journal excerpts and optional Ollama Cloud summaries.</p>"
+        def run_a1():
+            return run_agent1_k10(entries_df, model1, rag_diary_blob=rag_a1)
+
+        def run_a2():
+            return run_agent2_insight(
+                entries_df, user_question, model2, correlation_sidecar, rag_journal_blob=rag_a2
+            )
+
+        if include_k10_section:
+            with ThreadPoolExecutor(max_workers=2) as pool:
+                f1 = pool.submit(run_a1)
+                f2 = pool.submit(run_a2)
+                k10_payload = f1.result()
+                insight, _ = f2.result()
+        else:
+            insight, _ = run_agent2_insight(
+                entries_df, user_question, model2, correlation_sidecar, rag_journal_blob=rag_a2
+            )
+    else:
+        insight = normalize_insight_output(None)
+
+    k10_for_doc: dict | None = None
+    if k10_payload and include_k10_section:
+        df_k10 = slice_last_n_calendar_days(entries_df, 30)
+        save_k10_snapshot(k10_payload, df_k10, model1)
+        k10_for_doc = dict(k10_payload)
+        if not df_k10.empty:
+            dmin = df_k10["date"].min()
+            dmax = df_k10["date"].max()
+            k10_for_doc["data_source"] = {
+                "entry_count": len(df_k10),
+                "period_start": pd.Timestamp(dmin).strftime("%Y-%m-%d"),
+                "period_end": pd.Timestamp(dmax).strftime("%Y-%m-%d"),
+                "recent_days": 30,
+            }
+        else:
+            k10_for_doc["data_source"] = {
+                "entry_count": 0,
+                "period_start": None,
+                "period_end": None,
+                "recent_days": 30,
+            }
+
+    k10_history = fetch_k10_snapshots(80) if include_k10_trends else None
+    want_trend = _wants_trend_chart(user_question, trend_keywords)
+
+    correlation_tools_used = len(correlation_sidecar) > 0
+
+    full_doc = build_agent3_report(
+        entries_df=entries_df,
+        date_from=date_from,
+        date_to=date_to,
+        k10_payload=k10_for_doc if include_k10_section else None,
+        insight=insight,
+        correlation_sidecar=correlation_sidecar,
+        include_k10_section=include_k10_section,
+        include_k10_trends=include_k10_trends,
+        user_query=user_question,
+        want_trend_chart=want_trend,
+        trend_keywords=trend_keywords,
+        k10_history=k10_history,
+        correlation_tools_used=correlation_tools_used,
     )
-    parts.append('<hr style="border: 2px solid #DD4633; margin: 30px 0;" />')
-
-    parts.append("<h2>Overall activity</h2>")
-    parts.append(f"<p>{activity_summary}</p>")
-    parts.append('<hr style="border: 2px solid #DD4633; margin: 30px 0;" />')
-    parts.append("<h2>Overall emotion</h2>")
-    parts.append(f"<p>{emotion_summary}</p>")
-    parts.append('<hr style="border: 2px solid #DD4633; margin: 30px 0;" />')
-
-    parts.append("<h2>Observations by month, day of week, and time of day</h2>")
-    parts.append("<h3>Activity</h3>")
-    parts.append(obs_activity if obs_activity.strip().startswith("<") else f"<p>{obs_activity}</p>")
-    parts.append("<h3>Emotion</h3>")
-    parts.append(obs_emotion if obs_emotion.strip().startswith("<") else f"<p>{obs_emotion}</p>")
-    parts.append('<hr style="border: 2px solid #DD4633; margin: 30px 0;" />')
-
-    if trend_sections:
-        parts.append("<h2>Trends by phrase</h2>")
-        for sec in trend_sections:
-            parts.append(f'<h3>"{sec["keyword"]}"</h3>')
-            parts.append(sec["chart_html"])
-            parts.append(f"<p>{sec['summary']}</p>")
-        parts.append('<hr style="border: 2px solid #DD4633; margin: 30px 0;" />')
-
-    parts.append('<div class="appendix">')
-    parts.append("<h2>How conclusions were drawn</h2>")
-    parts.append(
-        "<p>Conclusions are based on journal entry excerpts (truncated for length) and on summaries "
-        "generated by Ollama Cloud (model: gpt-oss:20b-cloud) when OLLAMA_API_KEY is set. "
-        f"The analysis used {n_entries} entries from {date_from_str} to {date_to_str}. "
-        '"Activity" refers to life activity (what was documented, trends, changes), not how often entries were written. '
-        "Trend-by-phrase charts show occurrence counts per month; AI summaries use only aggregated or excerpted content.</p>"
-    )
-    parts.append("</div>")
-
-    body_html = "\n".join(parts)
-    full_doc = f"""<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Journal Analysis Report</title>
-  <style>
-{_REPORT_CSS}
-  </style>
-</head>
-<body>
-{body_html}
-</body>
-</html>"""
 
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(full_doc)
