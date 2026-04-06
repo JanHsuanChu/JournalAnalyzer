@@ -1,5 +1,9 @@
 # Environment and secrets
 .env
+.connect.env
+.rsconnect/
+.connect_python_pkgs/
+rsconnect-python/
 
 # macOS
 .DS_Store
