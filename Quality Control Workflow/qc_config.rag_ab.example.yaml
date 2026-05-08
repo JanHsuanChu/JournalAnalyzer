@@ -1,0 +1,26 @@
+# RAG A/B QC — copy to qc_config_rag.yaml (or merge) when running run_qc_rag_ab.py only.
+# Use for RAG on/off script; do not mix with multi-model sweeps in one analysis.
+# Keep one fixed LLM triple and shared: blocks; only the retrieval path differs (pass 1 vs 2 env).
+# Secrets stay in JournalAnalyzer/.env — not in this file.
+
+replicates_per_variant: 2
+qc_summary_run: first
+
+qc_journal_context:
+  mode: analysis_window
+
+shared:
+  date_from: "2025-01-01"
+  date_to: "2025-12-31"
+  trend_keywords: [depression]
+  user_question: "How is my energy going?"
+  include_k10_section: true
+  include_k10_trends: false
+
+# Single variant: fixed models; rag_env empty (TOP_K tweaks are not “RAG off”).
+variants:
+  - label: rag_ab_fixed_llm
+    OLLAMA_MODEL_AGENT1: gpt-oss:20b-cloud
+    OLLAMA_MODEL_AGENT2: gpt-oss:20b-cloud
+    OLLAMA_MODEL_AGENT3: gpt-oss:20b-cloud
+    rag_env: {}

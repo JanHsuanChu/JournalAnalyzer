@@ -1,0 +1,1148 @@
+variant_label,replicate_index,qc_level,k10_total,frequency_rubric_mean,evidence_relevance_mean,hallucination,qc_overall_score,details,report_path,tier2_skipped_reason,raw_grader_response
+LLM_a_nemotron,0,end_to_end,42,4.2,2.2,False,3.2,"The report captures frequent anxiety and restlessness, but evidence cited is general rather than case‑specific.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260411_235338.html,,"{""frequency_rubric_per_item"":[4,5,4,4,5,4,4,3,4,5],""frequency_rubric_mean"":4.20,""evidence_relevance_per_item"":[2,3,2,2,3,2,2,1,2,3],""evidence_relevance_mean"":2.20,""hallucination"":false,""details"":""The report captures frequent anxiety and restlessness, but evidence cited is general rather than case‑specific.""}"
+LLM_a_nemotron,0,rag_aware,42,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260411_235338.html,rag_unavailable_or_empty,
+LLM_a_nemotron,1,end_to_end,40,3.5,4.1,True,3.8,"Report cites December entries and a 40‑score total, contradicting the provided July‑to‑December data.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260411_235417.html,,"{
+  ""frequency_rubric_per_item"": [4,5,4,3,4,2,3,3,3,4],
+  ""frequency_rubric_mean"": 3.50,
+  ""evidence_relevance_per_item"": [4,4,5,4,4,4,4,4,4,4],
+  ""evidence_relevance_mean"": 4.10,
+  ""hallucination"": true,
+  ""details"": ""Report cites December entries and a 40‑score total, contradicting the provided July‑to‑December data.""
+}"
+LLM_a_nemotron,1,rag_aware,40,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260411_235417.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,0,end_to_end,32,3.2,3.8,False,3.5,"The report accurately reflects many recurring themes in the diary, scoring items largely on frequent occurrence; evidence relevance is strong except for items lacking explicit excerpts.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260411_235508.html,,"{
+  ""frequency_rubric_per_item"": [4, 4, 3, 2, 4, 3, 3, 2, 4, 3],
+  ""frequency_rubric_mean"": 3.20,
+  ""evidence_relevance_per_item"": [5, 5, 4, 1, 5, 4, 4, 1, 5, 4],
+  ""evidence_relevance_mean"": 3.80,
+  ""hallucination"": false,
+  ""details"": ""The report accurately reflects many recurring themes in the diary, scoring items largely on frequent occurrence; evidence relevance is strong except for items lacking explicit excerpts.""
+}"
+LLM_b_gpt-oss,0,rag_aware,32,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260411_235508.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,1,end_to_end,26,3.1,3.1,True,3.1,"The report indicates a high distress level, but many item scores lack supporting evidence in the journal, especially for anxiety and sadness. Restlessness, fatigue and a persistent low mood are well documented, yet some claims (e.g., nervousness scores) are unsupported or contradicted by the entries.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260411_235556.html,,"{""frequency_rubric_per_item"":[5,1,1,4,5,1,4,1,4,5],""frequency_rubric_mean"":3.10,""evidence_relevance_per_item"":[5,1,1,4,5,1,4,1,4,5],""evidence_relevance_mean"":3.10,""hallucination"":true,""details"":""The report indicates a high distress level, but many item scores lack supporting evidence in the journal, especially for anxiety and sadness. Restlessness, fatigue and a persistent low mood are well documented, yet some claims (e.g., nervousness scores) are unsupported or contradicted by the entries.""}"
+LLM_b_gpt-oss,1,rag_aware,26,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260411_235556.html,rag_unavailable_or_empty,
+LLM_c_qwen,0,end_to_end,35,4.0,3.3,False,3.65,"The report’s frequency assessments align well with the diary’s repeated themes, especially for fatigue, anxiety, and effortfulness, though the evidence stays somewhat generic. Overall, the content is grounded in the entries, with no clear fabrication detected.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260411_235637.html,,"{""frequency_rubric_per_item"":[5,5,3,3,5,3,5,4,4,3],""frequency_rubric_mean"":4.00,""evidence_relevance_per_item"":[4,4,2,3,4,3,4,3,4,2],""evidence_relevance_mean"":3.30,""hallucination"":false,""details"":""The report’s frequency assessments align well with the diary’s repeated themes, especially for fatigue, anxiety, and effortfulness, though the evidence stays somewhat generic. Overall, the content is grounded in the entries, with no clear fabrication detected.""}"
+LLM_c_qwen,0,rag_aware,35,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260411_235637.html,rag_unavailable_or_empty,
+LLM_c_qwen,1,end_to_end,38,3.8,4.1,False,3.95,"The entries show frequent fatigue, anxiety and a sense of exhausting effort; restlessness and nervousness recur, but marked sadness is absent. Evidence supports high frequency for tiredness, nervousness and effort. The report correctly reflects diary content with no fabrications. Strengths include consistent grounding and napping practices; concerns remain chronic sleep disruption and late‑night scrolling.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_000124.html,,"{
+  ""frequency_rubric_per_item"": [5,5,3,4,4,1,5,3,4,4],
+  ""frequency_rubric_mean"": 3.80,
+  ""evidence_relevance_per_item"": [5,5,3,5,5,1,5,3,5,4],
+  ""evidence_relevance_mean"": 4.10,
+  ""hallucination"": false,
+  ""details"": ""The entries show frequent fatigue, anxiety and a sense of exhausting effort; restlessness and nervousness recur, but marked sadness is absent. Evidence supports high frequency for tiredness, nervousness and effort. The report correctly reflects diary content with no fabrications. Strengths include consistent grounding and napping practices; concerns remain chronic sleep disruption and late‑night scrolling.""
+}"
+LLM_c_qwen,1,rag_aware,38,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_000124.html,rag_unavailable_or_empty,
+LLM_a_nemotron,0,end_to_end,37,3.0,4.8,False,3.9,"The diary shows moderate anxiety and frequent restlessness, occasional depressive rumination, with evidence largely consistent but some links (hopelessness, worthlessness) weaker. No major factual errors detected.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_001659.html,,"{
+  ""frequency_rubric_per_item"": [3, 3, 2, 3, 4, 3, 3, 2, 3, 4],
+  ""frequency_rubric_mean"": 3.0,
+  ""evidence_relevance_per_item"": [5, 5, 5, 4, 5, 5, 5, 4, 5, 5],
+  ""evidence_relevance_mean"": 4.8,
+  ""hallucination"": false,
+  ""details"": ""The diary shows moderate anxiety and frequent restlessness, occasional depressive rumination, with evidence largely consistent but some links (hopelessness, worthlessness) weaker. No major factual errors detected.""
+}"
+LLM_a_nemotron,0,rag_aware,37,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_001659.html,rag_unavailable_or_empty,
+LLM_a_nemotron,1,end_to_end,45,3.3,3.3,False,3.3,"The journal frequently reports tiredness, nervousness, and restless hypervigilance, with moderate depressive symptoms. Coping practices include grounding techniques, structured planning, and creative pursuits, indicating resilience despite high distress.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_001737.html,,"{
+  ""frequency_rubric_per_item"": [5,4,4,2,3,5,2,5,2,1],
+  ""frequency_rubric_mean"": 3.30,
+  ""evidence_relevance_per_item"": [5,4,4,2,3,5,2,5,2,1],
+  ""evidence_relevance_mean"": 3.30,
+  ""hallucination"": false,
+  ""details"": ""The journal frequently reports tiredness, nervousness, and restless hypervigilance, with moderate depressive symptoms. Coping practices include grounding techniques, structured planning, and creative pursuits, indicating resilience despite high distress.""
+}"
+LLM_a_nemotron,1,rag_aware,45,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_001737.html,rag_unavailable_or_empty,
+LLM_a_nemotron,2,end_to_end,44,4.2,5.0,False,4.6,"The report accurately reflects recurring anxiety, restlessness, and depressive‑like language across many entries, with evidence tied appropriately to each K‑10 theme. Frequencies were judged based on cross‑entry recurrence, not single‑sentence intensity, and all evidence appears consistent with diary content. No unsupported facts or contradictions were found.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_001814.html,,"{""frequency_rubric_per_item"":[5,5,4,3,5,3,3,4,5,5],""frequency_rubric_mean"":4.20,""evidence_relevance_per_item"":[5,5,5,5,5,5,5,5,5,5],""evidence_relevance_mean"":5.00,""hallucination"":false,""details"":""The report accurately reflects recurring anxiety, restlessness, and depressive‑like language across many entries, with evidence tied appropriately to each K‑10 theme. Frequencies were judged based on cross‑entry recurrence, not single‑sentence intensity, and all evidence appears consistent with diary content. No unsupported facts or contradictions were found.""}"
+LLM_a_nemotron,2,rag_aware,44,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_001814.html,rag_unavailable_or_empty,
+LLM_a_nemotron,3,end_to_end,23,2.1,1.0,False,1.55,"The report assigns high frequency to fatigue and nervousness but low frequency to hopelessness, worthlessness, and depression, with all evidence marked as minimal.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_001852.html,,"{
+  ""frequency_rubric_per_item"": [4, 4, 3, 1, 1, 2, 3, 1, 1, 1],
+  ""frequency_rubric_mean"": 2.10,
+  ""evidence_relevance_per_item"": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  ""evidence_relevance_mean"": 1.00,
+  ""hallucination"": false,
+  ""details"": ""The report assigns high frequency to fatigue and nervousness but low frequency to hopelessness, worthlessness, and depression, with all evidence marked as minimal.""
+}"
+LLM_a_nemotron,3,rag_aware,23,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_001852.html,rag_unavailable_or_empty,
+LLM_a_nemotron,0,end_to_end,34,3.0,3.8,True,3.4,"Evidence mix right but some lines unclear; overall high frequency of nervousness, moderate anxiety, lower hopelessness; hallucination flagged for unsupported evidence.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002034.html,,"{
+  ""frequency_rubric_per_item"": [4,5,3,2,4,2,3,3,2,2],
+  ""frequency_rubric_mean"": 3.00,
+  ""evidence_relevance_per_item"": [2,5,4,4,4,4,4,4,3,4],
+  ""evidence_relevance_mean"": 3.80,
+  ""hallucination"": true,
+  ""details"": ""Evidence mix right but some lines unclear; overall high frequency of nervousness, moderate anxiety, lower hopelessness; hallucination flagged for unsupported evidence.""
+}"
+LLM_a_nemotron,0,rag_aware,34,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002034.html,rag_unavailable_or_empty,
+LLM_a_nemotron,1,end_to_end,40,2.8,1.8,True,2.3,"Diary reveals frequent tiredness, nervousness, hopelessness and restlessness tied to daily stressors, with moderate evidence for other symptoms. Scores indicate relatively high anxiety‑driven distress, while evidence relevance is low for many items.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002128.html,,"{
+  ""frequency_rubric_per_item"": [5,5,1,4,1,1,2,1,3,5],
+  ""frequency_rubric_mean"": 2.80,
+  ""evidence_relevance_per_item"": [3,3,1,1,1,1,1,1,3,3],
+  ""evidence_relevance_mean"": 1.80,
+  ""hallucination"": true,
+  ""details"": ""Diary reveals frequent tiredness, nervousness, hopelessness and restlessness tied to daily stressors, with moderate evidence for other symptoms. Scores indicate relatively high anxiety‑driven distress, while evidence relevance is low for many items.""
+}"
+LLM_a_nemotron,1,rag_aware,40,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002128.html,rag_unavailable_or_empty,
+LLM_a_nemotron,2,end_to_end,30,3.2,1.0,True,2.1,"Journal shows persistent fatigue, anxiety, and restlessness, with sporadic hopelessness and depression. Report misattributes evidence, indicating hallucination. Frequent grounding practices suggest coping attempts; routine creation is a notable strength.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002213.html,,"{
+  ""frequency_rubric_per_item"": [4,4,3,2,4,3,3,3,3,3],
+  ""frequency_rubric_mean"": 3.20,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.00,
+  ""hallucination"": true,
+  ""details"": ""Journal shows persistent fatigue, anxiety, and restlessness, with sporadic hopelessness and depression. Report misattributes evidence, indicating hallucination. Frequent grounding practices suggest coping attempts; routine creation is a notable strength.""
+}"
+LLM_a_nemotron,2,rag_aware,30,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002213.html,rag_unavailable_or_empty,
+LLM_a_nemotron,3,end_to_end,36,3.0,2.6,False,2.8,"The journal reveals recurrent anxiety, restlessness, a sense of futility, and mild low mood. Engagement in grounding practice and structured productivity suggests coping efforts amid persistent distress.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002300.html,,"{""frequency_rubric_per_item"":[4,4,3,3,3,2,3,3,3,2],""frequency_rubric_mean"":3.00,""evidence_relevance_per_item"":[2,2,3,3,3,2,3,3,3,2],""evidence_relevance_mean"":2.40,""hallucination"":false,""details"":""The journal reveals recurrent anxiety, restlessness, a sense of futility, and mild low mood. Engagement in grounding practice and structured productivity suggests coping efforts amid persistent distress.""}"
+LLM_a_nemotron,3,rag_aware,36,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002300.html,rag_unavailable_or_empty,
+LLM_a_nemotron,4,end_to_end,37,3.9,4.0,False,3.95,"The report assigns high frequency and relevance scores, yet it lacks thorough evidence citations for each item and provides a total score without clear source verification.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002329.html,,"{
+  ""frequency_rubric_per_item"": [4,4,4,4,4,4,4,3,4,4],
+  ""frequency_rubric_mean"": 3.80,
+  ""evidence_relevance_per_item"": [4,4,4,4,4,4,4,4,4,4],
+  ""evidence_relevance_mean"": 4.00,
+  ""hallucination"": false,
+  ""details"": ""The report assigns high frequency and relevance scores, yet it lacks thorough evidence citations for each item and provides a total score without clear source verification.""
+}"
+LLM_a_nemotron,4,rag_aware,37,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002329.html,rag_unavailable_or_empty,
+LLM_a_nemotron,5,end_to_end,35,3.4,2.3,True,2.85,"Frequent fatigue, anxiety, and restlessness dominate, with moderate depressive symptoms; evidence sometimes off‑target, raising concerns about accuracy.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002403.html,,"{
+  ""frequency_rubric_per_item"": [4,4,3,3,4,3,3,3,3,4],
+  ""frequency_rubric_mean"": 3.40,
+  ""evidence_relevance_per_item"": [4,1,3,1,2,1,3,3,4,1],
+  ""evidence_relevance_mean"": 2.30,
+  ""hallucination"": true,
+  ""details"": ""Frequent fatigue, anxiety, and restlessness dominate, with moderate depressive symptoms; evidence sometimes off‑target, raising concerns about accuracy.""
+}"
+LLM_a_nemotron,5,rag_aware,35,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002403.html,rag_unavailable_or_empty,
+LLM_a_nemotron,6,end_to_end,50,3.3,2.0,True,2.65,"The journal shows frequent fatigue, anxiety, and restlessness, with occasional hopelessness and low self‑worth. The report cites non‑existent December entries, indicating hallucination.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002450.html,,"{
+  ""frequency_rubric_per_item"": [4,5,3,2,4,3,2,2,4,4],
+  ""frequency_rubric_mean"": 3.30,
+  ""evidence_relevance_per_item"": [2,2,2,2,2,2,2,2,2,2],
+  ""evidence_relevance_mean"": 2.00,
+  ""hallucination"": true,
+  ""details"": ""The journal shows frequent fatigue, anxiety, and restlessness, with occasional hopelessness and low self‑worth. The report cites non‑existent December entries, indicating hallucination.""
+}"
+LLM_a_nemotron,6,rag_aware,50,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002450.html,rag_unavailable_or_empty,
+LLM_a_nemotron,7,end_to_end,45,5.0,4.0,False,4.5,Report accurately reflects diary evidence; frequencies justified; evidence relevant; no fabrication.,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002537.html,,"{
+  ""frequency_rubric_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""frequency_rubric_mean"": 5.00,
+  ""evidence_relevance_per_item"": [4,4,4,4,4,4,4,4,4,4],
+  ""evidence_relevance_mean"": 4.00,
+  ""hallucination"": false,
+  ""details"": ""Report accurately reflects diary evidence; frequencies justified; evidence relevant; no fabrication.""
+}"
+LLM_a_nemotron,7,rag_aware,45,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002537.html,rag_unavailable_or_empty,
+LLM_a_nemotron,8,end_to_end,43,5.0,1.0,False,3.0,"The report lists K‑10 scores but offers no item‑specific evidence; frequencies are inferred from repeated diary mentions, hence high, while evidence relevance is low.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002602.html,,"{
+  ""frequency_rubric_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""frequency_rubric_mean"": 5.00,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.00,
+  ""hallucination"": false,
+  ""details"": ""The report lists K‑10 scores but offers no item‑specific evidence; frequencies are inferred from repeated diary mentions, hence high, while evidence relevance is low.""
+}"
+LLM_a_nemotron,8,rag_aware,43,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002602.html,rag_unavailable_or_empty,
+LLM_a_nemotron,9,end_to_end,47,5.0,5.0,False,5.0,"The report reflects pervasive anxiety, fatigue, restlessness and depressive symptoms, yet documents regular use of grounding, productivity rituals and supportive social interactions.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002626.html,,"{
+  ""frequency_rubric_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""frequency_rubric_mean"": 5.00,
+  ""evidence_relevance_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""evidence_relevance_mean"": 5.00,
+  ""hallucination"": false,
+  ""details"": ""The report reflects pervasive anxiety, fatigue, restlessness and depressive symptoms, yet documents regular use of grounding, productivity rituals and supportive social interactions.""
+}"
+LLM_a_nemotron,9,rag_aware,47,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002626.html,rag_unavailable_or_empty,
+LLM_a_nemotron,10,end_to_end,37,2.6,2.6,True,2.6,"Journal shows chronic fatigue and hypervigilance, with frequent low energy and mood dips. Productivity routines persist, yet hopelessness, worthlessness, and acute restlessness evidence is sparse.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002706.html,,"{
+  ""frequency_rubric_per_item"": [4,2,2,2,2,2,4,1,5,2],
+  ""frequency_rubric_mean"": 2.60,
+  ""evidence_relevance_per_item"": [4,3,2,2,2,2,4,1,4,2],
+  ""evidence_relevance_mean"": 2.60,
+  ""hallucination"": true,
+  ""details"": ""Journal shows chronic fatigue and hypervigilance, with frequent low energy and mood dips. Productivity routines persist, yet hopelessness, worthlessness, and acute restlessness evidence is sparse.""
+}"
+LLM_a_nemotron,10,rag_aware,37,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002706.html,rag_unavailable_or_empty,
+LLM_a_nemotron,11,end_to_end,43,5.0,1.1,True,3.05,"The report claims high K‑10 scores but provides scant, mismatched evidence, suggesting hallucination. Frequency ratings likely overstated, yet the diary shows frequent distress themes.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002740.html,,"{
+  ""frequency_rubric_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""frequency_rubric_mean"": 5.00,
+  ""evidence_relevance_per_item"": [2,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.10,
+  ""hallucination"": true,
+  ""details"": ""The report claims high K‑10 scores but provides scant, mismatched evidence, suggesting hallucination. Frequency ratings likely overstated, yet the diary shows frequent distress themes.""
+}"
+LLM_a_nemotron,11,rag_aware,43,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002740.html,rag_unavailable_or_empty,
+LLM_a_nemotron,12,end_to_end,36,2.0,2.2,True,2.1,"Report provides selected single‑entry references, many of which are irrelevant or fabricated, causing low frequency validity and inaccurate symptom representation; evidence relevance is mixed, with only a few items directly supported by the diary. The summary offers limited insight, and hallucinations such as invented entry details and an unjustified total score undermine reliability.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002821.html,,"{
+  ""frequency_rubric_per_item"": [2,2,2,2,2,2,2,2,2,2],
+  ""frequency_rubric_mean"": 2.00,
+  ""evidence_relevance_per_item"": [4,1,1,1,5,2,5,1,1,1],
+  ""evidence_relevance_mean"": 2.20,
+  ""hallucination"": true,
+  ""details"": ""Report provides selected single‑entry references, many of which are irrelevant or fabricated, causing low frequency validity and inaccurate symptom representation; evidence relevance is mixed, with only a few items directly supported by the diary. The summary offers limited insight, and hallucinations such as invented entry details and an unjustified total score undermine reliability.""
+}"
+LLM_a_nemotron,12,rag_aware,36,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002821.html,rag_unavailable_or_empty,
+LLM_a_nemotron,13,end_to_end,37,2.5,5.0,False,3.75,"The summary shows very high distress with frequent nervousness, restlessness, and depressive moods across many entries, while the evidence appears consistent with the diary and no fabrication is evident.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002848.html,,"{
+  ""frequency_rubric_per_item"": [2,3,3,2,4,3,2,1,3,2],
+  ""frequency_rubric_mean"": 2.5,
+  ""evidence_relevance_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""evidence_relevance_mean"": 5.0,
+  ""hallucination"": false,
+  ""details"": ""The summary shows very high distress with frequent nervousness, restlessness, and depressive moods across many entries, while the evidence appears consistent with the diary and no fabrication is evident.""
+}"
+LLM_a_nemotron,13,rag_aware,37,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002848.html,rag_unavailable_or_empty,
+LLM_a_nemotron,14,end_to_end,33,2.5,4.7,True,3.6,"Report overstates a December window not present in the data; it generally captures frequent fatigue, occasional nervousness, mild hopelessness, repeated restlessness, and some depressive and self‑worth concerns. Strengths include routine grounding and creative pursuits that help manage energy.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002916.html,,"{
+  ""frequency_rubric_per_item"": [3,2,2,2,3,2,2,4,2,3],
+  ""frequency_rubric_mean"": 2.30,
+  ""evidence_relevance_per_item"": [5,4,4,4,5,5,5,5,5,5],
+  ""evidence_relevance_mean"": 4.70,
+  ""hallucination"": true,
+  ""details"": ""Report overstates a December window not present in the data; it generally captures frequent fatigue, occasional nervousness, mild hopelessness, repeated restlessness, and some depressive and self‑worth concerns. Strengths include routine grounding and creative pursuits that help manage energy.""
+}"
+LLM_a_nemotron,14,rag_aware,33,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002916.html,rag_unavailable_or_empty,
+LLM_a_nemotron,15,end_to_end,36,3.2,2.2,False,2.7,"The diary shows frequent fatigue, anxiety, and low mood across many days, with occasional motivation rituals. Evidence for restlessness and worthlessness is not well‑aligned, but overall distress appears high.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002951.html,,"{""frequency_rubric_per_item"":[4,4,3,4,3,2,4,3,2,3],""frequency_rubric_mean"":3.40,""evidence_relevance_per_item"":[3,3,2,4,1,1,3,2,1,2],""evidence_relevance_mean"":2.20,""hallucination"":false,""details"":""The diary shows frequent fatigue, anxiety, and low mood across many days, with occasional motivation rituals. Evidence for restlessness and worthlessness is not well‑aligned, but overall distress appears high.""}"
+LLM_a_nemotron,15,rag_aware,36,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_002951.html,rag_unavailable_or_empty,
+LLM_a_nemotron,16,end_to_end,46,3.1,4.0,False,3.55,"The report highlights widespread fatigue and anxiety but notes hopelessness, sadness, worthlessness, depression, and restlessness notably less often, matching the journal entries.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003036.html,,"{
+  ""frequency_rubric_per_item"": [5,5,4,2,5,2,2,2,2,2],
+  ""frequency_rubric_mean"": 3.10,
+  ""evidence_relevance_per_item"": [4,4,4,4,4,4,4,4,4,4],
+  ""evidence_relevance_mean"": 4.00,
+  ""hallucination"": false,
+  ""details"": ""The report highlights widespread fatigue and anxiety but notes hopelessness, sadness, worthlessness, depression, and restlessness notably less often, matching the journal entries.""
+}"
+LLM_a_nemotron,16,rag_aware,46,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003036.html,rag_unavailable_or_empty,
+LLM_a_nemotron,17,end_to_end,44,5.0,5.0,False,5.0,"The report accurately reflects strong self‑observance and consistent coping strategies across the diary. It recognizes persistent high anxiety, restlessness, and depressive mood, yet highlights effective grounding, structured routines, and strategic rest periods that serve as strengths in managing distress.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003123.html,,"{""frequency_rubric_per_item"":[5,5,5,5,5,5,5,5,5,5],""frequency_rubric_mean"":5.00,""evidence_relevance_per_item"":[5,5,5,5,5,5,5,5,5,5],""evidence_relevance_mean"":5.00,""hallucination"":false,""details"":""The report accurately reflects strong self‑observance and consistent coping strategies across the diary. It recognizes persistent high anxiety, restlessness, and depressive mood, yet highlights effective grounding, structured routines, and strategic rest periods that serve as strengths in managing distress.""}"
+LLM_a_nemotron,17,rag_aware,44,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003123.html,rag_unavailable_or_empty,
+LLM_a_nemotron,18,end_to_end,34,2.0,1.1,False,1.55,"Report lacks specific item-level evidence, making frequency judgments uncertain. Evidence provided is sparse and partly unclear, especially for item 1. Overall, the report’s estimated high distress may overstate symptom prevalence without strong textual backing. Strength: it outlines general trends and overall distress level.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003149.html,,"{""frequency_rubric_per_item"":[2,2,2,2,2,2,2,2,2,2],""frequency_rubric_mean"":2.00,""evidence_relevance_per_item"":[2,1,1,1,1,1,1,1,1,1],""evidence_relevance_mean"":1.30,""hallucination"":false,""details"":""Report lacks specific item-level evidence, making frequency judgments uncertain. Evidence provided is sparse and partly unclear, especially for item 1. Overall, the report’s estimated high distress may overstate symptom prevalence without strong textual backing. Strength: it outlines general trends and overall distress level.""}"
+LLM_a_nemotron,18,rag_aware,34,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003149.html,rag_unavailable_or_empty,
+LLM_a_nemotron,19,end_to_end,46,3.9,4.3,True,4.1,"The journal shows near‑constant fatigue, depression and effort‑related strain, justifying high frequency scores. Evidence matching is clear for most items but the report misattribues hopelessness to the extreme nervousness item, indicating a hallucinated mapping.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003219.html,,"{
+  ""frequency_rubric_per_item"": [5,4,3,3,4,4,4,3,5,4],
+  ""frequency_rubric_mean"": 3.90,
+  ""evidence_relevance_per_item"": [2,5,1,5,5,5,5,5,5,5],
+  ""evidence_relevance_mean"": 4.30,
+  ""hallucination"": true,
+  ""details"": ""The journal shows near‑constant fatigue, depression and effort‑related strain, justifying high frequency scores. Evidence matching is clear for most items but the report misattribues hopelessness to the extreme nervousness item, indicating a hallucinated mapping.""
+}"
+LLM_a_nemotron,19,rag_aware,46,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003219.html,rag_unavailable_or_empty,
+LLM_a_nemotron,20,end_to_end,30,2.6,2.7,True,2.65,"The diary reveals intermittent fatigue, mild nervousness, and occasional restlessness, but not uniform distress across all K‑10 items. Hopelessness and worth‑lessness are largely absent, and severe anxiety is rare. Several items receive little explicit evidence, while claims that all scores are exactly 3 lack textual support. Frequency varies: restlessness, effort, and fatigue appear frequent, whereas other symptoms are sparsely mentioned. Overall, the review over‑generalizes scores.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003258.html,,"{
+  ""frequency_rubric_per_item"": [4,3,2,1,3,3,3,2,3,2],
+  ""frequency_rubric_mean"": 2.60,
+  ""evidence_relevance_per_item"": [4,4,2,1,3,3,3,2,3,2],
+  ""evidence_relevance_mean"": 2.60,
+  ""hallucination"": true,
+  ""details"": ""The diary reveals intermittent fatigue, mild nervousness, and occasional restlessness, but not uniform distress across all K‑10 items. Hopelessness and worth‑lessness are largely absent, and severe anxiety is rare. Several items receive little explicit evidence, while claims that all scores are exactly 3 lack textual support. Frequency varies: restlessness, effort, and fatigue appear frequent, whereas other symptoms are sparsely mentioned. Overall, the review over‑generalizes scores.""
+}"
+LLM_a_nemotron,20,rag_aware,30,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003258.html,rag_unavailable_or_empty,
+LLM_a_nemotron,21,end_to_end,36,3.4,3.4,False,3.4,"High distress centers on exhaustion, anxiety, restlessness and low mood; evidence largely aligns with journal content, though some symptom mapping is inaccurate.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003341.html,,"{
+  ""frequency_rubric_per_item"": [4,4,2,2,4,4,3,3,4,4],
+  ""frequency_rubric_mean"": 3.40,
+  ""evidence_relevance_per_item"": [4,4,1,1,4,4,4,4,4,4],
+  ""evidence_relevance_mean"": 3.40,
+  ""hallucination"": false,
+  ""details"": ""High distress centers on exhaustion, anxiety, restlessness and low mood; evidence largely aligns with journal content, though some symptom mapping is inaccurate.""
+}"
+LLM_a_nemotron,21,rag_aware,36,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003341.html,rag_unavailable_or_empty,
+LLM_a_nemotron,22,end_to_end,39,4.1,2.9,False,3.5,"The report captures overall high distress but mismatches evidence with item themes; frequency of symptoms is well reflected, while relevance scores drop for several items. Overall it underscores pervasive anxiety, fatigue, and restlessness, yet could improve alignment between stated evidence and specific K‑10 items.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003404.html,,"{""frequency_rubric_per_item"":[5,5,4,3,5,4,4,3,4,4],""frequency_rubric_mean"":4.1,""evidence_relevance_per_item"":[5,3,2,2,5,4,2,1,4,1],""evidence_relevance_mean"":2.9,""hallucination"":false,""details"":""The report captures overall high distress but mismatches evidence with item themes; frequency of symptoms is well reflected, while relevance scores drop for several items. Overall it underscores pervasive anxiety, fatigue, and restlessness, yet could improve alignment between stated evidence and specific K‑10 items.""}"
+LLM_a_nemotron,22,rag_aware,39,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003404.html,rag_unavailable_or_empty,
+LLM_a_nemotron,23,end_to_end,37,2.0,4.0,False,3.0,"The report identifies pervasive fatigue, restlessness, and depressive mood across the year, with high scores reflecting frequent symptomology. It notes consistent use of grounding routines and gratitude practices, suggesting resilience strategies.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003442.html,,"{""frequency_rubric_per_item"":[2,2,2,2,2,2,2,2,2,2],""frequency_rubric_mean"":2.00,""evidence_relevance_per_item"":[4,4,4,4,4,4,4,4,4,4],""evidence_relevance_mean"":4.00,""hallucination"":false,""details"":""The report identifies pervasive fatigue, restlessness, and depressive mood across the year, with high scores reflecting frequent symptomology. It notes consistent use of grounding routines and gratitude practices, suggesting resilience strategies.""}"
+LLM_a_nemotron,23,rag_aware,37,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003442.html,rag_unavailable_or_empty,
+LLM_a_nemotron,24,end_to_end,43,4.7,4.7,False,4.7,"The report accurately attributes most symptoms to recurring diary entries, with evidence closely matching each K-10 theme. Frequency ratings are predominantly high, reflecting the breadth of mentions. Evidence relevance is generally strong, though some items (e.g., intense anxiety) could benefit from more specific excerpts. No hallucinations or contradictions were detected.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003519.html,,"{
+  ""frequency_rubric_per_item"": [5,5,4,4,5,4,5,5,5,5],
+  ""frequency_rubric_mean"": 4.70,
+  ""evidence_relevance_per_item"": [5,5,4,4,5,4,5,5,5,5],
+  ""evidence_relevance_mean"": 4.70,
+  ""hallucination"": false,
+  ""details"": ""The report accurately attributes most symptoms to recurring diary entries, with evidence closely matching each K-10 theme. Frequency ratings are predominantly high, reflecting the breadth of mentions. Evidence relevance is generally strong, though some items (e.g., intense anxiety) could benefit from more specific excerpts. No hallucinations or contradictions were detected.""
+}"
+LLM_a_nemotron,24,rag_aware,43,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003519.html,rag_unavailable_or_empty,
+LLM_a_nemotron,25,end_to_end,33,2.7,2.0,True,2.35,"The report contains many mismatches between the K-10 stems and the provided evidence, leading to low relevance scores and undermining the reliability of the frequency estimates.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003546.html,,"{
+  ""frequency_rubric_per_item"": [4,3,3,2,4,2,3,2,2,2],
+  ""frequency_rubric_mean"": 2.70,
+  ""evidence_relevance_per_item"": [2,2,2,2,2,2,2,2,2,2],
+  ""evidence_relevance_mean"": 2.00,
+  ""hallucination"": true,
+  ""details"": ""The report contains many mismatches between the K-10 stems and the provided evidence, leading to low relevance scores and undermining the reliability of the frequency estimates.""
+}"
+LLM_a_nemotron,25,rag_aware,33,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003546.html,rag_unavailable_or_empty,
+LLM_a_nemotron,26,end_to_end,47,4.2,4.4,True,4.3,"The report lauds extreme frequencies for nervousness and hopelessness that only surface sporadically in the data, giving them high scores while the supporting rationales are misaligned or generic. Fatigue, restlessness, and depression are accurately flagged, but the evidence cited for several items is irrelevant or absent.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003614.html,,"{
+  ""frequency_rubric_per_item"": [5,5,1,2,5,5,4,5,5,5],
+  ""frequency_rubric_mean"": 4.20,
+  ""evidence_relevance_per_item"": [5,5,2,3,5,5,4,5,5,5],
+  ""evidence_relevance_mean"": 4.40,
+  ""hallucination"": true,
+  ""details"": ""The report lauds extreme frequencies for nervousness and hopelessness that only surface sporadically in the data, giving them high scores while the supporting rationales are misaligned or generic. Fatigue, restlessness, and depression are accurately flagged, but the evidence cited for several items is irrelevant or absent.""
+}"
+LLM_a_nemotron,26,rag_aware,47,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003614.html,rag_unavailable_or_empty,
+LLM_a_nemotron,27,end_to_end,42,3.9,4.9,False,4.4,"The report accurately reflects frequent fatigue, nervousness, and restlessness across many entries, scoring them high on frequency. Evidence excerpts directly match each item, though depressive language is less explicit. No fabricated statements are present, indicating no hallucinations. Overall, both frequency and evidence relevance are strong for most items, with mild uncertainty for the depressed item.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003657.html,,"{""frequency_rubric_per_item"":[5,5,2,2,5,5,4,5,3,3],""frequency_rubric_mean"":3.9,""evidence_relevance_per_item"":[5,5,5,5,5,5,4,5,5,5],""evidence_relevance_mean"":4.7,""hallucination"":false,""details"":""The report accurately reflects frequent fatigue, nervousness, and restlessness across many entries, scoring them high on frequency. Evidence excerpts directly match each item, though depressive language is less explicit. No fabricated statements are present, indicating no hallucinations. Overall, both frequency and evidence relevance are strong for most items, with mild uncertainty for the depressed item.""}"
+LLM_a_nemotron,27,rag_aware,42,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003657.html,rag_unavailable_or_empty,
+LLM_a_nemotron,28,end_to_end,48,3.0,1.0,True,2.0,"The report provides evidence statements that are not supported by the journal text, leading to severe hallucination and misalignment of item themes.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003733.html,,"{
+  ""frequency_rubric_per_item"": [5,5,1,1,5,1,3,1,3,5],
+  ""frequency_rubric_mean"": 2.80,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.00,
+  ""hallucination"": true,
+  ""details"": ""The report provides evidence statements that are not supported by the journal text, leading to severe hallucination and misalignment of item themes.""
+}"
+LLM_a_nemotron,28,rag_aware,48,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003733.html,rag_unavailable_or_empty,
+LLM_a_nemotron,29,end_to_end,42,2.0,5.0,True,3.5,"Scores seem exaggerated; item evidence is limited, yet the report assigns high K‑10 totals.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003807.html,,"{
+  ""frequency_rubric_per_item"": [2,2,2,2,2,2,2,2,2,2],
+  ""frequency_rubric_mean"": 2.00,
+  ""evidence_relevance_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""evidence_relevance_mean"": 5.00,
+  ""hallucination"": true,
+  ""details"": ""Scores seem exaggerated; item evidence is limited, yet the report assigns high K‑10 totals.""
+}"
+LLM_a_nemotron,29,rag_aware,42,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003807.html,rag_unavailable_or_empty,
+LLM_a_nemotron,30,end_to_end,43,3.3,2.8,False,3.05,Most items show high recurrency of anxiety and restlessness; evidence largely matches; only a few items mis‑aligned though not inherently contradictory.,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003853.html,,"{""frequency_rubric_per_item"":[4,4,3,3,4,3,3,2,3,4],""frequency_rubric_mean"":3.00,""evidence_relevance_per_item"":[5,5,2,2,5,2,2,2,2,1],""evidence_relevance_mean"":2.80,""hallucination"":false,""details"":""Most items show high recurrency of anxiety and restlessness; evidence largely matches; only a few items mis‑aligned though not inherently contradictory.""}"
+LLM_a_nemotron,30,rag_aware,43,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003853.html,rag_unavailable_or_empty,
+LLM_a_nemotron,31,end_to_end,43,3.7,1.2,False,2.45,"Diary suggests frequent exhaustion, anxiety and an effortful daily routine, indicating high distress, yet specific evidence supporting each K‑10 item is limited.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003925.html,,"{
+  ""frequency_rubric_per_item"": [4,4,4,3,4,3,4,3,4,4],
+  ""frequency_rubric_mean"": 3.70,
+  ""evidence_relevance_per_item"": [3,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.20,
+  ""hallucination"": false,
+  ""details"": ""Diary suggests frequent exhaustion, anxiety and an effortful daily routine, indicating high distress, yet specific evidence supporting each K‑10 item is limited.""
+}"
+LLM_a_nemotron,31,rag_aware,43,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_003925.html,rag_unavailable_or_empty,
+LLM_a_nemotron,32,end_to_end,36,4.1,5.0,False,4.55,"The report provides clear item‑specific evidence, but its computed frequency categories may overstate symptom prevalence.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004006.html,,"{
+  ""frequency_rubric_per_item"": [4, 5, 3, 3, 5, 4, 4, 3, 5, 5],
+  ""frequency_rubric_mean"": 4.10,
+  ""evidence_relevance_per_item"": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+  ""evidence_relevance_mean"": 5.00,
+  ""hallucination"": false,
+  ""details"": ""The report provides clear item‑specific evidence, but its computed frequency categories may overstate symptom prevalence.""
+}"
+LLM_a_nemotron,32,rag_aware,36,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004006.html,rag_unavailable_or_empty,
+LLM_a_nemotron,33,end_to_end,40,4.1,3.0,False,3.55,"The report shows high anxiety, frequent restlessness and fatigue across most weeks. Sporadic moments of resilience surface through brief grounding practices, but overall mood and motivation remain challenged.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004051.html,,"{""frequency_rubric_per_item"":[4,4,4,4,5,4,5,5,3,3],""frequency_rubric_mean"":4.10,""evidence_relevance_per_item"":[2,3,4,2,4,3,3,3,4,2],""evidence_relevance_mean"":3.10,""hallucination"":false,""details"":""The report shows high anxiety, frequent restlessness and fatigue across most weeks. Sporadic moments of resilience surface through brief grounding practices, but overall mood and motivation remain challenged.""}"
+LLM_a_nemotron,33,rag_aware,40,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004051.html,rag_unavailable_or_empty,
+LLM_a_nemotron,34,end_to_end,49,3.3,5.0,True,4.15,"The report highlights persistent fatigue and anxiety across many days, with frequent restlessness and depressive symptoms marked by shallow mood. Evidence is clearly tied to each item, but the reliance on a narrow set of dates and a few mentions for several items suggests the reported frequency ratings may overstate recurrence. Additionally, several date references are unsupported by the journal, indicating hallucinations.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004123.html,,"{
+  ""frequency_rubric_per_item"": [5,4,3,3,3,3,3,3,3,3],
+  ""frequency_rubric_mean"": 3.30,
+  ""evidence_relevance_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""evidence_relevance_mean"": 5.00,
+  ""hallucination"": true,
+  ""details"": ""The report highlights persistent fatigue and anxiety across many days, with frequent restlessness and depressive symptoms marked by shallow mood. Evidence is clearly tied to each item, but the reliance on a narrow set of dates and a few mentions for several items suggests the reported frequency ratings may overstate recurrence. Additionally, several date references are unsupported by the journal, indicating hallucinations.""
+}"
+LLM_a_nemotron,34,rag_aware,49,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004123.html,rag_unavailable_or_empty,
+LLM_a_nemotron,35,end_to_end,39,2.8,1.0,False,1.9,"Report misaligns evidence with item themes, giving low relevance yet high frequency scores appear grounded from diary.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004208.html,,"{
+  ""frequency_rubric_per_item"": [5,4,1,3,3,2,2,2,4,2],
+  ""frequency_rubric_mean"": 2.80,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.00,
+  ""hallucination"": false,
+  ""details"": ""Report misaligns evidence with item themes, giving low relevance yet high frequency scores appear grounded from diary.""
+}"
+LLM_a_nemotron,35,rag_aware,39,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004208.html,rag_unavailable_or_empty,
+LLM_a_nemotron,36,end_to_end,34,1.0,1.0,True,1.0,"Assessment finds all K‑10 items are minimally supported by the journal; evidence inserted is largely fabricated or off‑topic, leading to a low frequency and relevance rating. The report contains significant hallucinations.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004251.html,,"{
+  ""frequency_rubric_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""frequency_rubric_mean"": 1.00,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.00,
+  ""hallucination"": true,
+  ""details"": ""Assessment finds all K‑10 items are minimally supported by the journal; evidence inserted is largely fabricated or off‑topic, leading to a low frequency and relevance rating. The report contains significant hallucinations.""
+}"
+LLM_a_nemotron,36,rag_aware,34,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004251.html,rag_unavailable_or_empty,
+LLM_a_nemotron,37,end_to_end,32,3.3,2.0,False,2.65,"The report captures frequent tiredness, anxiety, and restlessness with moderate depressive themes, but lacks specific evidence excerpts, limiting definitive item attribution.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004314.html,,"{
+  ""frequency_rubric_per_item"": [4,4,3,2,4,3,4,2,3,4],
+  ""frequency_rubric_mean"": 3.30,
+  ""evidence_relevance_per_item"": [2,2,2,2,2,2,2,2,2,2],
+  ""evidence_relevance_mean"": 2.00,
+  ""hallucination"": false,
+  ""details"": ""The report captures frequent tiredness, anxiety, and restlessness with moderate depressive themes, but lacks specific evidence excerpts, limiting definitive item attribution.""
+}"
+LLM_a_nemotron,37,rag_aware,32,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004314.html,rag_unavailable_or_empty,
+LLM_a_nemotron,38,end_to_end,50,4.3,2.0,True,3.15,"Evidence alignments were inconsistent, and many items lacked direct support, suggesting over‑generalization and hallucination of symptom frequency.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004340.html,,"{""frequency_rubric_per_item"":[5,5,4,3,5,3,5,4,4,5],""frequency_rubric_mean"":4.30,""evidence_relevance_per_item"":[2,2,2,2,2,2,2,2,2,2],""evidence_relevance_mean"":2.00,""hallucination"":true,""details"":""Evidence alignments were inconsistent, and many items lacked direct support, suggesting over‑generalization and hallucination of symptom frequency.""}"
+LLM_a_nemotron,38,rag_aware,50,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004340.html,rag_unavailable_or_empty,
+LLM_a_nemotron,39,end_to_end,46,3.5,3.3,False,3.4,"The diary highlights persistent anxiety and depressive symptoms across many weeks, yet illustrates growing use of grounding, physical activity, and goal tracking that suggest gradual adaptive coping. The pattern shows frequent restlessness and fatigue, but also ongoing engagement in intentional self‑care.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004407.html,,"{
+  ""frequency_rubric_per_item"": [4,5,3,3,3,4,2,3,4,4],
+  ""frequency_rubric_mean"": 3.50,
+  ""evidence_relevance_per_item"": [3,4,2,4,3,4,2,4,3,4],
+  ""evidence_relevance_mean"": 3.30,
+  ""hallucination"": false,
+  ""details"": ""The diary highlights persistent anxiety and depressive symptoms across many weeks, yet illustrates growing use of grounding, physical activity, and goal tracking that suggest gradual adaptive coping. The pattern shows frequent restlessness and fatigue, but also ongoing engagement in intentional self‑care.""
+}"
+LLM_a_nemotron,39,rag_aware,46,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004407.html,rag_unavailable_or_empty,
+LLM_a_nemotron,40,end_to_end,41,3.9,3.4,False,3.65,"The report captures high-frequency emotional distress, accurately reflecting recurrent fatigue, nervousness, and effortful feeling across the journal. Evidence largely aligns with each symptom except for hopelessness, restlessness and worthlessness where coverage is sparse, suggesting missing contextual detail. Overall, the analysis is consistent with diary content and shows no hallucinations.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004439.html,,"{
+  ""frequency_rubric_per_item"": [5,5,4,3,4,3,5,2,4,4],
+  ""frequency_rubric_mean"": 3.90,
+  ""evidence_relevance_per_item"": [5,5,5,2,2,3,4,2,4,2],
+  ""evidence_relevance_mean"": 3.40,
+  ""hallucination"": false,
+  ""details"": ""The report captures high-frequency emotional distress, accurately reflecting recurrent fatigue, nervousness, and effortful feeling across the journal. Evidence largely aligns with each symptom except for hopelessness, restlessness and worthlessness where coverage is sparse, suggesting missing contextual detail. Overall, the analysis is consistent with diary content and shows no hallucinations.""
+}"
+LLM_a_nemotron,40,rag_aware,41,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004439.html,rag_unavailable_or_empty,
+LLM_a_nemotron,41,end_to_end,41,4.2,4.3,False,4.25,"High fatigue, anxiety, and restlessness recur across entries, with moderate hopelessness and depression. Micro‑win routines and grounding are practiced, yet worthlessness and feeling overwhelmed persist, indicating significant distress despite coping efforts.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004516.html,,"{
+  ""frequency_rubric_per_item"": [5, 5, 4, 4, 3, 5, 4, 5, 4, 3],
+  ""frequency_rubric_mean"": 4.20,
+  ""evidence_relevance_per_item"": [5, 5, 2, 3, 5, 5, 5, 5, 4, 4],
+  ""evidence_relevance_mean"": 4.30,
+  ""hallucination"": false,
+  ""details"": ""High fatigue, anxiety, and restlessness recur across entries, with moderate hopelessness and depression. Micro‑win routines and grounding are practiced, yet worthlessness and feeling overwhelmed persist, indicating significant distress despite coping efforts.""
+}"
+LLM_a_nemotron,41,rag_aware,41,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004516.html,rag_unavailable_or_empty,
+LLM_a_nemotron,42,end_to_end,45,3.8,5.0,False,4.4,"The diary consistently shows high levels of fatigue, nervousness, and depressive moods, with several entries describing extreme anxiety, hopelessness, and worthlessness. Restlessness appears frequently, though rarely so intense to disrupt sitting. Grounding practices surface often. The report accurately reflects these patterns, with strong, item‑specific evidence and no unsupported claims.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004550.html,,"{
+  ""frequency_rubric_per_item"": [5,4,3,4,3,4,4,4,4,3],
+  ""frequency_rubric_mean"": 3.80,
+  ""evidence_relevance_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""evidence_relevance_mean"": 5.00,
+  ""hallucination"": false,
+  ""details"": ""The diary consistently shows high levels of fatigue, nervousness, and depressive moods, with several entries describing extreme anxiety, hopelessness, and worthlessness. Restlessness appears frequently, though rarely so intense to disrupt sitting. Grounding practices surface often. The report accurately reflects these patterns, with strong, item‑specific evidence and no unsupported claims.""
+}"
+LLM_a_nemotron,42,rag_aware,45,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004550.html,rag_unavailable_or_empty,
+LLM_a_nemotron,43,end_to_end,44,3.8,4.1,False,3.95,"The diary shows a persistent cycle of anxiety, fatigue, and depressive mood, with frequent references to hypervigilance, feelings of hopelessness, and guilt‑based worthlessness. While resting moments and structured routines surface, they are interspersed with restless energy and low motivation. The report accurately mirrors journal content and contains no evident fabrications.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004623.html,,"{
+  ""frequency_rubric_per_item"": [5,4,2,3,2,4,5,4,4,5],
+  ""frequency_rubric_mean"": 3.80,
+  ""evidence_relevance_per_item"": [5,4,2,3,4,5,5,4,4,5],
+  ""evidence_relevance_mean"": 4.10,
+  ""hallucination"": false,
+  ""details"": ""The diary shows a persistent cycle of anxiety, fatigue, and depressive mood, with frequent references to hypervigilance, feelings of hopelessness, and guilt‑based worthlessness. While resting moments and structured routines surface, they are interspersed with restless energy and low motivation. The report accurately mirrors journal content and contains no evident fabrications.""
+}"
+LLM_a_nemotron,43,rag_aware,44,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004623.html,rag_unavailable_or_empty,
+LLM_a_nemotron,44,end_to_end,34,5.0,4.0,False,4.5,The K10 report aligns well with the diary text; evidence directly supports each symptom and frequency scores reflect recurring themes across many entries.,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004932.html,,"{
+  ""frequency_rubric_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""frequency_rubric_mean"": 5.00,
+  ""evidence_relevance_per_item"": [4,4,4,4,4,4,4,4,4,4],
+  ""evidence_relevance_mean"": 4.00,
+  ""hallucination"": false,
+  ""details"": ""The K10 report aligns well with the diary text; evidence directly supports each symptom and frequency scores reflect recurring themes across many entries.""
+}"
+LLM_a_nemotron,44,rag_aware,34,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004932.html,rag_unavailable_or_empty,
+LLM_a_nemotron,45,end_to_end,40,2.8,1.0,True,1.9,"Report overstates symptom frequencies; many claims unsubstantiated by entries. Depressive and anxiety themes appear often, but evidence cited mixes topics. Report misattributes content, leading to inaccurate K‑10 scoring.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004958.html,,"{
+  ""frequency_rubric_per_item"": [4,4,3,2,3,2,3,2,2,3],
+  ""frequency_rubric_mean"": 2.8,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.0,
+  ""hallucination"": true,
+  ""details"": ""Report overstates symptom frequencies; many claims unsubstantiated by entries. Depressive and anxiety themes appear often, but evidence cited mixes topics. Report misattributes content, leading to inaccurate K‑10 scoring.""
+}"
+LLM_a_nemotron,45,rag_aware,40,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_004958.html,rag_unavailable_or_empty,
+LLM_a_nemotron,46,end_to_end,43,4.0,2.9,False,3.45,"The diary shows high-frequency fatigue and anxiety, moderate hopelessness and low sadness. Restlessness and effort‑related exhaustion dominate daily language, while feelings of worthlessness and depression appear less frequent. Evidence for most items aligns with the reported symptoms, though some references are vague. The overall picture suggests chronic stress with moments of temporary relief through grounding practices.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005047.html,,"{""frequency_rubric_per_item"":[5,5,3,3,5,2,5,3,4,5],""frequency_rubric_mean"":4.00,""evidence_relevance_per_item"":[4,5,3,2,4,1,3,3,2,2],""evidence_relevance_mean"":2.90,""hallucination"":false,""details"":""The diary shows high-frequency fatigue and anxiety, moderate hopelessness and low sadness. Restlessness and effort‑related exhaustion dominate daily language, while feelings of worthlessness and depression appear less frequent. Evidence for most items aligns with the reported symptoms, though some references are vague. The overall picture suggests chronic stress with moments of temporary relief through grounding practices.""}"
+LLM_a_nemotron,46,rag_aware,43,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005047.html,rag_unavailable_or_empty,
+LLM_a_nemotron,47,end_to_end,41,3.6,4.5,False,4.05,"The report reflects frequent themes throughout the diary, providing concrete bullet evidence, yet some items are based on limited occurrences, leading to lower frequency scores.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005115.html,,"{
+  ""frequency_rubric_per_item"": [4,2,5,5,3,2,3,4,3,5],
+  ""frequency_rubric_mean"": 3.60,
+  ""evidence_relevance_per_item"": [4,4,5,5,4,4,5,4,5,5],
+  ""evidence_relevance_mean"": 4.50,
+  ""hallucination"": false,
+  ""details"": ""The report reflects frequent themes throughout the diary, providing concrete bullet evidence, yet some items are based on limited occurrences, leading to lower frequency scores.""
+}"
+LLM_a_nemotron,47,rag_aware,41,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005115.html,rag_unavailable_or_empty,
+LLM_a_nemotron,48,end_to_end,47,4.4,4.8,True,4.6,"The report shows pervasive anxiety, fatigue, restlessness and low mood across the last 30 days, with high frequency for most items. Evidence for hopelessness and worthlessness is less consistent. The overall distress rating appears inflated, and the documented score/counts suggest mis‑alignment with the actual entries.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005146.html,,"{
+  ""frequency_rubric_per_item"": [5,5,5,3,5,3,5,3,5,5],
+  ""frequency_rubric_mean"": 4.60,
+  ""evidence_relevance_per_item"": [5,5,5,5,5,4,5,4,5,5],
+  ""evidence_relevance_mean"": 4.90,
+  ""hallucination"": true,
+  ""details"": ""The report shows pervasive anxiety, fatigue, restlessness and low mood across the last 30 days, with high frequency for most items. Evidence for hopelessness and worthlessness is less consistent. The overall distress rating appears inflated, and the documented score/counts suggest mis‑alignment with the actual entries.""
+}"
+LLM_a_nemotron,48,rag_aware,47,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005146.html,rag_unavailable_or_empty,
+LLM_a_nemotron,49,end_to_end,39,3.8,4.7,False,4.25,"The diary reveals pervasive anxiety and depressive rumination—widespread fatigue, nervousness, restless urgency, and self‑critical tones—yet also shows consistent grounding practices, productivity routines, and reflective journaling that may foster resilience.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005241.html,,"{
+  ""frequency_rubric_per_item"": [4, 4, 3, 3, 4, 4, 4, 3, 4, 5],
+  ""frequency_rubric_mean"": 3.80,
+  ""evidence_relevance_per_item"": [5, 4, 5, 4, 5, 5, 5, 4, 5, 5],
+  ""evidence_relevance_mean"": 4.70,
+  ""hallucination"": false,
+  ""details"": ""The diary reveals pervasive anxiety and depressive rumination—widespread fatigue, nervousness, restless urgency, and self‑critical tones—yet also shows consistent grounding practices, productivity routines, and reflective journaling that may foster resilience.""
+}"
+LLM_a_nemotron,49,rag_aware,39,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005241.html,rag_unavailable_or_empty,
+LLM_a_nemotron,50,end_to_end,41,4.2,4.0,True,4.1,"The diary shows frequent wired‑tired and anxiety states, with robust restlessness and depressive cues, yet evidence citations in the report partially mis‑align with the text, indicating selective fabrication.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005316.html,,"{
+  ""frequency_rubric_per_item"": [4, 4, 3, 4, 5, 4, 4, 4, 5, 5],
+  ""frequency_rubric_mean"": 4.20,
+  ""evidence_relevance_per_item"": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+  ""evidence_relevance_mean"": 4.00,
+  ""hallucination"": true,
+  ""details"": ""The diary shows frequent wired‑tired and anxiety states, with robust restlessness and depressive cues, yet evidence citations in the report partially mis‑align with the text, indicating selective fabrication.""
+}"
+LLM_a_nemotron,50,rag_aware,41,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005316.html,rag_unavailable_or_empty,
+LLM_a_nemotron,51,end_to_end,43,1.0,1.0,True,1.0,"The summary misattributes K10 scores, provides incorrect item evidence, and lacks credible support, indicating a faulty, hallucinated report.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005352.html,,"{""frequency_rubric_per_item"":[1,1,1,1,1,1,1,1,1,1],""frequency_rubric_mean"":1.00,""evidence_relevance_per_item"":[1,1,1,1,1,1,1,1,1,1],""evidence_relevance_mean"":1.00,""hallucination"":true,""details"":""The summary misattributes K10 scores, provides incorrect item evidence, and lacks credible support, indicating a faulty, hallucinated report.""}"
+LLM_a_nemotron,51,rag_aware,43,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005352.html,rag_unavailable_or_empty,
+LLM_a_nemotron,52,end_to_end,42,2.3,3.6,False,2.95,"Report highlights high restlessness, moderate anxiety, and occasional depression, with evidence largely matching journal content. Some items lack support (sadness, worthlessness). Marks a high overall distress but notes consistent use of micro‑rituals, suggesting potential resilience strategies.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005420.html,,"{
+  ""frequency_rubric_per_item"": [2,3,2,3,5,1,1,1,2,3],
+  ""frequency_rubric_mean"": 2.40,
+  ""evidence_relevance_per_item"": [5,5,3,5,5,1,1,1,5,5],
+  ""evidence_relevance_mean"": 3.60,
+  ""hallucination"": false,
+  ""details"": ""Report highlights high restlessness, moderate anxiety, and occasional depression, with evidence largely matching journal content. Some items lack support (sadness, worthlessness). Marks a high overall distress but notes consistent use of micro‑rituals, suggesting potential resilience strategies.""
+}"
+LLM_a_nemotron,52,rag_aware,42,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005420.html,rag_unavailable_or_empty,
+LLM_a_nemotron,53,end_to_end,40,3.7,1.4,False,2.55,"Report highlights fatigue, restlessness and depression as high‑frequency themes, but gives evidence only for fatigue, leaving other items weakly supported.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005500.html,,"{""frequency_rubric_per_item"":[5,3,2,3,5,4,3,2,5,5],""frequency_rubric_mean"":3.70,""evidence_relevance_per_item"":[5,1,1,1,1,1,1,1,1,1],""evidence_relevance_mean"":1.40,""hallucination"":false,""details"":""Report highlights fatigue, restlessness and depression as high‑frequency themes, but gives evidence only for fatigue, leaving other items weakly supported.""}"
+LLM_a_nemotron,53,rag_aware,40,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005500.html,rag_unavailable_or_empty,
+LLM_a_nemotron,54,end_to_end,34,1.0,1.0,True,1.0,"Report provides no item‑by‑item scores or evidence from the journal; all information is generic and unsubstantiated. The lack of specific references indicates a fabricated summary, lowering confidence in its veracity.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005601.html,,"{
+  ""frequency_rubric_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""frequency_rubric_mean"": 1.00,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.00,
+  ""hallucination"": true,
+  ""details"": ""Report provides no item‑by‑item scores or evidence from the journal; all information is generic and unsubstantiated. The lack of specific references indicates a fabricated summary, lowering confidence in its veracity.""
+}"
+LLM_a_nemotron,54,rag_aware,34,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005601.html,rag_unavailable_or_empty,
+LLM_a_nemotron,55,end_to_end,37,3.0,1.5,True,2.25,"Scores reflect frequent tiredness and nervousness, moderate evidence relevance for most items, and low relevance or missing evidence for several items. The report appears to include incomplete or mismatched evidence, suggesting hallucination.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005634.html,,"{
+  ""frequency_rubric_per_item"": [4,4,3,2,4,2,4,2,2,3],
+  ""frequency_rubric_mean"": 3.00,
+  ""evidence_relevance_per_item"": [1,3,1,1,4,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.40,
+  ""hallucination"": true,
+  ""details"": ""Scores reflect frequent tiredness and nervousness, moderate evidence relevance for most items, and low relevance or missing evidence for several items. The report appears to include incomplete or mismatched evidence, suggesting hallucination.""
+}"
+LLM_a_nemotron,55,rag_aware,37,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005634.html,rag_unavailable_or_empty,
+LLM_a_nemotron,56,end_to_end,34,2.4,1.1,False,1.75,"Report indicates frequent fatigue, anxiety, and burnout, but evidence alignment is weak. Diary entries are consistently logged, yet many symptom–evidence links are mistimed or generic.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005727.html,,"{
+  ""frequency_rubric_per_item"": [4,3,2,2,2,2,3,3,2,1],
+  ""frequency_rubric_mean"": 2.20,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,2,1,1],
+  ""evidence_relevance_mean"": 1.10,
+  ""hallucination"": false,
+  ""details"": ""Report indicates frequent fatigue, anxiety, and burnout, but evidence alignment is weak. Diary entries are consistently logged, yet many symptom–evidence links are mistimed or generic.""
+}"
+LLM_a_nemotron,56,rag_aware,34,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005727.html,rag_unavailable_or_empty,
+LLM_a_nemotron,57,end_to_end,48,4.1,4.9,False,4.5,"The report captures frequent exhaustion, anxiety, and low mood recurring across many entries, but evidence for extreme symptoms often stems from individual highlights rather than widespread patterns. Overall, the assessments show high reported distress with strong supporting evidence, yet the analysis may overstate severity by focusing on isolated statements.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005809.html,,"{  
+  ""frequency_rubric_per_item"": [5,3,4,4,4,4,5,4,4,4],  
+  ""frequency_rubric_mean"": 4.10,  
+  ""evidence_relevance_per_item"": [5,4,5,5,5,5,5,5,5,5],  
+  ""evidence_relevance_mean"": 4.90,  
+  ""hallucination"": false,  
+  ""details"": ""The report captures frequent exhaustion, anxiety, and low mood recurring across many entries, but evidence for extreme symptoms often stems from individual highlights rather than widespread patterns. Overall, the assessments show high reported distress with strong supporting evidence, yet the analysis may overstate severity by focusing on isolated statements.""  
+}"
+LLM_a_nemotron,57,rag_aware,48,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005809.html,rag_unavailable_or_empty,
+LLM_a_nemotron,58,end_to_end,44,3.2,2.1,False,2.65,"User shows high distress with frequent fatigue, hopelessness, depression, and effort fatigue, yet the evidence cited for each item is often uneven and off‑topic.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005912.html,,"{""frequency_rubric_per_item"":[4,3,2,4,2,2,4,3,4,4],""frequency_rubric_mean"":3.2,""evidence_relevance_per_item"":[4,2,2,3,1,1,2,1,2,3],""evidence_relevance_mean"":2.1,""hallucination"":false,""details"":""User shows high distress with frequent fatigue, hopelessness, depression, and effort fatigue, yet the evidence cited for each item is often uneven and off‑topic.""}"
+LLM_a_nemotron,58,rag_aware,44,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005912.html,rag_unavailable_or_empty,
+LLM_a_nemotron,59,end_to_end,42,1.0,2.3,True,1.65,"Evidence for many items is minimal or misaligned, suggesting fabricated scores. The report also misassigns stems, raising concerns about its validity.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005944.html,,"{
+  ""frequency_rubric_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""frequency_rubric_mean"": 1.00,
+  ""evidence_relevance_per_item"": [5,2,2,1,5,4,1,1,1,1],
+  ""evidence_relevance_mean"": 2.20,
+  ""hallucination"": true,
+  ""details"": ""Evidence for many items is minimal or misaligned, suggesting fabricated scores. The report also misassigns stems, raising concerns about its validity.""
+}"
+LLM_a_nemotron,59,rag_aware,42,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_005944.html,rag_unavailable_or_empty,
+LLM_a_nemotron,60,end_to_end,44,3.7,5.0,False,4.35,"The diary reveals pervasive fatigue, restlessness, and depressive mood, consistently reported across days, while anxiety appears frequent but less intense. Hallucinations were not detected; the report aligns with actual entries. Strengths include a structured routine, creative practice, and proactive planning that anchor mood. The high frequency of tiredness and restlessness suggests the need for targeted coping strategies. Overall, the content is a realistic reflection of the author’s emotional landscape.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010030.html,,"{
+  ""frequency_rubric_per_item"": [5,4,3,2,5,3,3,2,5,5],
+  ""frequency_rubric_mean"": 3.70,
+  ""evidence_relevance_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""evidence_relevance_mean"": 5.00,
+  ""hallucination"": false,
+  ""details"": ""The diary reveals pervasive fatigue, restlessness, and depressive mood, consistently reported across days, while anxiety appears frequent but less intense. Hallucinations were not detected; the report aligns with actual entries. Strengths include a structured routine, creative practice, and proactive planning that anchor mood. The high frequency of tiredness and restlessness suggests the need for targeted coping strategies. Overall, the content is a realistic reflection of the author\u2019s emotional landscape.""
+}"
+LLM_a_nemotron,60,rag_aware,44,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010030.html,rag_unavailable_or_empty,
+LLM_a_nemotron,61,end_to_end,34,3.3,3.8,False,3.55,"The report appropriately identifies frequent fatigue, restlessness, and effortful feelings, but undercaptures depression and hopelessness due to sparse evidence.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010114.html,,"{
+  ""frequency_rubric_per_item"": [5,3,2,2,5,3,5,2,1,5],
+  ""frequency_rubric_mean"": 3.30,
+  ""evidence_relevance_per_item"": [5,4,3,2,5,4,5,3,2,5],
+  ""evidence_relevance_mean"": 3.80,
+  ""hallucination"": false,
+  ""details"": ""The report appropriately identifies frequent fatigue, restlessness, and effortful feelings, but undercaptures depression and hopelessness due to sparse evidence.""
+}"
+LLM_a_nemotron,61,rag_aware,34,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010114.html,rag_unavailable_or_empty,
+LLM_a_nemotron,62,end_to_end,43,3.9,4.9,True,4.4,"The report suggests many episodes of tiredness, anxiety, restlessness, depression, and hopelessness, yet the journal shows recurring symptoms with elevated distress, and the evidence comments align with themes, but some quantitative claims may be understated.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010252.html,,"{
+  ""frequency_rubric_per_item"": [4,4,4,4,4,4,4,3,4,4],
+  ""frequency_rubric_mean"": 3.90,
+  ""evidence_relevance_per_item"": [5,5,4,5,5,5,5,5,5,5],
+  ""evidence_relevance_mean"": 4.90,
+  ""hallucination"": true,
+  ""details"": ""The report suggests many episodes of tiredness, anxiety, restlessness, depression, and hopelessness, yet the journal shows recurring symptoms with elevated distress, and the evidence comments align with themes, but some quantitative claims may be understated.""
+}"
+LLM_a_nemotron,62,rag_aware,43,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010252.html,rag_unavailable_or_empty,
+LLM_a_nemotron,63,end_to_end,45,4.2,4.7,False,4.45,"The journal shows frequent fatigue, anxiety, and restlessness, with occasional hopelessness and depression, indicating high distress but strong self‑care routines such as grounding, hydration tracking, and scheduled breaks.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010357.html,,"{
+  ""frequency_rubric_per_item"": [5,5,4,4,5,3,4,3,4,5],
+  ""frequency_rubric_mean"": 4.20,
+  ""evidence_relevance_per_item"": [5,5,5,5,5,2,5,5,5,5],
+  ""evidence_relevance_mean"": 4.70,
+  ""hallucination"": false,
+  ""details"": ""The journal shows frequent fatigue, anxiety, and restlessness, with occasional hopelessness and depression, indicating high distress but strong self‑care routines such as grounding, hydration tracking, and scheduled breaks.""
+}"
+LLM_a_nemotron,63,rag_aware,45,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010357.html,rag_unavailable_or_empty,
+LLM_a_nemotron,64,end_to_end,44,4.4,2.0,True,3.2,"The report lists high distress across several items, with many scored 5. However, the cited evidence appears generic and not directly drawn from entries, leading to low evidence relevance. The overall narrative overstates symptom presence, likely fabricating support for the high K‑10 scores.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010440.html,,"{
+  ""frequency_rubric_per_item"": [4,5,5,4,5,4,4,4,4,5],
+  ""frequency_rubric_mean"": 4.4,
+  ""evidence_relevance_per_item"": [2,2,2,2,2,2,2,2,2,2],
+  ""evidence_relevance_mean"": 2.00,
+  ""hallucination"": true,
+  ""details"": ""The report lists high distress across several items, with many scored 5. However, the cited evidence appears generic and not directly drawn from entries, leading to low evidence relevance. The overall narrative overstates symptom presence, likely fabricating support for the high K‑10 scores.""
+}"
+LLM_a_nemotron,64,rag_aware,44,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010440.html,rag_unavailable_or_empty,
+LLM_a_nemotron,65,end_to_end,41,2.9,4.0,False,3.45,"The report captures recurring fatigue and anxiety across the year, noting multiple instances of tiredness, nervousness, and depressive thoughts, while documenting structured coping strategies. Evidence consistently references specific entries, supporting the overall symptom frequency assessment.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010512.html,,"{ 
+  ""frequency_rubric_per_item"": [4,4,2,2,3,2,3,2,4,3], 
+  ""frequency_rubric_mean"": 2.90, 
+  ""evidence_relevance_per_item"": [4,4,4,4,4,4,4,4,4,4], 
+  ""evidence_relevance_mean"": 4.00, 
+  ""hallucination"": false, 
+  ""details"": ""The report captures recurring fatigue and anxiety across the year, noting multiple instances of tiredness, nervousness, and depressive thoughts, while documenting structured coping strategies. Evidence consistently references specific entries, supporting the overall symptom frequency assessment."" 
+}"
+LLM_a_nemotron,65,rag_aware,41,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010512.html,rag_unavailable_or_empty,
+LLM_a_nemotron,66,end_to_end,32,3.1,4.0,False,3.55,"The diary shows recurring fatigue, nervousness, and occasional restlessness across many entries, with evidence of anxiety and mild sadness. Grounding and ritual practices appear to help, yet moments of hopelessness and worthlessness surface, indicating moderate‑to‑high distress overall.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010554.html,,"{
+  ""frequency_rubric_per_item"": [4,4,2,3,3,3,3,3,3,3],
+  ""frequency_rubric_mean"": 3.10,
+  ""evidence_relevance_per_item"": [4,4,4,4,4,4,4,4,4,4],
+  ""evidence_relevance_mean"": 4.00,
+  ""hallucination"": false,
+  ""details"": ""The diary shows recurring fatigue, nervousness, and occasional restlessness across many entries, with evidence of anxiety and mild sadness. Grounding and ritual practices appear to help, yet moments of hopelessness and worthlessness surface, indicating moderate‑to‑high distress overall.""
+}"
+LLM_a_nemotron,66,rag_aware,32,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010554.html,rag_unavailable_or_empty,
+LLM_a_nemotron,67,end_to_end,33,2.2,2.4,False,2.3,"Strong, repetitive evidence for tiredness, nervousness, and restlessness; weak or mismatched evidence for extreme nervousness, hopelessness, and worthlessness.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010627.html,,"{
+  ""frequency_rubric_per_item"": [4,4,1,1,4,2,1,3,1,1],
+  ""frequency_rubric_mean"": 2.20,
+  ""evidence_relevance_per_item"": [3,3,1,1,3,2,4,4,2,1],
+  ""evidence_relevance_mean"": 2.40,
+  ""hallucination"": false,
+  ""details"": ""Strong, repetitive evidence for tiredness, nervousness, and restlessness; weak or mismatched evidence for extreme nervousness, hopelessness, and worthlessness.""
+}"
+LLM_a_nemotron,67,rag_aware,33,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010627.html,rag_unavailable_or_empty,
+LLM_a_nemotron,68,end_to_end,48,3.6,4.8,False,4.2,"The diary shows frequent fatigue, restlessness, and depressive moods, yet also evidence of coping strategies like grounding and routine building. Symptom frequencies moderately high, with evidence well tied to each item. Overall, the content supports the reported K‑10 pattern without contradictions.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010700.html,,"{  
+  ""frequency_rubric_per_item"": [4,4,3,3,4,2,4,4,4,4],  
+  ""frequency_rubric_mean"": 3.60,  
+  ""evidence_relevance_per_item"": [5,5,3,5,5,5,5,5,5,5],  
+  ""evidence_relevance_mean"": 4.80,  
+  ""hallucination"": false,  
+  ""details"": ""The diary shows frequent fatigue, restlessness, and depressive moods, yet also evidence of coping strategies like grounding and routine building. Symptom frequencies moderately high, with evidence well tied to each item. Overall, the content supports the reported K‑10 pattern without contradictions.""  
+}"
+LLM_a_nemotron,68,rag_aware,48,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010700.html,rag_unavailable_or_empty,
+LLM_a_nemotron,69,end_to_end,46,3.0,3.0,True,3.0,"The report gives a total K‑10 score but lacks per‑item ratings, evidence, or rationale, so the frequency and evidence relevance cannot be verified; this omission suggests fabricated specificity.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010737.html,,"{  
+  ""frequency_rubric_per_item"": [3,3,3,3,3,3,3,3,3,3],  
+  ""frequency_rubric_mean"": 3.00,  
+  ""evidence_relevance_per_item"": [3,3,3,3,3,3,3,3,3,3],  
+  ""evidence_relevance_mean"": 3.00,  
+  ""hallucination"": true,  
+  ""details"": ""The report gives a total K‑10 score but lacks per‑item ratings, evidence, or rationale, so the frequency and evidence relevance cannot be verified; this omission suggests fabricated specificity.""}"
+LLM_a_nemotron,69,rag_aware,46,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010737.html,rag_unavailable_or_empty,
+LLM_a_nemotron,70,end_to_end,38,3.2,3.4,False,3.3,"The report consistently cites diary evidence for fatigue, nervousness, restlessness, and depressive mood, with moderate‑to‑high frequency across entries and no fabricated statements.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010813.html,,"{
+  ""frequency_rubric_per_item"": [3,4,3,2,4,2,3,3,4,4],
+  ""frequency_rubric_mean"": 3.20,
+  ""evidence_relevance_per_item"": [4,4,3,3,4,2,3,3,4,4],
+  ""evidence_relevance_mean"": 3.20,
+  ""hallucination"": false,
+  ""details"": ""The report consistently cites diary evidence for fatigue, nervousness, restlessness, and depressive mood, with moderate‑to‑high frequency across entries and no fabricated statements.""
+}"
+LLM_a_nemotron,70,rag_aware,38,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010813.html,rag_unavailable_or_empty,
+LLM_a_nemotron,71,end_to_end,31,3.1,3.1,False,3.1,"The report’s item scores align with how often each theme appears across the diary. Evidence excerpts mostly match the themes, though a few entries are a bit generic. No fabricated facts were detected.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010854.html,,"{
+  ""frequency_rubric_per_item"": [4, 4, 3, 2, 4, 2, 2, 3, 3, 4],
+  ""frequency_rubric_mean"": 3.10,
+  ""evidence_relevance_per_item"": [4, 4, 3, 2, 4, 2, 2, 3, 3, 4],
+  ""evidence_relevance_mean"": 3.10,
+  ""hallucination"": false,
+  ""details"": ""The report’s item scores align with how often each theme appears across the diary. Evidence excerpts mostly match the themes, though a few entries are a bit generic. No fabricated facts were detected.""
+}"
+LLM_a_nemotron,71,rag_aware,31,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010854.html,rag_unavailable_or_empty,
+LLM_a_nemotron,72,end_to_end,36,2.7,4.1,False,3.4,"Entry excerpts highlight recurring anxiety, restlessness, and depressive states, with fatigue and guilt. Though persistent distress signals high K‑10 scores, the narrator maintains coping habits—grounding, journaling, exercise—suggesting some resilience. Overall, the diary reveals chronic worry and effortful fatigue, warranting continued monitoring.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010937.html,,"{
+  ""frequency_rubric_per_item"": [2,2,1,1,4,3,3,2,4,5],
+  ""frequency_rubric_mean"": 2.70,
+  ""evidence_relevance_per_item"": [5,5,1,1,5,5,5,4,5,5],
+  ""evidence_relevance_mean"": 4.10,
+  ""hallucination"": false,
+  ""details"": ""Entry excerpts highlight recurring anxiety, restlessness, and depressive states, with fatigue and guilt. Though persistent distress signals high K‑10 scores, the narrator maintains coping habits—grounding, journaling, exercise—suggesting some resilience. Overall, the diary reveals chronic worry and effortful fatigue, warranting continued monitoring.""
+}"
+LLM_a_nemotron,72,rag_aware,36,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_010937.html,rag_unavailable_or_empty,
+LLM_a_nemotron,73,end_to_end,38,4.1,5.0,False,4.55,Report reflects repeated diary entries for tiredness and anxiety; evidence directly supports each item; no new facts introduced.,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011031.html,,"{
+  ""frequency_rubric_per_item"": [5,4,4,4,4,4,4,4,4,4],
+  ""frequency_rubric_mean"": 4.10,
+  ""evidence_relevance_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""evidence_relevance_mean"": 5.00,
+  ""hallucination"": false,
+  ""details"": ""Report reflects repeated diary entries for tiredness and anxiety; evidence directly supports each item; no new facts introduced.""
+}"
+LLM_a_nemotron,73,rag_aware,38,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011031.html,rag_unavailable_or_empty,
+LLM_a_nemotron,74,end_to_end,37,3.8,4.2,False,4.0,"The diary shows pervasive fatigue, racing thoughts, and restlessness, with some hopelessness and guilt, yet frequent grounding practices and social supports hint at resilience and gradual coping.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011117.html,,"{
+  ""frequency_rubric_per_item"": [5,5,3,3,4,3,4,3,4,4],
+  ""frequency_rubric_mean"": 3.80,
+  ""evidence_relevance_per_item"": [5,5,4,5,5,2,5,1,5,5],
+  ""evidence_relevance_mean"": 4.20,
+  ""hallucination"": false,
+  ""details"": ""The diary shows pervasive fatigue, racing thoughts, and restlessness, with some hopelessness and guilt, yet frequent grounding practices and social supports hint at resilience and gradual coping.""
+}"
+LLM_a_nemotron,74,rag_aware,37,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011117.html,rag_unavailable_or_empty,
+LLM_a_nemotron,75,end_to_end,35,3.3,1.0,True,2.15,"The diary shows frequent fatigue, anxiety, restlessness, and depressive mood, but the report’s evidence list is sparse and often unrelated to the specific items, indicating a high risk of hallucination.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011156.html,,"{
+  ""frequency_rubric_per_item"": [4,4,3,2,4,3,3,2,4,4],
+  ""frequency_rubric_mean"": 3.3,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.0,
+  ""hallucination"": true,
+  ""details"": ""The diary shows frequent fatigue, anxiety, restlessness, and depressive mood, but the report’s evidence list is sparse and often unrelated to the specific items, indicating a high risk of hallucination.""
+}"
+LLM_a_nemotron,75,rag_aware,35,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011156.html,rag_unavailable_or_empty,
+LLM_a_nemotron,76,end_to_end,47,4.5,5.0,True,4.75,"The review finds the K‑10 frequency scores appear justified by consistent mentions across entries, though some items may be slightly over‑estimated. Evidence notes align well with each symptom. The report, however, claims a subset of December entries and a summary score that do not match the supplied text, indicating a hallucination.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011226.html,,"{ ""frequency_rubric_per_item"": [5,5,4,4,5,5,4,4,5,4], ""frequency_rubric_mean"": 4.5, ""evidence_relevance_per_item"": [5,5,5,5,5,5,5,5,5,5], ""evidence_relevance_mean"": 5.0, ""hallucination"": true, ""details"": ""The review finds the K‑10 frequency scores appear justified by consistent mentions across entries, though some items may be slightly over‑estimated. Evidence notes align well with each symptom. The report, however, claims a subset of December entries and a summary score that do not match the supplied text, indicating a hallucination."" }"
+LLM_a_nemotron,76,rag_aware,47,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011226.html,rag_unavailable_or_empty,
+LLM_a_nemotron,77,end_to_end,41,1.0,1.0,True,1.0,"Little to no measurable evidence in the report to support specific K-10 scores, so all ratings were set to the lowest band.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011319.html,,"{
+  ""frequency_rubric_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""frequency_rubric_mean"": 1.00,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.00,
+  ""hallucination"": true,
+  ""details"": ""Little to no measurable evidence in the report to support specific K-10 scores, so all ratings were set to the lowest band.""
+}"
+LLM_a_nemotron,77,rag_aware,41,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011319.html,rag_unavailable_or_empty,
+LLM_a_nemotron,78,end_to_end,39,1.2,4.0,True,2.6,"The report’s K‑10 scoring largely lacks support in the journal; several symptoms are not mentioned in the entries and appear invented. Frequency claims are weak, and evidence citations are brief and sometimes off‑theme, leading to moderate relevance. Overall the report likely contains hallucinations and guesses rather than rigorous analysis.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011403.html,,"{
+  ""frequency_rubric_per_item"": [1,2,1,1,2,1,1,1,1,1],
+  ""frequency_rubric_mean"": 1.1,
+  ""evidence_relevance_per_item"": [4,4,4,4,4,4,4,4,4,4],
+  ""evidence_relevance_mean"": 4.0,
+  ""hallucination"": true,
+  ""details"": ""The report’s K‑10 scoring largely lacks support in the journal; several symptoms are not mentioned in the entries and appear invented. Frequency claims are weak, and evidence citations are brief and sometimes off‑theme, leading to moderate relevance. Overall the report likely contains hallucinations and guesses rather than rigorous analysis.""
+}"
+LLM_a_nemotron,78,rag_aware,39,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011403.html,rag_unavailable_or_empty,
+LLM_a_nemotron,79,end_to_end,46,3.2,2.5,False,2.85,"Diary reveals persistent fatigue and anxiety, with frequent restlessness and moderate hopelessness. Structured rituals and occasional social support buffer distress, but overall mood remains low.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011451.html,,"{
+  ""frequency_rubric_per_item"": [5,4,3,2,4,2,3,2,3,4],
+  ""frequency_rubric_mean"": 3.20,
+  ""evidence_relevance_per_item"": [5,3,4,3,1,2,2,1,3,1],
+  ""evidence_relevance_mean"": 2.40,
+  ""hallucination"": false,
+  ""details"": ""Diary reveals persistent fatigue and anxiety, with frequent restlessness and moderate hopelessness. Structured rituals and occasional social support buffer distress, but overall mood remains low.""
+}"
+LLM_a_nemotron,79,rag_aware,46,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011451.html,rag_unavailable_or_empty,
+LLM_a_nemotron,80,end_to_end,20,2.2,2.2,False,2.2,"The K-10 estimate appears modest, with most symptoms reported only occasionally. Fatigue, anxiety, and restlessness are the most frequent themes, while severe sadness, hopelessness, and worthlessness are rare. Evidence supports these patterns within the journal, and no unfounded claims are made.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011532.html,,"{""frequency_rubric_per_item"":[3,4,1,3,4,1,2,1,2,1],""frequency_rubric_mean"":2.20,""evidence_relevance_per_item"":[4,4,1,4,4,1,1,1,1,1],""evidence_relevance_mean"":2.20,""hallucination"":false,""details"":""The K-10 estimate appears modest, with most symptoms reported only occasionally. Fatigue, anxiety, and restlessness are the most frequent themes, while severe sadness, hopelessness, and worthlessness are rare. Evidence supports these patterns within the journal, and no unfounded claims are made.""}"
+LLM_a_nemotron,80,rag_aware,20,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011532.html,rag_unavailable_or_empty,
+LLM_a_nemotron,81,end_to_end,48,4.7,5.0,False,4.85,"The diary shows pervasive fatigue, anxiety, and depressive mood across most days, with some evidence of worthlessness occurring less consistently.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011604.html,,"{""frequency_rubric_per_item"":[5,5,5,4,5,5,5,3,5,5],""frequency_rubric_mean"":4.70,""evidence_relevance_per_item"":[5,5,5,5,5,5,5,5,5,5],""evidence_relevance_mean"":5.00,""hallucination"":false,""details"":""The diary shows pervasive fatigue, anxiety, and depressive mood across most days, with some evidence of worthlessness occurring less consistently.""}"
+LLM_a_nemotron,81,rag_aware,48,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011604.html,rag_unavailable_or_empty,
+LLM_a_nemotron,82,end_to_end,42,1.9,1.3,True,1.6,"The score profile assigns high distress for many items, yet evidence citations in the diary are limited and often absent, suggesting the reported frequency may be overstated. The appraisal can benefit from corroborating data and more explicit trial-to-trial mention of symptoms to improve reliability.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011659.html,,"{""frequency_rubric_per_item"":[2,3,1,2,2,2,2,1,2,2],""frequency_rubric_mean"":1.90,""evidence_relevance_per_item"":[3,2,1,1,1,1,1,1,1,1],""evidence_relevance_mean"":1.30,""hallucination"":true,""details"":""The score profile assigns high distress for many items, yet evidence citations in the diary are limited and often absent, suggesting the reported frequency may be overstated. The appraisal can benefit from corroborating data and more explicit trial-to-trial mention of symptoms to improve reliability.""}"
+LLM_a_nemotron,82,rag_aware,42,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011659.html,rag_unavailable_or_empty,
+LLM_a_nemotron,83,end_to_end,31,3.1,3.2,False,3.15,"The review finds that tiredness, restlessness, and anxiety occur frequently across the diary, while hopelessness and depression are moderately frequent. Evidence supports most items, though references to worthlessness are scarce, and no clear fabrication or contradictions were detected.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011734.html,,"{""frequency_rubric_per_item"":[5,4,2,3,3,3,3,1,3,4],""frequency_rubric_mean"":3.10,""evidence_relevance_per_item"":[4,4,3,3,3,3,3,2,3,4],""evidence_relevance_mean"":3.00,""hallucination"":false,""details"":""The review finds that tiredness, restlessness, and anxiety occur frequently across the diary, while hopelessness and depression are moderately frequent. Evidence supports most items, though references to worthlessness are scarce, and no clear fabrication or contradictions were detected.""}"
+LLM_a_nemotron,83,rag_aware,31,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011734.html,rag_unavailable_or_empty,
+LLM_a_nemotron,84,end_to_end,47,2.0,1.0,True,1.5,"The report's evidence does not match the K10 stems and provides no real frequency data. Scores appear fabricated, leading to low evidence relevance and a probable hallucination.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011814.html,,"{
+  ""frequency_rubric_per_item"": [2,2,2,2,2,2,2,2,2,2],
+  ""frequency_rubric_mean"": 2.00,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.00,
+  ""hallucination"": true,
+  ""details"": ""The report's evidence does not match the K10 stems and provides no real frequency data. Scores appear fabricated, leading to low evidence relevance and a probable hallucination.""
+}"
+LLM_a_nemotron,84,rag_aware,47,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011814.html,rag_unavailable_or_empty,
+LLM_a_nemotron,85,end_to_end,30,2.0,1.0,True,1.5,"The report assigns uniform K‑10 scores without citing specific diary excerpts, violating the need for item‑level evidence and over‑smoothing frequency patterns.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011841.html,,"{
+  ""frequency_rubric_per_item"": [2,2,2,2,2,2,2,2,2,2],
+  ""frequency_rubric_mean"": 2.00,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.00,
+  ""hallucination"": true,
+  ""details"": ""The report assigns uniform K‑10 scores without citing specific diary excerpts, violating the need for item‑level evidence and over‑smoothing frequency patterns.""
+}"
+LLM_a_nemotron,85,rag_aware,30,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011841.html,rag_unavailable_or_empty,
+LLM_a_nemotron,86,end_to_end,41,3.7,1.9,True,2.8,"The report mixes up symptom themes with evidence, misaligning items and sources; overall reliability is low with several hallucinated or out‑of‑context statements.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011914.html,,"{
+  ""frequency_rubric_per_item"": [4,4,3,3,4,3,4,4,4,4],
+  ""frequency_rubric_mean"": 3.70,
+  ""evidence_relevance_per_item"": [3,3,1,1,2,1,2,2,2,2],
+  ""evidence_relevance_mean"": 1.90,
+  ""hallucination"": true,
+  ""details"": ""The report mixes up symptom themes with evidence, misaligning items and sources; overall reliability is low with several hallucinated or out‑of‑context statements.""
+}"
+LLM_a_nemotron,86,rag_aware,41,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011914.html,rag_unavailable_or_empty,
+LLM_a_nemotron,87,end_to_end,39,3.7,4.4,True,4.05,"The report gives high scores for most items, reflecting frequent mention of fatigue, restlessness and nervousness, but it pairs some items with irrelevant evidence and invents details (e.g., neck pain, hopelessness) not present, indicating factual inaccuracies.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011951.html,,"{
+  ""frequency_rubric_per_item"": [4,4,4,2,4,4,4,4,4,3],
+  ""frequency_rubric_mean"": 3.5,
+  ""evidence_relevance_per_item"": [5,5,2,2,5,5,5,5,5,5],
+  ""evidence_relevance_mean"": 4.4,
+  ""hallucination"": true,
+  ""details"": ""The report gives high scores for most items, reflecting frequent mention of fatigue, restlessness and nervousness, but it pairs some items with irrelevant evidence and invents details (e.g., neck pain, hopelessness) not present, indicating factual inaccuracies.""
+}"
+LLM_a_nemotron,87,rag_aware,39,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_011951.html,rag_unavailable_or_empty,
+LLM_a_nemotron,88,end_to_end,40,3.7,5.0,False,4.35,"The diary shows frequent fatigue, nervousness, restlessness, and a high degree of depressive symptoms, with moderate hopelessness and worthlessness. Evidence for each item is specific and aligns with the reported entries, supporting the assigned scores.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012039.html,,"{
+  ""frequency_rubric_per_item"": [4,4,4,3,4,4,3,3,4,4],
+  ""frequency_rubric_mean"": 3.70,
+  ""evidence_relevance_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""evidence_relevance_mean"": 5.00,
+  ""hallucination"": false,
+  ""details"": ""The diary shows frequent fatigue, nervousness, restlessness, and a high degree of depressive symptoms, with moderate hopelessness and worthlessness. Evidence for each item is specific and aligns with the reported entries, supporting the assigned scores.""
+}"
+LLM_a_nemotron,88,rag_aware,40,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012039.html,rag_unavailable_or_empty,
+LLM_a_nemotron,89,end_to_end,32,2.8,1.5,False,2.15,"Diary shows frequent tiredness and anxiety; restlessness common. Hopelessness, worthlessness, severe sadness appear sporadically. Evidence for most items is scarce, limiting reliability. No hallucinations detected.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012113.html,,"{
+  ""frequency_rubric_per_item"": [5,4,2,1,4,2,3,1,2,4],
+  ""frequency_rubric_mean"": 2.80,
+  ""evidence_relevance_per_item"": [4,3,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.50,
+  ""hallucination"": false,
+  ""details"": ""Diary shows frequent tiredness and anxiety; restlessness common. Hopelessness, worthlessness, severe sadness appear sporadically. Evidence for most items is scarce, limiting reliability. No hallucinations detected.""
+}"
+LLM_a_nemotron,89,rag_aware,32,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012113.html,rag_unavailable_or_empty,
+LLM_a_nemotron,90,end_to_end,35,5.0,1.0,True,3.0,"Report infers high symptom frequency across the last 30 days but provides minimal or unrelated evidence for each item, suggesting both under‑justification and likely fabrication.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012259.html,,"{
+  ""frequency_rubric_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""frequency_rubric_mean"": 5.00,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.00,
+  ""hallucination"": true,
+  ""details"": ""Report infers high symptom frequency across the last 30 days but provides minimal or unrelated evidence for each item, suggesting both under‑justification and likely fabrication.""
+}"
+LLM_a_nemotron,90,rag_aware,35,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012259.html,rag_unavailable_or_empty,
+LLM_a_nemotron,91,end_to_end,49,3.0,2.0,True,2.5,Report over‑states frequency and provides irrelevant evidence; few symptoms documented consistently across the diary.,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012347.html,,"{
+  ""frequency_rubric_per_item"": [4,3,2,2,4,3,3,2,3,4],
+  ""frequency_rubric_mean"": 3.00,
+  ""evidence_relevance_per_item"": [2,2,2,2,2,2,2,2,2,2],
+  ""evidence_relevance_mean"": 2.00,
+  ""hallucination"": true,
+  ""details"": ""Report over‑states frequency and provides irrelevant evidence; few symptoms documented consistently across the diary.""
+}"
+LLM_a_nemotron,91,rag_aware,49,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012347.html,rag_unavailable_or_empty,
+LLM_a_nemotron,92,end_to_end,48,4.7,5.0,False,4.85,"The report accurately reflects frequent distress themes, with evidence directly tied to each item. No fabricated content was found.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012409.html,,"{
+  ""frequency_rubric_per_item"": [5,5,5,4,4,5,5,5,5,4],
+  ""frequency_rubric_mean"": 4.70,
+  ""evidence_relevance_per_item"": [5,5,5,5,5,5,5,5,5,5],
+  ""evidence_relevance_mean"": 5.00,
+  ""hallucination"": false,
+  ""details"": ""The report accurately reflects frequent distress themes, with evidence directly tied to each item. No fabricated content was found.""
+}"
+LLM_a_nemotron,92,rag_aware,48,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012409.html,rag_unavailable_or_empty,
+LLM_a_nemotron,93,end_to_end,39,3.6,2.3,False,2.95,"Frequent fatigue, restlessness and effort perception are prominent across entries; nervousness is common but intense panic is seldom. Evidence citations poorly match the specific items, lowering relevance scores. No contradictory facts were detected in the summary.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012443.html,,"{""frequency_rubric_per_item"":[5,5,2,2,5,2,5,5,2,3],""frequency_rubric_mean"":3.40,""evidence_relevance_per_item"":[3,2,2,2,2,2,3,3,2,2],""evidence_relevance_mean"":2.10,""hallucination"":false,""details"":""Frequent fatigue, restlessness and effort perception are prominent across entries; nervousness is common but intense panic is seldom. Evidence citations poorly match the specific items, lowering relevance scores. No contradictory facts were detected in the summary.""}"
+LLM_a_nemotron,93,rag_aware,39,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012443.html,rag_unavailable_or_empty,
+LLM_a_nemotron,94,end_to_end,35,2.0,1.0,False,1.5,"Report presents vague, generic evidence with no explicit scores or frequency support, leading to low confidence in inferred K‑10 item ratings.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012524.html,,"{""frequency_rubric_per_item"":[2,2,2,2,2,2,2,2,2,2],""frequency_rubric_mean"":2.00,""evidence_relevance_per_item"":[1,1,1,1,1,1,1,1,1,1],""evidence_relevance_mean"":1.00,""hallucination"":false,""details"":""Report presents vague, generic evidence with no explicit scores or frequency support, leading to low confidence in inferred K‑10 item ratings.""}"
+LLM_a_nemotron,94,rag_aware,35,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012524.html,rag_unavailable_or_empty,
+LLM_a_nemotron,95,end_to_end,40,3.0,2.2,True,2.6,"The report’s item evidence is largely misaligned with the diary entries, indicating fabrication and poor relevance.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012600.html,,"{
+  ""frequency_rubric_per_item"": [4,3,1,3,4,3,3,2,3,4],
+  ""frequency_rubric_mean"": 3.00,
+  ""evidence_relevance_per_item"": [5,5,1,1,1,3,1,1,1,3],
+  ""evidence_relevance_mean"": 2.20,
+  ""hallucination"": true,
+  ""details"": ""The report’s item evidence is largely misaligned with the diary entries, indicating fabrication and poor relevance.""
+}"
+LLM_a_nemotron,95,rag_aware,40,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012600.html,rag_unavailable_or_empty,
+LLM_a_nemotron,96,end_to_end,32,3.3,4.0,False,3.65,"The report reasonably reflects diary frequency and cites relevant evidence for each K‑10 item, with no unsupported claims.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012648.html,,"{
+  ""frequency_rubric_per_item"": [4,4,2,3,4,3,4,3,3,3],
+  ""frequency_rubric_mean"": 3.3,
+  ""evidence_relevance_per_item"": [4,4,4,4,4,4,4,4,4,4],
+  ""evidence_relevance_mean"": 4.0,
+  ""hallucination"": false,
+  ""details"": ""The report reasonably reflects diary frequency and cites relevant evidence for each K‑10 item, with no unsupported claims.""
+}"
+LLM_a_nemotron,96,rag_aware,32,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012648.html,rag_unavailable_or_empty,
+LLM_a_nemotron,97,end_to_end,42,1.5,1.9,True,1.7,"The report cites tiredness and nervousness, but restlessness, depressive feelings, and hopelessness lack concrete journal support. Scoring patterns show low frequency across entries, and the asserted total score of 42 is inconsistent with the evidence provided, indicating possible hallucination. Strengths include clear documentation of nervousness and tiredness, though further corroboration is needed.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012723.html,,"{
+  ""frequency_rubric_per_item"": [2,3,2,1,1,1,1,1,2,1],
+  ""frequency_rubric_mean"": 1.50,
+  ""evidence_relevance_per_item"": [4,4,3,1,1,1,1,1,2,1],
+  ""evidence_relevance_mean"": 1.90,
+  ""hallucination"": true,
+  ""details"": ""The report cites tiredness and nervousness, but restlessness, depressive feelings, and hopelessness lack concrete journal support. Scoring patterns show low frequency across entries, and the asserted total score of 42 is inconsistent with the evidence provided, indicating possible hallucination. Strengths include clear documentation of nervousness and tiredness, though further corroboration is needed.""
+}"
+LLM_a_nemotron,97,rag_aware,42,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012723.html,rag_unavailable_or_empty,
+LLM_a_nemotron,98,end_to_end,47,2.0,1.0,True,1.5,"The summary cites symptoms that are scarcely reported in the journal, with most evidence irrelevant to the K‑10 items. Frequency estimates are low, reflecting limited occurrences. Overall, the analysis overstates distress, suggesting fabricated or misinterpreted content.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012756.html,,"{""frequency_rubric_per_item"":[2,2,2,2,2,2,2,2,2,2],""frequency_rubric_mean"":2.00,""evidence_relevance_per_item"":[1,1,1,1,1,1,1,1,1,1],""evidence_relevance_mean"":1.00,""hallucination"":true,""details"":""The summary cites symptoms that are scarcely reported in the journal, with most evidence irrelevant to the K‑10 items. Frequency estimates are low, reflecting limited occurrences. Overall, the analysis overstates distress, suggesting fabricated or misinterpreted content.""}"
+LLM_a_nemotron,98,rag_aware,47,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012756.html,rag_unavailable_or_empty,
+LLM_a_nemotron,99,end_to_end,37,2.3,2.0,False,2.15,"The diary reveals persistent anxiety and sporadic fatigue, with grounding rituals reducing restlessness. Low self‑worth reflections recur, while depressive and hopeless themes are infrequent. Habitual self‑care tracking and therapy engagement are strengths. Overall psychological distress remains elevated, yet coping strategies suggest gradual improvement.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012834.html,,"{""frequency_rubric_per_item"":[4,4,3,2,2,1,1,1,2,3],""frequency_rubric_mean"":2.30,""evidence_relevance_per_item"":[5,2,3,2,1,1,1,1,1,3],""evidence_relevance_mean"":2.00,""hallucination"":false,""details"":""The diary reveals persistent anxiety and sporadic fatigue, with grounding rituals reducing restlessness. Low self‑worth reflections recur, while depressive and hopeless themes are infrequent. Habitual self‑care tracking and therapy engagement are strengths. Overall psychological distress remains elevated, yet coping strategies suggest gradual improvement.""}"
+LLM_a_nemotron,99,rag_aware,37,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012834.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,0,end_to_end,22,2.9,1.2,False,2.05,"Diary shows frequent tiredness, nervousness, hyperactivity, feeling effortful work, some hopelessness, moderate depression. Evidence points to consistent anxiety symptoms with episodic mood problems but sparse self‑reported low self‑esteem or worthlessness. Strengths include grounding practices and brief naps that help sustain alertness.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012912.html,,"{
+  ""frequency_rubric_per_item"": [4,4,3,3,3,2,4,1,3,2],
+  ""frequency_rubric_mean"": 2.90,
+  ""evidence_relevance_per_item"": [1,2,1,2,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.20,
+  ""hallucination"": false,
+  ""details"": ""Diary shows frequent tiredness, nervousness, hyperactivity, feeling effortful work, some hopelessness, moderate depression. Evidence points to consistent anxiety symptoms with episodic mood problems but sparse self‑reported low self‑esteem or worthlessness. Strengths include grounding practices and brief naps that help sustain alertness.""
+}"
+LLM_b_gpt-oss,0,rag_aware,22,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_012912.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,1,end_to_end,31,3.1,2.0,False,2.55,"The report assigns high frequency for tiredness, nervousness, and intense nervousness, moderate for restlessness and low mood, and lower for hopelessness and worthlessness, reflecting recurring but not constant themes. Evidence citations are generic and not tightly tied to each item, warranting lower relevance scores.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013047.html,,"{
+  ""frequency_rubric_per_item"": [4,4,4,2,3,3,3,3,3,2],
+  ""frequency_rubric_mean"": 3.30,
+  ""evidence_relevance_per_item"": [2,2,2,2,2,2,2,2,2,2],
+  ""evidence_relevance_mean"": 2.00,
+  ""hallucination"": false,
+  ""details"": ""The report assigns high frequency for tiredness, nervousness, and intense nervousness, moderate for restlessness and low mood, and lower for hopelessness and worthlessness, reflecting recurring but not constant themes. Evidence citations are generic and not tightly tied to each item, warranting lower relevance scores.""
+}"
+LLM_b_gpt-oss,1,rag_aware,31,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013047.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,2,end_to_end,26,2.6,2.6,False,2.6,"The diary shows frequent fatigue, anxiety, and effortful days with occasional depression. Structured rest, grounding, and hydration appear to mitigate peaks, supporting a pattern of persistent distress balanced by coping practices.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013129.html,,"{
+  ""frequency_rubric_per_item"": [5,5,1,1,1,1,5,1,5,1],
+  ""frequency_rubric_mean"": 2.60,
+  ""evidence_relevance_per_item"": [5,5,1,1,1,1,5,1,5,1],
+  ""evidence_relevance_mean"": 2.60,
+  ""hallucination"": false,
+  ""details"": ""The diary shows frequent fatigue, anxiety, and effortful days with occasional depression. Structured rest, grounding, and hydration appear to mitigate peaks, supporting a pattern of persistent distress balanced by coping practices.""
+}"
+LLM_b_gpt-oss,2,rag_aware,26,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013129.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,3,end_to_end,28,3.6,4.2,False,3.9,"The report rates most symptoms around moderate, but the diary shows frequent restlessness, tiredness, and hypervigilance, indicating a higher distress pattern than reported.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013220.html,,"{""frequency_rubric_per_item"":[4,4,4,2,4,4,4,2,4,4],""frequency_rubric_mean"":3.60,""evidence_relevance_per_item"":[5,5,5,1,5,5,5,1,5,5],""evidence_relevance_mean"":4.20,""hallucination"":false,""details"":""The report rates most symptoms around moderate, but the diary shows frequent restlessness, tiredness, and hypervigilance, indicating a higher distress pattern than reported.""}"
+LLM_b_gpt-oss,3,rag_aware,28,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013220.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,4,end_to_end,26,2.6,2.7,False,2.65,"Journal review shows high distress driven by chronic fatigue, pervasive anxiety, and restlessness. Frequent ""wired & tired"" and hypervigilance across many entries indicate intense rumination. Depressive and hopelessness themes appear less often. Strengths include consistent grounding practices and scheduled naps that mitigate anxiety, though digital distraction remains problematic.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013314.html,,"{
+  ""frequency_rubric_per_item"": [5, 5, 2, 2, 5, 1, 1, 1, 1, 3],
+  ""frequency_rubric_mean"": 2.6,
+  ""evidence_relevance_per_item"": [5, 5, 1, 3, 4, 1, 1, 1, 1, 5],
+  ""evidence_relevance_mean"": 2.7,
+  ""hallucination"": false,
+  ""details"": ""Journal review shows high distress driven by chronic fatigue, pervasive anxiety, and restlessness. Frequent \""wired & tired\"" and hypervigilance across many entries indicate intense rumination. Depressive and hopelessness themes appear less often. Strengths include consistent grounding practices and scheduled naps that mitigate anxiety, though digital distraction remains problematic.""
+}"
+LLM_b_gpt-oss,4,rag_aware,26,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013314.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,5,end_to_end,24,1.5,1.9,False,1.7,"Evidence is scarce and often cited from a single entry, so frequency interpretations are low. The few cited instances are relevant to their items, but most items lack supporting evidence, yielding a weak overall assessment.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013425.html,,"{
+  ""frequency_rubric_per_item"": [2,3,1,1,1,1,3,1,1,1],
+  ""frequency_rubric_mean"": 1.50,
+  ""evidence_relevance_per_item"": [4,4,1,1,1,1,4,1,1,1],
+  ""evidence_relevance_mean"": 1.90,
+  ""hallucination"": false,
+  ""details"": ""Evidence is scarce and often cited from a single entry, so frequency interpretations are low. The few cited instances are relevant to their items, but most items lack supporting evidence, yielding a weak overall assessment.""
+}"
+LLM_b_gpt-oss,5,rag_aware,24,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013425.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,6,end_to_end,30,3.7,1.0,False,2.35,"The journal indicates pervasive tiredness, anxiety, and restlessness across many days, with occasional lapses into depressed mood and hopelessness. Symptoms of worthlessness and effortfulness recur but less frequently. Overall, emotional and physical exhaustion dominates the narrative.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013512.html,,"{
+  ""frequency_rubric_per_item"": [5,5,2,1,5,3,4,4,3,5],
+  ""frequency_rubric_mean"": 3.70,
+  ""evidence_relevance_per_item"": [1,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.00,
+  ""hallucination"": false,
+  ""details"": ""The journal indicates pervasive tiredness, anxiety, and restlessness across many days, with occasional lapses into depressed mood and hopelessness. Symptoms of worthlessness and effortfulness recur but less frequently. Overall, emotional and physical exhaustion dominates the narrative.""
+}"
+LLM_b_gpt-oss,6,rag_aware,30,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013512.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,7,end_to_end,33,3.2,3.8,False,3.5,"The diary indicates a persistent pattern of anxiety, chronic fatigue, and an effortful work routine, each occurring across many days, as reflected in the high frequency scores. Evidence is generally relevant, drawing directly from days that describe these symptoms, though reports of worthlessness and hopelessness were sparse. Overall distress remains high, yet the presence of structured habits may indicate adaptive coping. No discrepancies were found between the report and the journal text.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013602.html,,"{
+  ""frequency_rubric_per_item"": [5,5,5,1,1,2,5,1,5,2],
+  ""frequency_rubric_mean"": 3.20,
+  ""evidence_relevance_per_item"": [5,5,5,1,1,5,5,1,5,5],
+  ""evidence_relevance_mean"": 3.80,
+  ""hallucination"": false,
+  ""details"": ""The diary indicates a persistent pattern of anxiety, chronic fatigue, and an effortful work routine, each occurring across many days, as reflected in the high frequency scores. Evidence is generally relevant, drawing directly from days that describe these symptoms, though reports of worthlessness and hopelessness were sparse. Overall distress remains high, yet the presence of structured habits may indicate adaptive coping. No discrepancies were found between the report and the journal text.""
+}"
+LLM_b_gpt-oss,7,rag_aware,33,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013602.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,8,end_to_end,27,3.4,3.0,False,3.2,"The report supplies strong evidence for fatigue, nervousness, restlessness, and sadness items, matching diary content. It omits citations for several items, lowering evidence relevance. Frequency scores capture how often themes recur, but lack of evidence for some items limits confidence in those areas.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013655.html,,"{""frequency_rubric_per_item"":[3,4,2,1,5,5,3,1,5,5],""frequency_rubric_mean"":3.40,""evidence_relevance_per_item"":[5,1,5,1,5,5,5,1,1,1],""evidence_relevance_mean"":2.90,""hallucination"":false,""details"":""The report supplies strong evidence for fatigue, nervousness, restlessness, and sadness items, matching diary content. It omits citations for several items, lowering evidence relevance. Frequency scores capture how often themes recur, but lack of evidence for some items limits confidence in those areas.""}"
+LLM_b_gpt-oss,8,rag_aware,27,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013655.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,9,end_to_end,28,2.8,3.4,False,3.1,"The report captures frequent tiredness, low mood and restlessness with high scores, but treats other anxiety aspects as rare. Evidence is clear for the main symptoms, yet lacks support for less‑highlighted items, leaving those scores essentially at zero. Overall it portrays a diary dominated by fatigue and racing thoughts, with minimal mention of other distress indicators.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013742.html,,"{""frequency_rubric_per_item"":[4,1,1,4,4,1,4,1,4,4],""frequency_rubric_mean"":2.80,""evidence_relevance_per_item"":[5,1,1,5,5,1,5,1,5,5],""evidence_relevance_mean"":3.40,""hallucination"":false,""details"":""The report captures frequent tiredness, low mood and restlessness with high scores, but treats other anxiety aspects as rare. Evidence is clear for the main symptoms, yet lacks support for less‑highlighted items, leaving those scores essentially at zero. Overall it portrays a diary dominated by fatigue and racing thoughts, with minimal mention of other distress indicators.""}"
+LLM_b_gpt-oss,9,rag_aware,28,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013742.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,10,end_to_end,28,3.6,2.8,False,3.2,"Frequent fatigue, restlessness and effortful workload emerge, but the evidence for many items is sparse, limiting the reliability of the distress estimate.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013839.html,,"{
+  ""frequency_rubric_per_item"": [5,4,3,2,5,3,5,1,3,5],
+  ""frequency_rubric_mean"": 3.60,
+  ""evidence_relevance_per_item"": [4,1,1,1,4,4,4,1,4,4],
+  ""evidence_relevance_mean"": 2.80,
+  ""hallucination"": false,
+  ""details"": ""Frequent fatigue, restlessness and effortful workload emerge, but the evidence for many items is sparse, limiting the reliability of the distress estimate.""
+}"
+LLM_b_gpt-oss,10,rag_aware,28,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013839.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,11,end_to_end,25,3.7,3.0,False,3.35,"Report reflects frequent fatigue, nervousness and restlessness, but lacks evidence for hopelessness, sadness, worthlessness. Overall frequencies align with diary, though several items miss supporting quotes. Good coverage of grounding practices and sleep patterns.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013928.html,,"{
+  ""frequency_rubric_per_item"": [5,5,4,3,5,2,3,2,3,5],
+  ""frequency_rubric_mean"": 3.50,
+  ""evidence_relevance_per_item"": [5,5,5,1,5,1,1,1,1,5],
+  ""evidence_relevance_mean"": 2.80,
+  ""hallucination"": false,
+  ""details"": ""Report reflects frequent fatigue, nervousness and restlessness, but lacks evidence for hopelessness, sadness, worthlessness. Overall frequencies align with diary, though several items miss supporting quotes. Good coverage of grounding practices and sleep patterns.""
+}"
+LLM_b_gpt-oss,11,rag_aware,25,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_013928.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,12,end_to_end,26,2.9,2.6,False,2.75,"Diary shows frequent fatigue, persistent anxiety, and low mood, with restlessness and sadness appearing less consistently. Overall distress is high, yet hopefulness or worthlessness remain minimal.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014056.html,,"{
+  ""frequency_rubric_per_item"": [5,5,1,1,3,2,4,1,4,3],
+  ""frequency_rubric_mean"": 2.9,
+  ""evidence_relevance_per_item"": [5,5,1,1,1,1,5,1,5,1],
+  ""evidence_relevance_mean"": 2.6,
+  ""hallucination"": false,
+  ""details"": ""Diary shows frequent fatigue, persistent anxiety, and low mood, with restlessness and sadness appearing less consistently. Overall distress is high, yet hopefulness or worthlessness remain minimal.""
+}"
+LLM_b_gpt-oss,12,rag_aware,26,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014056.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,13,end_to_end,28,2.8,2.5,False,2.65,"The report assigns high frequency to tiredness and restlessness, moderate to nervousness and hopelessness, and low to sadness and worthlessness, reflecting frequent diary mentions. Evidence is strong for tiredness, nervousness, hopelessness, and restlessness, but weak for sadness, effort, worthlessness, depression, and hyper‑calming anxiety, leading to low relevance on several items.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014145.html,,"{
+  ""frequency_rubric_per_item"": [4,3,2,3,4,2,2,2,2,4],
+  ""frequency_rubric_mean"": 2.80,
+  ""evidence_relevance_per_item"": [4,4,1,4,4,1,1,1,1,4],
+  ""evidence_relevance_mean"": 2.50,
+  ""hallucination"": false,
+  ""details"": ""The report assigns high frequency to tiredness and restlessness, moderate to nervousness and hopelessness, and low to sadness and worthlessness, reflecting frequent diary mentions. Evidence is strong for tiredness, nervousness, hopelessness, and restlessness, but weak for sadness, effort, worthlessness, depression, and hyper‑calming anxiety, leading to low relevance on several items.""
+}"
+LLM_b_gpt-oss,13,rag_aware,28,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014145.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,14,end_to_end,31,2.4,3.4,False,2.9,"The report shows consistent mention of fatigue and depression, suggesting moderate to high frequency; anxiety and hopelessness are less frequent. Evidence generally aligns with items. No unsupported facts were detected.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014305.html,,"{""frequency_rubric_per_item"":[4,2,1,1,3,4,1,1,4,3],""frequency_rubric_mean"":2.4,""evidence_relevance_per_item"":[5,3,2,2,4,5,2,2,5,4],""evidence_relevance_mean"":3.6,""hallucination"":false,""details"":""The report shows consistent mention of fatigue and depression, suggesting moderate to high frequency; anxiety and hopelessness are less frequent. Evidence generally aligns with items. No unsupported facts were detected.""}"
+LLM_b_gpt-oss,14,rag_aware,31,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014305.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,15,end_to_end,31,3.0,4.1,False,3.55,"Restlessness, nervousness, and fatigue recur daily, indicating pervasive distress. Symptoms appear repeatedly, so the high frequency scores are justified. Grounding practices and social outings offer brief relief, and the report aligns with the journal content without fabricating facts.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014349.html,,"{
+  ""frequency_rubric_per_item"": [4,4,1,3,4,3,3,1,3,4],
+  ""frequency_rubric_mean"": 3.00,
+  ""evidence_relevance_per_item"": [5,5,1,4,5,5,5,1,5,5],
+  ""evidence_relevance_mean"": 4.10,
+  ""hallucination"": false,
+  ""details"": ""Restlessness, nervousness, and fatigue recur daily, indicating pervasive distress. Symptoms appear repeatedly, so the high frequency scores are justified. Grounding practices and social outings offer brief relief, and the report aligns with the journal content without fabricating facts.""
+}"
+LLM_b_gpt-oss,15,rag_aware,31,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014349.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,16,end_to_end,30,3.4,3.4,False,3.4,"The report accurately identifies frequent fatigue and restlessness across multiple entries, scoring high where evidence is present. Items without evidence are rated low, reflecting the diary’s actual content. No unsupported claims appear, indicating no hallucination.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014439.html,,"{""frequency_rubric_per_item"":[4,4,2,2,5,5,3,5,2,2],""frequency_rubric_mean"":3.40,""evidence_relevance_per_item"":[5,5,1,1,5,5,5,5,1,1],""evidence_relevance_mean"":3.40,""hallucination"":false,""details"":""The report accurately identifies frequent fatigue and restlessness across multiple entries, scoring high where evidence is present. Items without evidence are rated low, reflecting the diary’s actual content. No unsupported claims appear, indicating no hallucination.""}"
+LLM_b_gpt-oss,16,rag_aware,30,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014439.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,17,end_to_end,38,3.5,3.5,False,3.5,"Diary reveals frequent restless anxiety, wired‑tired cycles, depressive moods and burnout; grounding practices give brief relief. Symptoms recur daily, with hypervigilance and work overload especially prominent, leading to high overall distress and low energy.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014518.html,,"{""frequency_rubric_per_item"":[5,3,4,3,3,3,4,4,3,3],""frequency_rubric_mean"":3.4,""evidence_relevance_per_item"":[5,3,4,3,3,3,4,4,3,3],""evidence_relevance_mean"":3.4,""hallucination"":false,""details"":""Diary reveals frequent restless anxiety, wired‑tired cycles, depressive moods and burnout; grounding practices give brief relief. Symptoms recur daily, with hypervigilance and work overload especially prominent, leading to high overall distress and low energy.""}"
+LLM_b_gpt-oss,17,rag_aware,38,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014518.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,18,end_to_end,33,4.0,3.8,False,3.9,"The diary shows persistent fatigue, anxiety, and depressive rumination, with frequent restlessness and a sense of relentless effort at work; although some moments of cheerfulness exist, overall distress is high.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014613.html,,"{
+  ""frequency_rubric_per_item"": [5,5,3,3,5,3,5,3,5,3],
+  ""frequency_rubric_mean"": 4.00,
+  ""evidence_relevance_per_item"": [5,5,1,3,5,3,5,3,5,3],
+  ""evidence_relevance_mean"": 3.80,
+  ""hallucination"": false,
+  ""details"": ""The diary shows persistent fatigue, anxiety, and depressive rumination, with frequent restlessness and a sense of relentless effort at work; although some moments of cheerfulness exist, overall distress is high.""
+}"
+LLM_b_gpt-oss,18,rag_aware,33,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014613.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,19,end_to_end,35,3.5,4.4,False,3.95,"Most symptoms recur across the final 30‑day window (high or frequent), with low mood, hypervigilance and effort described consistently, while worthlessness appears rarely. Evidence quoted aligns neatly with the corresponding symptom themes (scored 4–5), except for worthlessness where no support is given. No fabricated events or contradictions were detected.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014721.html,,"{""frequency_rubric_per_item"":[4,4,3,4,4,3,4,1,4,4],""frequency_rubric_mean"":3.50,""evidence_relevance_per_item"":[5,5,4,5,5,4,5,1,5,5],""evidence_relevance_mean"":4.40,""hallucination"":false,""details"":""Most symptoms recur across the final 30‑day window (high or frequent), with low mood, hypervigilance and effort described consistently, while worthlessness appears rarely. Evidence quoted aligns neatly with the corresponding symptom themes (scored 4–5), except for worthlessness where no support is given. No fabricated events or contradictions were detected.""}"
+LLM_b_gpt-oss,19,rag_aware,35,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014721.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,20,end_to_end,34,2.6,3.3,True,2.95,"The report captures some recurring fatigue, nervousness, restlessness, and depressive mood, but many items lack concrete evidence. The overall distress estimate is questionable due to missing scores and over‑generalized claims.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014809.html,,"{
+  ""frequency_rubric_per_item"": [5,3,1,1,4,1,4,1,4,2],
+  ""frequency_rubric_mean"": 2.60,
+  ""evidence_relevance_per_item"": [5,5,1,1,5,1,5,1,5,4],
+  ""evidence_relevance_mean"": 3.30,
+  ""hallucination"": true,
+  ""details"": ""The report captures some recurring fatigue, nervousness, restlessness, and depressive mood, but many items lack concrete evidence. The overall distress estimate is questionable due to missing scores and over‑generalized claims.""
+}"
+LLM_b_gpt-oss,20,rag_aware,34,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014809.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,21,end_to_end,26,1.7,3.4,False,2.55,"The diary shows frequent tiredness, nervousness and occasional hopeless mood, but little evidence for restlessness or worthlessness; overall distress appears moderate to high, with no hallucinated content.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014854.html,,"{
+  ""frequency_rubric_per_item"": [4, 3, 3, 1, 1, 1, 1, 1, 1, 1],
+  ""frequency_rubric_mean"": 1.7,
+  ""evidence_relevance_per_item"": [5, 5, 5, 5, 1, 5, 1, 1, 5, 1],
+  ""evidence_relevance_mean"": 3.4,
+  ""hallucination"": false,
+  ""details"": ""The diary shows frequent tiredness, nervousness and occasional hopeless mood, but little evidence for restlessness or worthlessness; overall distress appears moderate to high, with no hallucinated content.""
+}"
+LLM_b_gpt-oss,21,rag_aware,26,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014854.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,22,end_to_end,35,2.0,2.0,False,2.0,"The report lacks detailed justification for each item, omits many evidence quotes, and provides a vague summary that likely underestimates the diary’s nuances.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014934.html,,"{
+  ""frequency_rubric_per_item"": [2,2,2,2,2,2,2,2,2,2],
+  ""frequency_rubric_mean"": 2.0,
+  ""evidence_relevance_per_item"": [2,2,2,2,2,2,2,2,2,2],
+  ""evidence_relevance_mean"": 2.0,
+  ""hallucination"": false,
+  ""details"": ""The report lacks detailed justification for each item, omits many evidence quotes, and provides a vague summary that likely underestimates the diary’s nuances.""
+}"
+LLM_b_gpt-oss,22,rag_aware,35,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_014934.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,23,end_to_end,26,2.3,2.5,False,2.4,"The diary shows frequent exhaustion, anxiety, and restlessness, with occasional notes of hopelessness or depression. Patterns of late‑night scrolling and hypervigilance highlight coping challenges, while grounding rituals occasionally provide brief relief.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015052.html,,"{
+  ""frequency_rubric_per_item"": [4,3,1,1,4,1,3,1,1,4],
+  ""frequency_rubric_mean"": 2.30,
+  ""evidence_relevance_per_item"": [4,4,1,1,4,1,4,1,1,4],
+  ""evidence_relevance_mean"": 2.50,
+  ""hallucination"": false,
+  ""details"": ""The diary shows frequent exhaustion, anxiety, and restlessness, with occasional notes of hopelessness or depression. Patterns of late‑night scrolling and hypervigilance highlight coping challenges, while grounding rituals occasionally provide brief relief.""
+}"
+LLM_b_gpt-oss,23,rag_aware,26,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015052.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,24,end_to_end,27,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015202.html,,"{""frequency_rubric_per_item"":[5,2,5,1,3,1,3,1,1,3],""frequency_rubric_mean"":2.40,""evidence_relevance_per_item"":[5,1,5,1,5,1,1,1,1,1],""evidence_relevance_mean"":2.20,""hallucination"":false,""details"":""The diary shows strong evidence of fatigue, hypervigilance and restless‑fidgety states, while the data for hopelessness, sadness, worthlessness and depression are scarce. Hypervigilance is frequent, suggesting chronic anxiety. Limited evidence for many items illustrates gaps, but the overall pattern points to high fatigue and restlessness.”}"
+LLM_b_gpt-oss,24,rag_aware,27,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015202.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,25,end_to_end,30,2.6,2.8,False,2.7,"The report captures frequent fatigue, anxiety, restlessness, and occasional low mood across the journal period, with strong evidence of recurring tiredness, nervousness, and sense of effort. It identifies moderate depressive feelings and hypervigilance, but shows limited mention of hopelessness or worthlessness. Overall, the summary is consistent with the provided entries and avoids unsupported claims.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015312.html,,"{
+  ""frequency_rubric_per_item"": [4,4,1,1,4,2,3,1,3,3],
+  ""frequency_rubric_mean"": 2.60,
+  ""evidence_relevance_per_item"": [4,4,1,1,4,3,4,1,3,3],
+  ""evidence_relevance_mean"": 2.80,
+  ""hallucination"": false,
+  ""details"": ""The report captures frequent fatigue, anxiety, restlessness, and occasional low mood across the journal period, with strong evidence of recurring tiredness, nervousness, and sense of effort. It identifies moderate depressive feelings and hypervigilance, but shows limited mention of hopelessness or worthlessness. Overall, the summary is consistent with the provided entries and avoids unsupported claims.""
+}"
+LLM_b_gpt-oss,25,rag_aware,30,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015312.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,26,end_to_end,31,3.8,3.7,False,3.75,"The diary shows frequent fatigue, anxiety, and effortful work, with occasional depressive signals. Evidence largely matches entries; low mood and hopelessness are scarcely noted. Overall, no unsupported claims are evident.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015349.html,,"{
+  ""frequency_rubric_per_item"": [5,5,4,2,5,2,5,2,3,5],
+  ""frequency_rubric_mean"": 3.80,
+  ""evidence_relevance_per_item"": [4,5,5,1,5,3,5,1,3,5],
+  ""evidence_relevance_mean"": 3.70,
+  ""hallucination"": false,
+  ""details"": ""The diary shows frequent fatigue, anxiety, and effortful work, with occasional depressive signals. Evidence largely matches entries; low mood and hopelessness are scarcely noted. Overall, no unsupported claims are evident.""
+}"
+LLM_b_gpt-oss,26,rag_aware,31,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015349.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,27,end_to_end,27,3.0,2.6,False,2.8,"The diary reveals frequent tiredness, heightened anxiety, and a perception that daily tasks feel excessively demanding. Depressive mood surfaces regularly, though it remains somewhat mild. Restlessness and short‑sightedness are common, but evidence for catastrophic nervousness is limited. Overall, the entries point to a pattern of chronic fatigue and blunted motivation, with few concrete, serious depressive episodes.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015437.html,,"{
+  ""frequency_rubric_per_item"": [5, 5, 2, 1, 4, 1, 5, 5, 1, 1],
+  ""frequency_rubric_mean"": 2.90,
+  ""evidence_relevance_per_item"": [4, 4, 1, 1, 3, 1, 5, 5, 1, 1],
+  ""evidence_relevance_mean"": 2.50,
+  ""hallucination"": false,
+  ""details"": ""The diary reveals frequent tiredness, heightened anxiety, and a perception that daily tasks feel excessively demanding. Depressive mood surfaces regularly, though it remains somewhat mild. Restlessness and short‑sightedness are common, but evidence for catastrophic nervousness is limited. Overall, the entries point to a pattern of chronic fatigue and blunted motivation, with few concrete, serious depressive episodes.""
+}"
+LLM_b_gpt-oss,27,rag_aware,27,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015437.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,28,end_to_end,26,3.5,3.1,False,3.3,"The report captures frequent fatigue, persistent nervousness, restlessness, and mild depressive mood, but evidence for some items is missing, limiting confidence.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015530.html,,"{
+  ""frequency_rubric_per_item"": [5,4,4,3,4,2,4,2,4,3],
+  ""frequency_rubric_mean"": 3.50,
+  ""evidence_relevance_per_item"": [5,2,2,3,4,2,4,2,4,3],
+  ""evidence_relevance_mean"": 3.10,
+  ""hallucination"": false,
+  ""details"": ""The report captures frequent fatigue, persistent nervousness, restlessness, and mild depressive mood, but evidence for some items is missing, limiting confidence.""
+}"
+LLM_b_gpt-oss,28,rag_aware,26,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015530.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,29,end_to_end,32,4.1,2.8,False,3.45,"The report’s evidence largely appears in the journal, though several items lack explicit support or have misattributed statements (e.g., restlessness). Frequency scores are high for most symptoms, but evidence relevance is low where bullets are absent or irrelevant, indicating gaps in the summary.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015608.html,,"{
+  ""frequency_rubric_per_item"": [5,5,5,2,5,3,5,1,5,5],
+  ""frequency_rubric_mean"": 4.10,
+  ""evidence_relevance_per_item"": [5,5,1,1,1,2,5,1,2,5],
+  ""evidence_relevance_mean"": 2.80,
+  ""hallucination"": false,
+  ""details"": ""The report’s evidence largely appears in the journal, though several items lack explicit support or have misattributed statements (e.g., restlessness). Frequency scores are high for most symptoms, but evidence relevance is low where bullets are absent or irrelevant, indicating gaps in the summary.""
+}"
+LLM_b_gpt-oss,29,rag_aware,32,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015608.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,30,end_to_end,30,3.8,3.6,False,3.7,"Frequent, pervasive fatigue and hypervigilance dominate. Anxiety and restlessness recur across many entries, while depressive mood appears often but less intense. Worthlessness and extreme sadness are rarely mentioned. The report reflects these patterns but omits some themes, giving lower relevance for items lacking evidence. Overall distress remains high, with intermittent brief activity‑induced energy spikes.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015656.html,,"{""frequency_rubric_per_item"":[5,5,4,4,5,2,3,1,5,4],""frequency_rubric_mean"":3.8,""evidence_relevance_per_item"":[5,5,5,4,4,1,3,1,5,3],""evidence_relevance_mean"":3.6,""hallucination"":false,""details"":""Frequent, pervasive fatigue and hypervigilance dominate. Anxiety and restlessness recur across many entries, while depressive mood appears often but less intense. Worthlessness and extreme sadness are rarely mentioned. The report reflects these patterns but omits some themes, giving lower relevance for items lacking evidence. Overall distress remains high, with intermittent brief activity‑induced energy spikes.""}"
+LLM_b_gpt-oss,30,rag_aware,30,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015656.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,31,end_to_end,20,3.1,2.5,False,2.8,"Evidence aligns for items 1,2,5,7,10, but missing or generic for others, and frequency ratings reflect the recurring narrative.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015750.html,,"{
+  ""frequency_rubric_per_item"": [4,4,3,1,4,2,4,2,3,4],
+  ""frequency_rubric_mean"": 3.00,
+  ""evidence_relevance_per_item"": [4,4,1,1,4,1,4,1,1,4],
+  ""evidence_relevance_mean"": 2.50,
+  ""hallucination"": false,
+  ""details"": ""Evidence aligns for items 1,2,5,7,10, but missing or generic for others, and frequency ratings reflect the recurring narrative.""
+}"
+LLM_b_gpt-oss,31,rag_aware,20,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015750.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,32,end_to_end,33,3.5,3.6,False,3.55,"The report captures consistent fatigue, restlessness, and effort‑heavy work, with frequent nervousness across many entries. Evidence largely matches each symptom theme, supporting the assigned scores. No clear hallucinations are evident.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015837.html,,"{
+  ""frequency_rubric_per_item"": [5,4,1,1,5,5,4,5,4,1],
+  ""frequency_rubric_mean"": 3.50,
+  ""evidence_relevance_per_item"": [5,5,1,1,4,5,5,5,4,1],
+  ""evidence_relevance_mean"": 3.60,
+  ""hallucination"": false,
+  ""details"": ""The report captures consistent fatigue, restlessness, and effort‑heavy work, with frequent nervousness across many entries. Evidence largely matches each symptom theme, supporting the assigned scores. No clear hallucinations are evident.""
+}"
+LLM_b_gpt-oss,32,rag_aware,33,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015837.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,33,end_to_end,29,2.5,2.9,False,2.7,"Report captures well-used themes of fatigue, hypervigilance and depressive mood, but lacks evidence for several items; overall scores appear consistent with journal frequency.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015914.html,,"{  
+  ""frequency_rubric_per_item"": [4,4,1,1,4,1,4,1,4,1],  
+  ""frequency_rubric_mean"": 2.50,  
+  ""evidence_relevance_per_item"": [4,5,1,1,5,1,5,1,5,1],  
+  ""evidence_relevance_mean"": 2.90,  
+  ""hallucination"": false,  
+  ""details"": ""Report captures well-used themes of fatigue, hypervigilance and depressive mood, but lacks evidence for several items; overall scores appear consistent with journal frequency.""  
+}"
+LLM_b_gpt-oss,33,rag_aware,29,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015914.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,34,end_to_end,25,2.3,1.3,False,1.8,"Tiredness, nervousness, and the sense that all tasks are an effort appear frequently, while hopelessness, worthlessness, and intense sadness are rare; evidence for most items is sparse.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015955.html,,"{
+  ""frequency_rubric_per_item"": [4,4,2,1,1,2,4,1,2,2],
+  ""frequency_rubric_mean"": 2.30,
+  ""evidence_relevance_per_item"": [4,1,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.30,
+  ""hallucination"": false,
+  ""details"": ""Tiredness, nervousness, and the sense that all tasks are an effort appear frequently, while hopelessness, worthlessness, and intense sadness are rare; evidence for most items is sparse.""
+}"
+LLM_b_gpt-oss,34,rag_aware,25,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_015955.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,35,end_to_end,23,2.0,1.8,False,1.9,"The record shows recurring fatigue and anxiety, with some days of intense nervousness and mild depressive mood. Grounding rituals, scheduled naps, and social activities appear to mitigate restlessness and promote brief mood uplifts.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_020219.html,,"{
+  ""frequency_rubric_per_item"": [3,4,1,1,3,2,1,1,2,2],
+  ""frequency_rubric_mean"": 1.90,
+  ""evidence_relevance_per_item"": [5,5,1,1,1,1,1,1,1,1],
+  ""evidence_relevance_mean"": 1.80,
+  ""hallucination"": false,
+  ""details"": ""The record shows recurring fatigue and anxiety, with some days of intense nervousness and mild depressive mood. Grounding rituals, scheduled naps, and social activities appear to mitigate restlessness and promote brief mood uplifts.""
+}"
+LLM_b_gpt-oss,35,rag_aware,23,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_020219.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,36,end_to_end,25,2.6,2.2,False,2.4,"Frequent fatigue and depressive mood dominate the journal, with moderate nervousness and restlessness. Evidence supports these themes, though several items lack direct excerpts. Frequency and relevance ratings indicate high distress from exhaustion and low mood; other symptoms appear less frequent. No hallucinations detected; the report accurately reflects diary content.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_020330.html,,"{  
+  ""frequency_rubric_per_item"": [4,2,2,3,2,3,3,2,3,2],  
+  ""frequency_rubric_mean"": 2.60,  
+  ""evidence_relevance_per_item"": [5,1,1,1,1,5,5,1,1,1],  
+  ""evidence_relevance_mean"": 2.20,  
+  ""hallucination"": false,  
+  ""details"": ""Frequent fatigue and depressive mood dominate the journal, with moderate nervousness and restlessness. Evidence supports these themes, though several items lack direct excerpts. Frequency and relevance ratings indicate high distress from exhaustion and low mood; other symptoms appear less frequent. No hallucinations detected; the report accurately reflects diary content.""}"
+LLM_b_gpt-oss,36,rag_aware,25,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_020330.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,37,end_to_end,22,3.0,1.8,True,2.4,"The diary shows frequent feelings of fatigue, nervousness, and effortful tasks, with occasional sad or hopeless notes. Evidence is weak for most items, except nervousness and effort. Overall report is inconsistent with the journal and likely fabricated.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_020427.html,,"{
+  ""frequency_rubric_per_item"": [5,5,2,2,3,2,5,2,2,2],
+  ""frequency_rubric_mean"": 3.00,
+  ""evidence_relevance_per_item"": [1,5,1,1,1,1,5,1,1,1],
+  ""evidence_relevance_mean"": 1.80,
+  ""hallucination"": true,
+  ""details"": ""The diary shows frequent feelings of fatigue, nervousness, and effortful tasks, with occasional sad or hopeless notes. Evidence is weak for most items, except nervousness and effort. Overall report is inconsistent with the journal and likely fabricated.""
+}"
+LLM_b_gpt-oss,37,rag_aware,22,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_020427.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,38,end_to_end,30,3.6,3.7,False,3.65,"The diary shows frequent occurrences of fatigue, anxiety, restlessness, and depressive feelings, with strong evidence support for most items. Items related to feeling overwhelmed by effort and worthless have weaker evidence, suggesting limited coverage in the entries. Overall, the analysis reflects consistent distress while highlighting areas with ample evidence.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_020651.html,,"{
+  ""frequency_rubric_per_item"": [4,5,4,3,4,3,2,3,4,4],
+  ""frequency_rubric_mean"": 3.60,
+  ""evidence_relevance_per_item"": [5,5,4,3,4,3,1,3,5,4],
+  ""evidence_relevance_mean"": 3.70,
+  ""hallucination"": false,
+  ""details"": ""The diary shows frequent occurrences of fatigue, anxiety, restlessness, and depressive feelings, with strong evidence support for most items. Items related to feeling overwhelmed by effort and worthless have weaker evidence, suggesting limited coverage in the entries. Overall, the analysis reflects consistent distress while highlighting areas with ample evidence.""
+}"
+LLM_b_gpt-oss,38,rag_aware,30,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_020651.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,39,end_to_end,26,2.7,2.2,False,2.45,"The journal shows frequent fatigue and effort‑related strain, with moderate nervousness and restlessness. Symptoms of hopelessness, worthlessness, sadness and depression appear less often. Overall, energy levels seem consistently low, and coping strategies are noted but not pervasive.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_020818.html,,"{""frequency_rubric_per_item"":[4,3,2,2,3,2,4,2,2,3],""frequency_rubric_mean"":2.70,""evidence_relevance_per_item"":[5,5,1,1,1,1,5,1,1,1],""evidence_relevance_mean"":2.20,""hallucination"":false,""details"":""The journal shows frequent fatigue and effort‑related strain, with moderate nervousness and restlessness. Symptoms of hopelessness, worthlessness, sadness and depression appear less often. Overall, energy levels seem consistently low, and coping strategies are noted but not pervasive.""}"
+LLM_b_gpt-oss,39,rag_aware,26,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_020818.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,40,end_to_end,32,2.7,2.5,False,2.6,"Report uses some valid diary cues for most items, yet mislabels evidence for a few, resulting in low relevance for those categories.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_020932.html,,"{
+  ""frequency_rubric_per_item"": [4, 4, 2, 2, 3, 2, 3, 1, 4, 2],
+  ""frequency_rubric_mean"": 2.70,
+  ""evidence_relevance_per_item"": [4, 4, 1, 1, 4, 1, 1, 1, 4, 4],
+  ""evidence_relevance_mean"": 2.50,
+  ""hallucination"": false,
+  ""details"": ""Report uses some valid diary cues for most items, yet mislabels evidence for a few, resulting in low relevance for those categories.""
+}"
+LLM_b_gpt-oss,40,rag_aware,32,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_020932.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,41,end_to_end,20,1.9,3.0,True,2.45,"The journal depicts frequent fatigue and nervousness, with occasional hypervigilance, but provides little evidence for restlessness, worthlessness, or sadness. The report contains unsupported claims, indicating misinformation.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021027.html,,"{""frequency_rubric_per_item"":[4,4,2,1,1,1,2,1,2,1],""frequency_rubric_mean"":1.90,""evidence_relevance_per_item"":[5,5,5,1,1,1,5,1,5,1],""evidence_relevance_mean"":3.00,""hallucination"":true,""details"":""The journal depicts frequent fatigue and nervousness, with occasional hypervigilance, but provides little evidence for restlessness, worthlessness, or sadness. The report contains unsupported claims, indicating misinformation.""}"
+LLM_b_gpt-oss,41,rag_aware,20,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021027.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,42,end_to_end,26,2.4,3.0,False,2.7,"Frequent fatigue and intense nervousness dominate, with repeated reports of energy crashes, anxiety, hypervigilance, and effortful days. Depression is noted but less pervasive. Restlessness, worthlessness, and hopelessness appear minimal. The diary shows use of grounding, hydration, and structured breaks as coping strengths.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021229.html,,"{
+  ""frequency_rubric_per_item"": [4,4,4,1,1,1,3,4,1,1],
+  ""frequency_rubric_mean"": 2.40,
+  ""evidence_relevance_per_item"": [5,5,5,1,1,1,5,5,1,1],
+  ""evidence_relevance_mean"": 3.00,
+  ""hallucination"": false,
+  ""details"": ""Frequent fatigue and intense nervousness dominate, with repeated reports of energy crashes, anxiety, hypervigilance, and effortful days. Depression is noted but less pervasive. Restlessness, worthlessness, and hopelessness appear minimal. The diary shows use of grounding, hydration, and structured breaks as coping strengths.""
+}"
+LLM_b_gpt-oss,42,rag_aware,26,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021229.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,43,end_to_end,31,3.1,4.4,True,3.75,"The report omits concrete scores and leaves evidence gaps, so it appears partially fabricated. Core anxiety, fatigue and effort themes are noted, but the data presentation lacks consistency with the supplied diary.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021333.html,,"{
+  ""frequency_rubric_per_item"": [4,4,4,1,4,4,3,3,3,1],
+  ""frequency_rubric_mean"": 3.00,
+  ""evidence_relevance_per_item"": [5,5,5,2,5,5,5,5,5,2],
+  ""evidence_relevance_mean"": 4.40,
+  ""hallucination"": true,
+  ""details"": ""The report omits concrete scores and leaves evidence gaps, so it appears partially fabricated. Core anxiety, fatigue and effort themes are noted, but the data presentation lacks consistency with the supplied diary.""
+}"
+LLM_b_gpt-oss,43,rag_aware,31,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021333.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,44,end_to_end,24,2.2,2.4,False,2.3,"The report highlights frequent tiredness and effortful days, with mood‑related distress moderate and anxiety symptoms less common. Evidence for fatigue and effort is clear, though many items lack concrete citations. Overall, sleep‑related fatigue dominates, while social anxiety appears minimally reported, suggesting potential sleep regulation issues in the journal.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021424.html,,"{
+  ""frequency_rubric_per_item"": [4,2,1,1,2,1,4,3,3,1],
+  ""frequency_rubric_mean"": 2.20,
+  ""evidence_relevance_per_item"": [5,1,1,1,1,1,5,4,4,1],
+  ""evidence_relevance_mean"": 2.40,
+  ""hallucination"": false,
+  ""details"": ""The report highlights frequent tiredness and effortful days, with mood‑related distress moderate and anxiety symptoms less common. Evidence for fatigue and effort is clear, though many items lack concrete citations. Overall, sleep‑related fatigue dominates, while social anxiety appears minimally reported, suggesting potential sleep regulation issues in the journal.""
+}"
+LLM_b_gpt-oss,44,rag_aware,24,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021424.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,45,end_to_end,31,3.4,3.1,False,3.25,"Summary indicates several symptoms are prominent, especially tiredness, hypervigilance, low mood, and effort. Some items lack explicit support, lowering confidence for those. Overall, high‑frequency themes suggest persistent fatigue and anxiety, while evidence remains partially provided.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021555.html,,"{
+  ""frequency_rubric_per_item"": [4,5,1,1,5,4,4,1,4,5],
+  ""frequency_rubric_mean"": 3.40,
+  ""evidence_relevance_per_item"": [4,4,1,1,4,4,4,1,4,4],
+  ""evidence_relevance_mean"": 3.10,
+  ""hallucination"": false,
+  ""details"": ""Summary indicates several symptoms are prominent, especially tiredness, hypervigilance, low mood, and effort. Some items lack explicit support, lowering confidence for those. Overall, high‑frequency themes suggest persistent fatigue and anxiety, while evidence remains partially provided.""
+}"
+LLM_b_gpt-oss,45,rag_aware,31,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021555.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,46,end_to_end,28,2.6,2.6,False,2.6,"Restlessness, nervousness, and a persistent wired‑tired state appear frequently; depressive‑like low mood is present but less common, aligning with the noted anxiety–fatigue cycle.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021809.html,,"{""frequency_rubric_per_item"":[4,4,1,1,4,3,1,1,3,4],""frequency_rubric_mean"":2.6,""evidence_relevance_per_item"":[4,4,1,1,4,3,1,1,3,4],""evidence_relevance_mean"":2.6,""hallucination"":false,""details"":""Restlessness, nervousness, and a persistent wired‑tired state appear frequently; depressive‑like low mood is present but less common, aligning with the noted anxiety–fatigue cycle.""}"
+LLM_b_gpt-oss,46,rag_aware,28,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021809.html,rag_unavailable_or_empty,
+LLM_b_gpt-oss,47,end_to_end,30,3.6,2.5,True,3.05,"The report omits evidence for most items and gives inconsistent frequencies; tiredness and nervousness are well supported, whereas hopelessness, worthlessness, and depressive nuance are scarcely referenced. The lack of concrete excerpts leads to low relevance scores. Overall brevity of evidence threatens validity, though prevalence of worry and fatigue is evident. The total K‑10 score appears arbitrary, likely hallucinated. A more thorough, evidence‑anchored assessment is necessary.",/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021849.html,,"{
+  ""frequency_rubric_per_item"": [5,5,3,3,4,3,4,1,4,4],
+  ""frequency_rubric_mean"": 3.60,
+  ""evidence_relevance_per_item"": [5,5,2,2,2,2,2,1,2,2],
+  ""evidence_relevance_mean"": 2.30,
+  ""hallucination"": true,
+  ""details"": ""The report omits evidence for most items and gives inconsistent frequencies; tiredness and nervousness are well supported, whereas hopelessness, worthlessness, and depressive nuance are scarcely referenced. The lack of concrete excerpts leads to low relevance scores. Overall brevity of evidence threatens validity, though prevalence of worry and fatigue is evident. The total K‑10 score appears arbitrary, likely hallucinated. A more thorough, evidence‑anchored assessment is necessary.""
+}"
+LLM_b_gpt-oss,47,rag_aware,30,,,,,,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260412_021849.html,rag_unavailable_or_empty,

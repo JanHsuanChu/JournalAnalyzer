@@ -1,0 +1,30 @@
+# QC workflow — edit this file for experiment parameters (variants, dates, RAG env).
+# Do not put API keys here; use JournalAnalyzer/.env for secrets.
+
+# How many times the workflow runs the full pipeline + QC for each experimental variant 
+replicates_per_variant: 30
+
+# first = print raw+parsed QC for the first completed run (like 02_ai_quality_control.R)
+qc_summary_run: first
+
+# Which journal text the grader sees (build_report inputs stay in `shared` below)
+# The qc_journal_context.mode block is not what sets K10’s window for scoring. It only controls which journal text is shown to the QC grader. So a special setting “for K10’s 30 days” is not needed — that behavior comes from the app. 
+qc_journal_context:
+  mode: analysis_window
+  # mode: k10_last_30
+  # mode: both_labeled_sections
+
+shared:
+  date_from: "2026-03-01"
+  date_to: "2026-04-12"
+  trend_keywords: []
+  user_question: []
+  include_k10_section: true
+  include_k10_trends: false
+
+# v1: vary LLM + optional rag_env per variant; keep shared inputs constant across variants.
+variants:
+  - label: LLM_c_qwen
+    OLLAMA_MODEL_AGENT1: qwen3.5:cloud
+    OLLAMA_MODEL_AGENT2: qwen3.5:cloud
+    OLLAMA_MODEL_AGENT3: gpt-oss:20b-cloud  
