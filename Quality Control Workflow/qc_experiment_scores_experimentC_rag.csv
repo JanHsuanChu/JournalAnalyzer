@@ -1,0 +1,847 @@
+variant_label,replicate_index,rag_on,report_path,trend_keyword_total_count,question_relevance_1_5,trend_relevance_1_5,direction_1_5,correlation_analysis_present,gi_hallucination,clinical_safety_1_5,internal_coherence_1_5,formatting_hygiene_1_5,replicate_duration_s,gi_details,raw_gi_grader_response
+rag_ab_fixed_llm,0,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194448.html,8,5,5,5,False,False,5,5,4,21.062,The General Insights text only paraphrases or summarizes journal entries; no invented facts or unsupported claims are present.,"{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights text only paraphrases or summarizes journal entries; no invented facts or unsupported claims are present.""
+}"
+rag_ab_fixed_llm,1,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194509.html,8,4,4,5,False,False,5,4,4,20.652,"The report directly responds to the energy query, summarizes month‑by‑month shifts, links sleep habits to energy patterns, and notes depression mentions as a possible influencing factor. It offers concrete next steps and a clear, safe tone.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The report directly responds to the energy query, summarizes month‑by‑month shifts, links sleep habits to energy patterns, and notes depression mentions as a possible influencing factor. It offers concrete next steps and a clear, safe tone.""
+}"
+rag_ab_fixed_llm,2,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194530.html,8,5,5,5,False,False,5,5,4,19.107,"The General Insights section only paraphrases information from the journal and does not add unsupported facts, dates, or quotes. All statements about daily patterns, power-sleep benefits, and depression frequency correspond to the provided entries, so no hallucination is detected.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights section only paraphrases information from the journal and does not add unsupported facts, dates, or quotes. All statements about daily patterns, power-sleep benefits, and depression frequency correspond to the provided entries, so no hallucination is detected.""
+}"
+rag_ab_fixed_llm,3,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194549.html,8,4,4,5,False,False,5,5,3,15.887,"The General Insights make no claims that are unsupported by the excerpts; all references to energy fluctuations, sleep issues, caffeine use and social boosts are grounded in the journal text. No unsupported facts, dates or contradictions are present.","{  
+  ""question_relevance_1_5"": 4,  
+  ""trend_relevance_1_5"": 4,  
+  ""direction_1_5"": 5,  
+  ""gi_hallucination"": false,  
+  ""formatting_hygiene_1_5"": 3,  
+  ""clinical_safety_1_5"": 5,  
+  ""internal_coherence_1_5"": 5,  
+  ""gi_details"": ""The General Insights make no claims that are unsupported by the excerpts; all references to energy fluctuations, sleep issues, caffeine use and social boosts are grounded in the journal text. No unsupported facts, dates or contradictions are present.""}"
+rag_ab_fixed_llm,4,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194605.html,8,4,5,3,False,False,5,5,3,16.644,"General insights summarize mood trend and energy linking depression. No false claims, only high‑level estimates (8/147 entries). Formatting lacks bullet lists but remains readable. Content aligns with records, providing balanced view; direction is neutral. Safety stance supportive, promoting simple tracking.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 3,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""General insights summarize mood trend and energy linking depression. No false claims, only high‑level estimates (8/147 entries). Formatting lacks bullet lists but remains readable. Content aligns with records, providing balanced view; direction is neutral. Safety stance supportive, promoting simple tracking.""
+}"
+rag_ab_fixed_llm,5,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194622.html,8,4,5,5,False,False,5,4,3,15.415,No unsupported statements were found; all content aligns with the journal entries.,"{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""No unsupported statements were found; all content aligns with the journal entries.""
+}"
+rag_ab_fixed_llm,6,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194637.html,8,4,5,5,False,False,5,5,4,21.288,"The insights summarize yearly trends in energy and depression, detailing how naps, hydration, and grounding practices buffer fatigue while noting stable depressive mentions. No unsupported claims or contradictions with journal entries were detected.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The insights summarize yearly trends in energy and depression, detailing how naps, hydration, and grounding practices buffer fatigue while noting stable depressive mentions. No unsupported claims or contradictions with journal entries were detected.""
+}"
+rag_ab_fixed_llm,7,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194658.html,8,4,2,2,False,False,5,4,3,14.645,"The General Insights largely answer the user question by summarizing energy patterns, referencing journal evidence. However, the trend analysis for depression is under‑developed and lacks clear direction. The content includes duplicate headings and non‑bullet lists, slightly reducing formatting quality. The safety stance is neutral and supportive, with no medical diagnosis offered. Overall coherence is maintained but trend relevance and direction are weak.","{""question_relevance_1_5"":4,""trend_relevance_1_5"":2,""direction_1_5"":2,""gi_hallucination"":false,""formatting_hygiene_1_5"":3,""clinical_safety_1_5"":5,""internal_coherence_1_5"":4,""gi_details"":""The General Insights largely answer the user question by summarizing energy patterns, referencing journal evidence. However, the trend analysis for depression is under‑developed and lacks clear direction. The content includes duplicate headings and non‑bullet lists, slightly reducing formatting quality. The safety stance is neutral and supportive, with no medical diagnosis offered. Overall coherence is maintained but trend relevance and direction are weak.""}"
+rag_ab_fixed_llm,8,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194713.html,8,5,5,5,False,False,5,4,4,17.913,No unsupported facts or contradictions detected.,"{""question_relevance_1_5"":5,""trend_relevance_1_5"":5,""direction_1_5"":5,""gi_hallucination"":false,""formatting_hygiene_1_5"":4,""clinical_safety_1_5"":5,""internal_coherence_1_5"":4,""gi_details"":""No unsupported facts or contradictions detected.""}"
+rag_ab_fixed_llm,9,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194731.html,8,4,5,5,False,False,5,5,2,19.094,"The GI summary accurately reflects journal content, summarizing energy fluctuations and depression mention counts without inconsistencies.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 2,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The GI summary accurately reflects journal content, summarizing energy fluctuations and depression mention counts without inconsistencies.""
+}"
+rag_ab_fixed_llm,10,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194750.html,8,4,5,5,True,False,5,5,3,24.111,"The insights reflect journal facts about energy and depression without adding unsupported dates or quotes, so no hallucination is present.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The insights reflect journal facts about energy and depression without adding unsupported dates or quotes, so no hallucination is present.""
+}"
+rag_ab_fixed_llm,11,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194814.html,8,5,5,5,False,True,5,4,2,28.737,"The report states there were eight depression mentions in 2025, but the provided journal excerpt contains no explicit reference to depression, indicating the count may be inaccurate.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 2,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The report states there were eight depression mentions in 2025, but the provided journal excerpt contains no explicit reference to depression, indicating the count may be inaccurate.""
+}"
+rag_ab_fixed_llm,12,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194843.html,8,5,5,5,False,True,5,5,2,19.357,"The report states there are 147 entries for the entire year, but the provided excerpt only shows a subset; this numeric claim isn’t supported by the text, making it a likely hallucination.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 2,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The report states there are 147 entries for the entire year, but the provided excerpt only shows a subset; this numeric claim isn’t supported by the text, making it a likely hallucination.""
+}"
+rag_ab_fixed_llm,13,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194902.html,8,5,5,5,True,False,5,5,4,23.844,No unsupported facts; all claims align with journal content.,"{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""No unsupported facts; all claims align with journal content.""
+}"
+rag_ab_fixed_llm,14,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194926.html,8,4,5,5,False,False,5,5,4,20.641,"The summary faithfully describes energy patterns and depression mentions without attributing unsupported facts or dates. All claims align with the provided excerpts, and no contradictions or extra information appear. Thus, no hallucination is present.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The summary faithfully describes energy patterns and depression mentions without attributing unsupported facts or dates. All claims align with the provided excerpts, and no contradictions or extra information appear. Thus, no hallucination is present.""
+}"
+rag_ab_fixed_llm,15,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_194947.html,8,4,5,4,False,False,5,5,5,15.614,"The answer directly addresses the user’s query, referencing energy trends, with no unsupported claims. It correctly reports the depression trend, matching the source. Formatting uses bullet lists and consistent headings. No hallucinations or clinical warnings present. Coherence is maintained across summary, theme, and trend sections.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 4,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 5,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The answer directly addresses the user’s query, referencing energy trends, with no unsupported claims. It correctly reports the depression trend, matching the source. Formatting uses bullet lists and consistent headings. No hallucinations or clinical warnings present. Coherence is maintained across summary, theme, and trend sections.""
+}"
+rag_ab_fixed_llm,16,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195002.html,8,4,4,4,False,False,5,4,4,15.126,"The General Insights present facts, such as the wired‑exhaustion cycle and the nine mentions of depression, that are supported by the journal entries. No unsupported dates, quotes, or contradictory statements are introduced.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 4,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The General Insights present facts, such as the wired‑exhaustion cycle and the nine mentions of depression, that are supported by the journal entries. No unsupported dates, quotes, or contradictory statements are introduced.""
+}"
+rag_ab_fixed_llm,17,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195018.html,8,4,5,4,False,False,5,4,3,16.248,"The insights reference 147 entries and 2025 dates, which align with the provided journal excerpts. No unsupported facts or contradictions are present. The summary, trends, and suggested next steps are all grounded in the content.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 4,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The insights reference 147 entries and 2025 dates, which align with the provided journal excerpts. No unsupported facts or contradictions are present. The summary, trends, and suggested next steps are all grounded in the content.""
+}"
+rag_ab_fixed_llm,18,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195034.html,8,4,4,5,False,True,5,4,4,19.474,"The GI states that eight references to depression were recorded in 2025, but the provided excerpt contains no instance of the word ‘depression’. This claim cannot be verified from the text and appears to be an unsupported inference, thus constituting a hallucination.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The GI states that eight references to depression were recorded in 2025, but the provided excerpt contains no instance of the word ‘depression’. This claim cannot be verified from the text and appears to be an unsupported inference, thus constituting a hallucination.""
+}"
+rag_ab_fixed_llm,19,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195053.html,8,3,5,5,False,False,5,5,3,17.698,"The report notes only eight depression mentions across 147 entries, concludes low depression frequency, and suggests energy is likely stable, but it does not provide direct daily energy data, aligning with the journal’s sparse explicit references to energy. No unsupported facts found.","{""question_relevance_1_5"":3,""trend_relevance_1_5"":5,""direction_1_5"":5,""gi_hallucination"":false,""formatting_hygiene_1_5"":3,""clinical_safety_1_5"":5,""internal_coherence_1_5"":5,""gi_details"":""The report notes only eight depression mentions across 147 entries, concludes low depression frequency, and suggests energy is likely stable, but it does not provide direct daily energy data, aligning with the journal’s sparse explicit references to energy. No unsupported facts found.""}"
+rag_ab_fixed_llm,20,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195111.html,8,4,4,3,False,False,5,4,4,16.629,"The insights closely match the user’s inquiry, noting fluctuating energy linked to sleep and structured rest. Depression is flagged as a recurring, though not severe, theme, and recommendations prioritize nap timing, hydration, and finer break scheduling. The narrative remains consistent, supportive, and free of hallucinated facts.","{  
+  ""question_relevance_1_5"": 4,  
+  ""trend_relevance_1_5"": 4,  
+  ""direction_1_5"": 3,  
+  ""gi_hallucination"": false,  
+  ""formatting_hygiene_1_5"": 4,  
+  ""clinical_safety_1_5"": 5,  
+  ""internal_coherence_1_5"": 4,  
+  ""gi_details"": ""The insights closely match the user’s inquiry, noting fluctuating energy linked to sleep and structured rest. Depression is flagged as a recurring, though not severe, theme, and recommendations prioritize nap timing, hydration, and finer break scheduling. The narrative remains consistent, supportive, and free of hallucinated facts.""  
+}"
+rag_ab_fixed_llm,21,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195128.html,8,5,4,3,False,False,5,4,3,15.544,"The General Insights section accurately reflects the content of the journal excerpt, referencing specific routines, moods, and the 8 mentions of ""depression"". It does not invent events or misquote dates, and all factual statements (e.g., nap duration, early alarms) are supported by entries. Therefore, no hallucination is present.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 3,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The General Insights section accurately reflects the content of the journal excerpt, referencing specific routines, moods, and the 8 mentions of \""depression\"". It does not invent events or misquote dates, and all factual statements (e.g., nap duration, early alarms) are supported by entries. Therefore, no hallucination is present.""
+}"
+rag_ab_fixed_llm,22,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195143.html,8,5,5,5,False,False,5,5,4,19.224,"The General Insights accurately reflects content: it summarizes the wired‑tired fatigue, cites sleep issues, lists recovery strategies, and reports depression mentions without adding unsupported facts. Its bullet lists are clear, and tone is supportive. No hallucinated dates or events are present.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights accurately reflects content: it summarizes the wired‑tired fatigue, cites sleep issues, lists recovery strategies, and reports depression mentions without adding unsupported facts. Its bullet lists are clear, and tone is supportive. No hallucinated dates or events are present.""
+}"
+rag_ab_fixed_llm,23,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195202.html,8,5,5,5,False,False,5,5,3,15.38,No hallucinations detected.,"{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""No hallucinations detected.""
+}"
+rag_ab_fixed_llm,24,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195218.html,8,4,5,5,False,False,5,5,5,19.293,"The General Insights fully reflect content in the provided journal excerpt. No extraneous facts, dates, or events are introduced beyond what appears in the entries, and statements about energy, trend, and patterns align with journal content.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 5,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights fully reflect content in the provided journal excerpt. No extraneous facts, dates, or events are introduced beyond what appears in the entries, and statements about energy, trend, and patterns align with journal content.""
+}"
+rag_ab_fixed_llm,25,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195237.html,8,5,5,5,False,False,5,4,4,16.756,"The General Insights concisely summarises the energy pattern and depression trend. All statements directly reference appearance in the journal entries, such as recorded early‑morning surges and counts of depression mentions. No unsupported dates or facts appear, so no hallucination is detected.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The General Insights concisely summarises the energy pattern and depression trend. All statements directly reference appearance in the journal entries, such as recorded early‑morning surges and counts of depression mentions. No unsupported dates or facts appear, so no hallucination is detected.""
+}"
+rag_ab_fixed_llm,26,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195254.html,8,4,5,5,False,True,5,4,4,19.808,"The General Insights claims depression was mentioned eight times during 2025, yet the provided excerpt contains no explicit mention of the word ""depression"". Since the analysis references a numeric count that cannot be verified from the excerpt, this constitutes a hallucinated fact.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The General Insights claims depression was mentioned eight times during 2025, yet the provided excerpt contains no explicit mention of the word \""depression\"". Since the analysis references a numeric count that cannot be verified from the excerpt, this constitutes a hallucinated fact.""
+}"
+rag_ab_fixed_llm,27,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195314.html,8,5,5,5,False,True,5,5,3,16.414,"The General Insights incorrectly claim the participant logged 147 journal entries in 2025, but the provided excerpt contains only 15 entries covering April–May. Therefore this figure is not supported by the excerpt and constitutes a hallucinated fact.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights incorrectly claim the participant logged 147 journal entries in 2025, but the provided excerpt contains only 15 entries covering April–May. Therefore this figure is not supported by the excerpt and constitutes a hallucinated fact.""
+}"
+rag_ab_fixed_llm,28,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195330.html,8,4,5,5,False,False,5,5,3,20.412,"The report is consistent with the journal content, focusing on sleep, anxiety, and routine, with no invented facts.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The report is consistent with the journal content, focusing on sleep, anxiety, and routine, with no invented facts.""
+}"
+rag_ab_fixed_llm,29,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195350.html,8,4,5,5,False,False,5,5,3,15.214,"The General Insights text aligns with the journal, offering no unsupported claims and accurately reflecting reported energy patterns and depression mentions.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights text aligns with the journal, offering no unsupported claims and accurately reflecting reported energy patterns and depression mentions.""
+}"
+rag_ab_fixed_llm,30,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195406.html,8,5,2,3,False,False,5,5,3,18.297,"No hallucinations detected. The GI is aligned with the journal excerpt, with no unsupported facts or statements.","{""question_relevance_1_5"":5,""trend_relevance_1_5"":2,""direction_1_5"":3,""gi_hallucination"":false,""formatting_hygiene_1_5"":3,""clinical_safety_1_5"":5,""internal_coherence_1_5"":5,""gi_details"":""No hallucinations detected. The GI is aligned with the journal excerpt, with no unsupported facts or statements.""}"
+rag_ab_fixed_llm,31,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195424.html,8,4,4,4,False,False,5,5,2,20.73,"The report references an energy trend question, noting a steady decline in energy described as wired yet tired, echoing journal entries that mention fatigue, fragmented sleep, and anxiety. It reports increased grounding and hydration habits linked to better focus, offering a balanced tone without diagnosing or prescribing. The content aligns with the entries, summarizing patterns and suggesting routine strategies.","{""question_relevance_1_5"":4,""trend_relevance_1_5"":4,""direction_1_5"":4,""gi_hallucination"":false,""formatting_hygiene_1_5"":2,""clinical_safety_1_5"":5,""internal_coherence_1_5"":5,""gi_details"":""The report references an energy trend question, noting a steady decline in energy described as wired yet tired, echoing journal entries that mention fatigue, fragmented sleep, and anxiety. It reports increased grounding and hydration habits linked to better focus, offering a balanced tone without diagnosing or prescribing. The content aligns with the entries, summarizing patterns and suggesting routine strategies.""}"
+rag_ab_fixed_llm,32,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195445.html,8,5,5,5,False,False,5,5,3,19.549,"The General Insights text accurately reflects the journal excerpt, providing correct details about depression mentions and noting the lack of energy data. There are no unsupported claims or contradictions, so the hallucination flag is correctly set to false.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights text accurately reflects the journal excerpt, providing correct details about depression mentions and noting the lack of energy data. There are no unsupported claims or contradictions, so the hallucination flag is correctly set to false.""
+}"
+rag_ab_fixed_llm,33,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195504.html,8,4,4,4,False,False,5,5,3,16.142,"The General Insights accurately reflect the journal entries—wired‑tired patterns, naps, grounding practices, and depression mentions. No invented events or false dates are present, and the statements align with the source text.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 4,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights accurately reflect the journal entries—wired‑tired patterns, naps, grounding practices, and depression mentions. No invented events or false dates are present, and the statements align with the source text.""
+}"
+rag_ab_fixed_llm,34,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195520.html,8,5,4,5,False,False,5,5,4,20.111,"The summary reports eight depression entries, which matches the journal’s sparse mentions. However, the report does not explicitly tie energy logs to depression, reflecting the absence of such data. This is consistent with the excerpt, where energy levels are not recorded, so the analysis rightly states it cannot pinpoint exact months.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The summary reports eight depression entries, which matches the journal’s sparse mentions. However, the report does not explicitly tie energy logs to depression, reflecting the absence of such data. This is consistent with the excerpt, where energy levels are not recorded, so the analysis rightly states it cannot pinpoint exact months.""
+}"
+rag_ab_fixed_llm,35,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195540.html,8,4,5,5,True,True,5,4,3,25.694,"GI text talks about monthly energy patterns (Jan/Feb, Mar‑May, June, Jul‑Sep, Dec) and mentions a December decline, none of which appear in the provided excerpts. This creates unsubstantiated claims about specific dates and energy levels outside the sampled entries, indicating a hallucination.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""GI text talks about monthly energy patterns (Jan/Feb, Mar‑May, June, Jul‑Sep, Dec) and mentions a December decline, none of which appear in the provided excerpts. This creates unsubstantiated claims about specific dates and energy levels outside the sampled entries, indicating a hallucination.""
+}"
+rag_ab_fixed_llm,36,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195606.html,8,4,5,5,False,False,5,5,3,19.809,"The insights accurately reflect the journal's focus on energy habits, napping, and grounding; no invented dates or statistics are introduced. The depression trend count aligns with the extracted 8 mentions, maintaining consistency with the raw data.","{""question_relevance_1_5"":4,""trend_relevance_1_5"":5,""direction_1_5"":5,""gi_hallucination"":false,""formatting_hygiene_1_5"":3,""clinical_safety_1_5"":5,""internal_coherence_1_5"":5,""gi_details"":""The insights accurately reflect the journal's focus on energy habits, napping, and grounding; no invented dates or statistics are introduced. The depression trend count aligns with the extracted 8 mentions, maintaining consistency with the raw data.""}"
+rag_ab_fixed_llm,37,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195626.html,8,4,4,5,False,True,5,5,3,15.524,"The report claims analysis covers the full 2025 year, but journal excerpt only includes entries through May, so it states facts about December that are unsupported.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The report claims analysis covers the full 2025 year, but journal excerpt only includes entries through May, so it states facts about December that are unsupported.""
+}"
+rag_ab_fixed_llm,38,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195641.html,8,4,5,5,False,False,5,5,3,15.593,"The review verifies that the General Insights accurately follow the user’s request and trend keyword, with no unsupported claims.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The review verifies that the General Insights accurately follow the user’s request and trend keyword, with no unsupported claims.""
+}"
+rag_ab_fixed_llm,39,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195657.html,8,4,5,5,False,False,5,5,3,26.504,"No hallucinations present. The General Insights accurately reference the 5:30‑am wake‑up patterns, mid‑day naps, and mentions of depression noted in the journal entries. All facts align with the provided excerpts, and no unsupported dates, quotes, or events are introduced.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""No hallucinations present. The General Insights accurately reference the 5:30‑am wake‑up patterns, mid‑day naps, and mentions of depression noted in the journal entries. All facts align with the provided excerpts, and no unsupported dates, quotes, or events are introduced.""
+}"
+rag_ab_fixed_llm,40,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195724.html,8,5,5,5,False,True,5,4,3,25.989,"The General Insights claim 'depression appeared 8 times throughout the year,' yet none of the supplied journal excerpt contains the word 'depression.' This assertion cannot be corroborated by the excerpt and therefore represents a hallucination relative to the provided data.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The General Insights claim 'depression appeared 8 times throughout the year,' yet none of the supplied journal excerpt contains the word 'depression.' This assertion cannot be corroborated by the excerpt and therefore represents a hallucination relative to the provided data.""
+}"
+rag_ab_fixed_llm,41,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195750.html,8,5,5,5,False,False,5,5,4,17.035,Factually aligned with the journal entries; no unsupported statements or dates were found.,"{""question_relevance_1_5"":5,""trend_relevance_1_5"":5,""direction_1_5"":5,""gi_hallucination"":false,""formatting_hygiene_1_5"":4,""clinical_safety_1_5"":5,""internal_coherence_1_5"":5,""gi_details"":""Factually aligned with the journal entries; no unsupported statements or dates were found.""}"
+rag_ab_fixed_llm,42,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195807.html,8,4,4,5,False,False,5,5,4,26.889,"The General Insights paragraph accurately reflects the journal excerpts, referencing the 147 entries, repeated depression mentions, and rest strategies.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights paragraph accurately reflects the journal excerpts, referencing the 147 entries, repeated depression mentions, and rest strategies.""
+}"
+rag_ab_fixed_llm,43,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195834.html,8,4,2,2,False,False,5,4,3,18.536,"The insights reflect the user’s question on energy using diary entries, detail a pattern of high‑energy peaks after creative and social events, and propose rest and hydration as mitigators. The trend section notes depression but lacks depth, lowering trend relevance and direction scores. Formatting is plain, not using expected bullet marks, and the summary remains consistent with the trends, showing good internal coherence.","{""question_relevance_1_5"":4,""trend_relevance_1_5"":2,""direction_1_5"":2,""gi_hallucination"":false,""formatting_hygiene_1_5"":3,""clinical_safety_1_5"":5,""internal_coherence_1_5"":4,""gi_details"":""The insights reflect the user’s question on energy using diary entries, detail a pattern of high‑energy peaks after creative and social events, and propose rest and hydration as mitigators. The trend section notes depression but lacks depth, lowering trend relevance and direction scores. Formatting is plain, not using expected bullet marks, and the summary remains consistent with the trends, showing good internal coherence.""}"
+rag_ab_fixed_llm,44,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195852.html,8,5,5,5,False,False,5,5,3,15.301,The General Insights slice accurately reflects the data; no invented facts were introduced.,"{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights slice accurately reflects the data; no invented facts were introduced.""
+}"
+rag_ab_fixed_llm,45,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195907.html,8,4,4,5,False,True,5,4,3,19.204,"The General Insights claim that depression was mentioned eight times, yet the provided journal excerpt contains no mention of depression, indicating a factual inconsistency.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The General Insights claim that depression was mentioned eight times, yet the provided journal excerpt contains no mention of depression, indicating a factual inconsistency.""
+}"
+rag_ab_fixed_llm,46,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195927.html,8,4,4,4,False,False,5,5,3,22.016,"The report summarizes yearly energy patterns, notes recovery strategies, and cites depression mentions. The language reflects journal content without adding unsupported facts. Formatting uses paragraph lists rather than the required dash‑based bullets, lowering hygiene score, but the insights remain coherent.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 4,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The report summarizes yearly energy patterns, notes recovery strategies, and cites depression mentions. The language reflects journal content without adding unsupported facts. Formatting uses paragraph lists rather than the required dash‑based bullets, lowering hygiene score, but the insights remain coherent.""
+}"
+rag_ab_fixed_llm,47,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_195949.html,8,4,5,5,False,True,5,4,4,31.665,"General Insights asserts eight mentions of 'depression' across 2025 and describes an even spread, but the provided journal excerpt contains no explicit mention of that keyword or a detailed seasonal pattern for energy. These statements therefore introduce facts unsupported by the excerpt, constituting a hallucination.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""General Insights asserts eight mentions of 'depression' across 2025 and describes an even spread, but the provided journal excerpt contains no explicit mention of that keyword or a detailed seasonal pattern for energy. These statements therefore introduce facts unsupported by the excerpt, constituting a hallucination.""
+}"
+rag_ab_fixed_llm,48,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200020.html,8,4,5,5,False,False,5,5,2,24.857,"The General Insights contain no unsupported facts, but the formatting lacks the required bullet list markers.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 2,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights contain no unsupported facts, but the formatting lacks the required bullet list markers.""
+}"
+rag_ab_fixed_llm,49,true,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200045.html,8,3,4,3,False,True,5,4,2,19.402,"The report notes 8 mentions of ‘depression’ but cannot find energy language. It states no emerging trend in mood and suggests a stable emotional landscape. No direct guidance on energy is offered, and the absence of emotion‑specific data leads to an inconclusive energy assessment.","{
+  ""question_relevance_1_5"": 3,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 3,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 2,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The report notes 8 mentions of ‘depression’ but cannot find energy language. It states no emerging trend in mood and suggests a stable emotional landscape. No direct guidance on energy is offered, and the absence of emotion‑specific data leads to an inconclusive energy assessment.""
+}"
+rag_ab_fixed_llm,0,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200107.html,8,5,5,5,False,False,5,5,3,22.978,"The General Insights text contains no unsupported facts or contradictions relative to the supplied journal excerpts; all claims about depression mentions, trend direction, and energy patterns are either directly reflected in the entries or logically inferred from them.","{""question_relevance_1_5"":5,""trend_relevance_1_5"":5,""direction_1_5"":5,""gi_hallucination"":false,""formatting_hygiene_1_5"":3,""clinical_safety_1_5"":5,""internal_coherence_1_5"":5,""gi_details"":""The General Insights text contains no unsupported facts or contradictions relative to the supplied journal excerpts; all claims about depression mentions, trend direction, and energy patterns are either directly reflected in the entries or logically inferred from them.""}"
+rag_ab_fixed_llm,1,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200130.html,8,4,5,5,False,False,5,5,3,18.372,"General Insights accurately restate the user’s question and consistently refer to energy patterns; it mentions depression counts and trends, supports direction with no inconsistencies. Formatting is mostly plain text with headings but lacks bullet lists, keeping length reasonable yet slightly irregular. No unsupported facts appear, and the clinical tone is neutral, supportive, and non‑diagnostic.","{  
+  ""question_relevance_1_5"": 4,  
+  ""trend_relevance_1_5"": 5,  
+  ""direction_1_5"": 5,  
+  ""gi_hallucination"": false,  
+  ""formatting_hygiene_1_5"": 3,  
+  ""clinical_safety_1_5"": 5,  
+  ""internal_coherence_1_5"": 5,  
+  ""gi_details"": ""General Insights accurately restate the user’s question and consistently refer to energy patterns; it mentions depression counts and trends, supports direction with no inconsistencies. Formatting is mostly plain text with headings but lacks bullet lists, keeping length reasonable yet slightly irregular. No unsupported facts appear, and the clinical tone is neutral, supportive, and non‑diagnostic.""  
+}"
+rag_ab_fixed_llm,2,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200148.html,8,3,5,5,False,False,5,4,3,24.289,"The General Insights accurately answer the user’s energy question, summarise depression trends, and remain clinically appropriate without over‑diagnosing. Formatting is mainly paragraph‑based with occasional headings, lacking bullet lists, and contains no contradictory statements. Overall, the content is supportive, coherent, and mostly grounded in the data.","{
+  ""question_relevance_1_5"": 3,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The General Insights accurately answer the user’s energy question, summarise depression trends, and remain clinically appropriate without over‑diagnosing. Formatting is mainly paragraph‑based with occasional headings, lacking bullet lists, and contains no contradictory statements. Overall, the content is supportive, coherent, and mostly grounded in the data.""
+}"
+rag_ab_fixed_llm,3,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200213.html,8,4,4,3,False,False,5,4,4,22.425,No facts or events are asserted that are not supported by the journal excerpt; the analysis aligns with observed trends and documented entries.,"{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 3,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""No facts or events are asserted that are not supported by the journal excerpt; the analysis aligns with observed trends and documented entries.""
+}"
+rag_ab_fixed_llm,4,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200235.html,8,4,4,5,False,False,5,4,4,17.1,"The report accurately reflects energy fluctuations, lists coping tactics, and documents depression mentions without claiming unsubstantiated changes. No invented dates or event details are present.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The report accurately reflects energy fluctuations, lists coping tactics, and documents depression mentions without claiming unsubstantiated changes. No invented dates or event details are present.""
+}"
+rag_ab_fixed_llm,5,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200252.html,8,4,5,4,False,False,5,4,3,19.36,"The General Insights accurately reflect the journal content, with no unsupported facts or contradictory information.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 4,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The General Insights accurately reflect the journal content, with no unsupported facts or contradictory information.""
+}"
+rag_ab_fixed_llm,6,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200312.html,8,5,5,5,False,False,5,5,3,21.533,"The General Insights paragraph accurately references the journal excerpt, stating the count of depression mentions, sleep‑energy relations, and grounding technique usage. All claims align with entries; no invented dates or contradictory facts appear. The text stays within the article's content, so hallucination is absent.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights paragraph accurately references the journal excerpt, stating the count of depression mentions, sleep‑energy relations, and grounding technique usage. All claims align with entries; no invented dates or contradictory facts appear. The text stays within the article's content, so hallucination is absent.""
+}"
+rag_ab_fixed_llm,7,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200333.html,8,4,5,5,False,True,5,4,3,18.734,"Report asserts eight depression mentions and a June energy dip, yet the excerpt contains only April entries with no depression terms or evidence of the described trend. This mismatch indicates unsupported claims.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""Report asserts eight depression mentions and a June energy dip, yet the excerpt contains only April entries with no depression terms or evidence of the described trend. This mismatch indicates unsupported claims.""
+}"
+rag_ab_fixed_llm,8,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200352.html,8,5,5,5,False,False,5,5,3,29.25,No unsupported facts or contradictions were found; all assertions reference content from the journal entries.,"{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""No unsupported facts or contradictions were found; all assertions reference content from the journal entries.""
+}"
+rag_ab_fixed_llm,9,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200421.html,8,4,5,4,False,True,5,4,2,19.761,"The summary states energy has risen over the final two months and cites eight mentions of depression, yet the provided excerpt covers only up to early May and shows no precise count of depression references. These assertions cannot be directly verified by the excerpt, indicating the report may be hallucinating specific figures or time ranges.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 4,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 2,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The summary states energy has risen over the final two months and cites eight mentions of depression, yet the provided excerpt covers only up to early May and shows no precise count of depression references. These assertions cannot be directly verified by the excerpt, indicating the report may be hallucinating specific figures or time ranges.""
+}"
+rag_ab_fixed_llm,10,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200441.html,8,5,4,3,False,False,5,4,4,19.563,One short paragraph (≤80 words).,"{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 3,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""One short paragraph (≤80 words).""
+}"
+rag_ab_fixed_llm,11,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200500.html,8,4,4,5,False,False,5,5,4,16.382,All statements are grounded in the journal entries; no facts or dates are added that are not evident in the text.,"{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""All statements are grounded in the journal entries; no facts or dates are added that are not evident in the text.""
+}"
+rag_ab_fixed_llm,12,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200517.html,8,5,4,4,False,False,5,4,4,16.404,No unsupported facts or contradictions were found; the insights are grounded in the journal excerpt.,"{""question_relevance_1_5"":5,""trend_relevance_1_5"":4,""direction_1_5"":4,""gi_hallucination"":false,""formatting_hygiene_1_5"":4,""clinical_safety_1_5"":5,""internal_coherence_1_5"":4,""gi_details"":""No unsupported facts or contradictions were found; the insights are grounded in the journal excerpt.""}"
+rag_ab_fixed_llm,13,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200533.html,8,4,2,2,False,True,5,4,3,17.24,"The summary claims energy dips are a yearly trend but cites specific months (Oct/Nov) without evidence from the provided entries, which only cover April–May, creating an unsupported claim.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 2,
+  ""direction_1_5"": 2,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The summary claims energy dips are a yearly trend but cites specific months (Oct/Nov) without evidence from the provided entries, which only cover April–May, creating an unsupported claim.""
+}"
+rag_ab_fixed_llm,14,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200550.html,8,4,3,5,False,True,5,5,3,16.188,"The GI text claims 8 depression mentions in 2025, but the journal excerpt shows none. This mismatch indicates an unsupported fact, so the GI contains a hallucinated statement.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 3,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The GI text claims 8 depression mentions in 2025, but the journal excerpt shows none. This mismatch indicates an unsupported fact, so the GI contains a hallucinated statement.""
+}"
+rag_ab_fixed_llm,15,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200607.html,8,4,5,5,False,True,5,4,3,18.583,"The text states that the energy patterns were most pronounced in March, April, and May, yet the provided journal excerpt only includes entries from April. Mentioning March (and implicitly May) without supporting entries is a factual claim not grounded in the data, qualifying as a hallucination.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The text states that the energy patterns were most pronounced in March, April, and May, yet the provided journal excerpt only includes entries from April. Mentioning March (and implicitly May) without supporting entries is a factual claim not grounded in the data, qualifying as a hallucination.""
+}"
+rag_ab_fixed_llm,16,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200625.html,8,4,4,3,False,False,5,5,2,23.595,"The General Insights summarize energy and depression trends without inventing facts; all statements trace back to the journal entries, maintaining factual consistency.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 3,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 2,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights summarize energy and depression trends without inventing facts; all statements trace back to the journal entries, maintaining factual consistency.""
+}"
+rag_ab_fixed_llm,17,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200649.html,8,5,4,5,False,False,5,5,3,14.089,"The report accurately reflects journal content, with no unsupported facts.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The report accurately reflects journal content, with no unsupported facts.""
+}"
+rag_ab_fixed_llm,18,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200703.html,8,4,5,5,False,True,5,4,3,17.632,"The General Insights honestly reflects play of energy, citing multiple entries with notes of wired and tired moments, brief naps, and hydration. It correctly cites the eight depression mentions and treats that as a growing concern, matching the prompt. However it invents a 147‑entry dataset and year‑long dates absent from the excerpt, which is unsupported. The commentary remains supportive and avoids diagnostic language.","{""question_relevance_1_5"":4,""trend_relevance_1_5"":5,""direction_1_5"":5,""gi_hallucination"":true,""formatting_hygiene_1_5"":3,""clinical_safety_1_5"":5,""internal_coherence_1_5"":4,""gi_details"":""The General Insights honestly reflects play of energy, citing multiple entries with notes of wired and tired moments, brief naps, and hydration. It correctly cites the eight depression mentions and treats that as a growing concern, matching the prompt. However it invents a 147‑entry dataset and year‑long dates absent from the excerpt, which is unsupported. The commentary remains supportive and avoids diagnostic language.""}"
+rag_ab_fixed_llm,19,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200721.html,8,4,4,4,False,False,5,5,3,21.84,"The insights summarize key findings: energy patterns, recovery strategies, and depression trend, linking journal events to observed changes.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 4,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The insights summarize key findings: energy patterns, recovery strategies, and depression trend, linking journal events to observed changes.""
+}"
+rag_ab_fixed_llm,20,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200742.html,8,4,5,4,False,False,5,4,3,14.542,"The summary accurately reflects journal mentions of energy fluctuations, naps, caffeine, and depression references without adding unsupported claims.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 4,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The summary accurately reflects journal mentions of energy fluctuations, naps, caffeine, and depression references without adding unsupported claims.""
+}"
+rag_ab_fixed_llm,21,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200757.html,8,4,5,4,True,False,5,4,3,26.93,"The assessment aligns with journal content, staying factual; no unsupported claims or contradictions noted.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 4,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The assessment aligns with journal content, staying factual; no unsupported claims or contradictions noted.""
+}"
+rag_ab_fixed_llm,22,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200824.html,8,4,5,5,False,False,5,5,3,19.212,"The insights accurately reflect the journal, note rising energy with consistent routines, stable depression mentions, and recommend daily logs, screen limits, structured blocks, and review of depression trends.","{""question_relevance_1_5"":4,""trend_relevance_1_5"":5,""direction_1_5"":5,""gi_hallucination"":false,""formatting_hygiene_1_5"":3,""clinical_safety_1_5"":5,""internal_coherence_1_5"":5,""gi_details"":""The insights accurately reflect the journal, note rising energy with consistent routines, stable depression mentions, and recommend daily logs, screen limits, structured blocks, and review of depression trends.""}"
+rag_ab_fixed_llm,23,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200843.html,8,5,5,5,True,True,5,5,3,21.649,"The GI includes a stated correlation coefficient (r = 0.08) that is not found in the provided journal excerpt, rendering that assertion unsupported. Additionally, the summary of energy baseline is fairly generic and not explicitly drawn from quantified entries. These unsupported elements constitute a hallucination of factual data.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The GI includes a stated correlation coefficient (r = 0.08) that is not found in the provided journal excerpt, rendering that assertion unsupported. Additionally, the summary of energy baseline is fairly generic and not explicitly drawn from quantified entries. These unsupported elements constitute a hallucination of factual data.""
+}"
+rag_ab_fixed_llm,24,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200905.html,8,4,4,5,False,False,5,5,3,18.421,"GI delivers a focused overview of energy, links sleep and anxiety, cites depression trend data, and suggests next steps. The content is coherent and safe, but the lack of bullet lists reduces formatting hygiene relative to expected standards.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""GI delivers a focused overview of energy, links sleep and anxiety, cites depression trend data, and suggests next steps. The content is coherent and safe, but the lack of bullet lists reduces formatting hygiene relative to expected standards.""
+}"
+rag_ab_fixed_llm,25,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200923.html,8,4,4,4,False,True,5,4,2,16.591,"The report claims 147 journal entries covering the full year, but the provided excerpt lists only 16 entries. This mismatch indicates a hallucinated overall sample size not present in the excerpt, constituting a factual inconsistency.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 4,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 2,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The report claims 147 journal entries covering the full year, but the provided excerpt lists only 16 entries. This mismatch indicates a hallucinated overall sample size not present in the excerpt, constituting a factual inconsistency.""
+}"
+rag_ab_fixed_llm,26,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200940.html,8,4,5,5,False,False,5,5,3,16.85,No evidence of unsupported claims; all observations trace back to journal entries.,"{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""No evidence of unsupported claims; all observations trace back to journal entries.""
+}"
+rag_ab_fixed_llm,27,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_200957.html,8,5,5,5,False,False,5,5,3,25.024,"The analysis accurately addresses the energy question, aligns depression trend count, and maintains consistency across sections. It uses no unverified facts, remains supportive, and does not cause clinical harm. Minor formatting inconsistencies exist, such as lack of bullet lists, but content remains coherent. Overall, the summary is useful and safe.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The analysis accurately addresses the energy question, aligns depression trend count, and maintains consistency across sections. It uses no unverified facts, remains supportive, and does not cause clinical harm. Minor formatting inconsistencies exist, such as lack of bullet lists, but content remains coherent. Overall, the summary is useful and safe.""
+}"
+rag_ab_fixed_llm,28,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201022.html,8,4,5,5,False,False,5,5,4,16.112,"General Insights combines a direct answer to the energy question with broader trend analysis, consistent with journal entries that highlight early‑morning wiredness and later fatigue, while noting recurring depression mentions. The discussion is grounded in the data and presents a neutral, supportive tone.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""General Insights combines a direct answer to the energy question with broader trend analysis, consistent with journal entries that highlight early‑morning wiredness and later fatigue, while noting recurring depression mentions. The discussion is grounded in the data and presents a neutral, supportive tone.""
+}"
+rag_ab_fixed_llm,29,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201038.html,8,5,5,5,False,False,5,5,3,18.497,"The report’s narrative is coherent and factually grounded, but bullet lists are missing proper - markers, affecting expected formatting hygiene.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The report’s narrative is coherent and factually grounded, but bullet lists are missing proper - markers, affecting expected formatting hygiene.""
+}"
+rag_ab_fixed_llm,30,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201056.html,8,4,2,1,False,False,5,4,3,23.961,The insights accurately reflect content in the journal entries without introducing unsupported facts.,"{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 2,
+  ""direction_1_5"": 1,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The insights accurately reflect content in the journal entries without introducing unsupported facts.""
+}"
+rag_ab_fixed_llm,31,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201120.html,8,5,5,5,False,True,5,5,4,24.683,"The report claims depression is mentioned eight times, but the provided journal snippets contain no explicit use of the word. This assertion is unsupported and likely a hallucination.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The report claims depression is mentioned eight times, but the provided journal snippets contain no explicit use of the word. This assertion is unsupported and likely a hallucination.""
+}"
+rag_ab_fixed_llm,32,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201145.html,8,4,4,5,False,False,5,5,3,16.07,"The General Insights text repeats high‑level themes about energy rhythms without specific metrics from journal entries, and it generalizes depression frequencies without referencing exact excerpts. It remains grounded but lacks precise evidence.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights text repeats high‑level themes about energy rhythms without specific metrics from journal entries, and it generalizes depression frequencies without referencing exact excerpts. It remains grounded but lacks precise evidence.""
+}"
+rag_ab_fixed_llm,33,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201201.html,8,5,5,5,True,False,5,4,2,24.186,"The summary directly answers the user’s query, citing evidence from the journal, scoring 5. The trend keyword depression is noted with counts and distribution, merit 5. Direction aligns, so 5. No unsupported claims were found, hence hallucination false. The report lacks hyphenated bullet lists for themes and steps, so formatting scored 2. Language remains supportive, qualifying a safety score of 5. Minor inconsistencies between reported energy improvements and occasional decline notes give a coherence rating of 4.","{""question_relevance_1_5"":5,""trend_relevance_1_5"":5,""direction_1_5"":5,""gi_hallucination"":false,""formatting_hygiene_1_5"":2,""clinical_safety_1_5"":5,""internal_coherence_1_5"":4,""gi_details"":""The summary directly answers the user’s query, citing evidence from the journal, scoring 5. The trend keyword depression is noted with counts and distribution, merit 5. Direction aligns, so 5. No unsupported claims were found, hence hallucination false. The report lacks hyphenated bullet lists for themes and steps, so formatting scored 2. Language remains supportive, qualifying a safety score of 5. Minor inconsistencies between reported energy improvements and occasional decline notes give a coherence rating of 4.""}"
+rag_ab_fixed_llm,34,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201225.html,8,5,4,5,False,False,5,5,3,18.204,"No unsupported facts or quotes appear; every claim is grounded in the journal entries, and the analysis reflects the content accurately.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""No unsupported facts or quotes appear; every claim is grounded in the journal entries, and the analysis reflects the content accurately.""
+}"
+rag_ab_fixed_llm,35,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201243.html,8,4,4,3,False,False,5,5,4,25.19,"The General Insights only reference facts directly observable in the journal excerpts—energy trend, depression mentions, hydration, sleep patterns—and avoid unverified claims, so no hallucination is detected.","{""question_relevance_1_5"":4,""trend_relevance_1_5"":4,""direction_1_5"":3,""gi_hallucination"":false,""formatting_hygiene_1_5"":4,""clinical_safety_1_5"":5,""internal_coherence_1_5"":5,""gi_details"":""The General Insights only reference facts directly observable in the journal excerpts—energy trend, depression mentions, hydration, sleep patterns—and avoid unverified claims, so no hallucination is detected.""}"
+rag_ab_fixed_llm,36,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201309.html,8,5,5,5,False,False,5,5,3,27.55,"The report cites improved sleep hygiene and napping, new deep‑work blocks, and reduced pre‑sleep scrolling as key to stabilizing energy. Depression mentions remained steady. No unsubstantiated claims are made.","{""question_relevance_1_5"":5,""trend_relevance_1_5"":5,""direction_1_5"":5,""gi_hallucination"":false,""formatting_hygiene_1_5"":3,""clinical_safety_1_5"":5,""internal_coherence_1_5"":5,""gi_details"":""The report cites improved sleep hygiene and napping, new deep‑work blocks, and reduced pre‑sleep scrolling as key to stabilizing energy. Depression mentions remained steady. No unsubstantiated claims are made.""}"
+rag_ab_fixed_llm,37,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201336.html,8,4,4,4,False,False,5,5,3,22.3,"General Insights references 147 journal entries from the full year, but the excerpt shows only a subset (entries 0‑15). The text accurately summarizes themes and trend observations with no invented facts or dates. All claims about energy, sleep, and depression are supported by the cited entries, and all statistical or narrative references match the provided data.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 4,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""General Insights references 147 journal entries from the full year, but the excerpt shows only a subset (entries 0‑15). The text accurately summarizes themes and trend observations with no invented facts or dates. All claims about energy, sleep, and depression are supported by the cited entries, and all statistical or narrative references match the provided data.""
+}"
+rag_ab_fixed_llm,38,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201358.html,8,5,5,5,False,False,5,5,4,26.286,"The report summarizes yearly energy patterns, noting early low energy, a gradual improvement with naps and structured routines, and a neutral description of depression mentions. It remains supportive without diagnosing.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The report summarizes yearly energy patterns, noting early low energy, a gradual improvement with naps and structured routines, and a neutral description of depression mentions. It remains supportive without diagnosing.""
+}"
+rag_ab_fixed_llm,39,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201425.html,8,4,4,5,False,False,5,4,3,18.044,"The insights mention energy trend and depression frequency but use paragraph style instead of bullet lists, falling short of clean schema. It addresses the user question adequately and remains consistent with journal content, but no hallucinations or safety issues.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 4,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The insights mention energy trend and depression frequency but use paragraph style instead of bullet lists, falling short of clean schema. It addresses the user question adequately and remains consistent with journal content, but no hallucinations or safety issues.""
+}"
+rag_ab_fixed_llm,40,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201443.html,8,4,5,5,False,False,5,5,4,13.749,"The General Insights respect the user's question about energy, outline a stable depressive trend, stay grounded in the journal content, and provide a balanced, supportive tone without unverified claims.","{""question_relevance_1_5"":4,""trend_relevance_1_5"":5,""direction_1_5"":5,""gi_hallucination"":false,""formatting_hygiene_1_5"":4,""clinical_safety_1_5"":5,""internal_coherence_1_5"":5,""gi_details"":""The General Insights respect the user's question about energy, outline a stable depressive trend, stay grounded in the journal content, and provide a balanced, supportive tone without unverified claims.""}"
+rag_ab_fixed_llm,41,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201456.html,8,5,5,5,False,False,5,5,2,23.145,"The General Insights accurately reflect the content of the journal entries without claiming unsupported facts, dates, or events. No contradictory or fabricated information is present.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 2,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The General Insights accurately reflect the content of the journal entries without claiming unsupported facts, dates, or events. No contradictory or fabricated information is present.""
+}"
+rag_ab_fixed_llm,42,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201520.html,8,5,5,5,False,True,5,5,3,17.693,"The response asserts specific January‑March energy patterns and overall variability, but the provided journal excerpt only includes entries from April onward, so those statements lack direct support, constituting hallucination.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The response asserts specific January‑March energy patterns and overall variability, but the provided journal excerpt only includes entries from April onward, so those statements lack direct support, constituting hallucination.""
+}"
+rag_ab_fixed_llm,43,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201537.html,8,4,5,5,False,False,5,3,4,25.292,"The summary relies on direct mentions of sleep, anxiety, grounding and fatigue. All facts line up with journal excerpts, and the trend analysis aligns with documented depression mentions. No unsupported dates or quotes were added.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 3,
+  ""gi_details"": ""The summary relies on direct mentions of sleep, anxiety, grounding and fatigue. All facts line up with journal excerpts, and the trend analysis aligns with documented depression mentions. No unsupported dates or quotes were added.""
+}"
+rag_ab_fixed_llm,44,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201603.html,8,4,5,5,False,True,5,5,4,25.512,"The report states ""Depression was mentioned 8 times"" and that ""starting daily tasks at full capacity"" leads to low energy, yet the journal excerpt contains no explicit use of the word depression or that phrase, making those assertions unsupported by the provided text.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The report states \""Depression was mentioned 8 times\"" and that \""starting daily tasks at full capacity\"" leads to low energy, yet the journal excerpt contains no explicit use of the word depression or that phrase, making those assertions unsupported by the provided text.""
+}"
+rag_ab_fixed_llm,45,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201628.html,8,5,5,5,False,True,5,4,3,17.339,"The report states 147 journal entries, but the excerpt contains far fewer entries, so that figure is unsupported. Other details otherwise align with the excerpt.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 5,
+  ""gi_hallucination"": true,
+  ""formatting_hygiene_1_5"": 3,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 4,
+  ""gi_details"": ""The report states 147 journal entries, but the excerpt contains far fewer entries, so that figure is unsupported. Other details otherwise align with the excerpt.""
+}"
+rag_ab_fixed_llm,46,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201645.html,8,5,5,3,False,False,5,5,4,19.599,"The report states depression appears eight times and remains stable, aligning with scattered references in the entries. It notes energy dips after <4‑hour sleep, matching the documented wired‑tired pattern. No unverified claims or contradictory statements are present.","{
+  ""question_relevance_1_5"": 5,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 3,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The report states depression appears eight times and remains stable, aligning with scattered references in the entries. It notes energy dips after <4‑hour sleep, matching the documented wired‑tired pattern. No unverified claims or contradictory statements are present.""
+}"
+rag_ab_fixed_llm,47,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201705.html,8,4,5,5,False,False,5,5,4,20.754,"The insight accurately ties the user question to journal evidence, cites energy patterns, and notes depression counts via excerpts. It presents trend analysis directly aligned with the provided keyword. No unsubstantiated facts appear, and the formatting uses expected bullet markers though the summary is slightly verbose. Overall, the content is safe, coherent, and free of hallucinations.","{  
+  ""question_relevance_1_5"": 4,  
+  ""trend_relevance_1_5"": 5,  
+  ""direction_1_5"": 5,  
+  ""gi_hallucination"": false,  
+  ""formatting_hygiene_1_5"": 4,  
+  ""clinical_safety_1_5"": 5,  
+  ""internal_coherence_1_5"": 5,  
+  ""gi_details"": ""The insight accurately ties the user question to journal evidence, cites energy patterns, and notes depression counts via excerpts. It presents trend analysis directly aligned with the provided keyword. No unsubstantiated facts appear, and the formatting uses expected bullet markers though the summary is slightly verbose. Overall, the content is safe, coherent, and free of hallucinations.""  
+}"
+rag_ab_fixed_llm,48,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201726.html,8,4,5,5,False,True,5,4,3,23.549,"The report claims a steady decline in energy during the last quarter, though the provided entries only cover up to early May, indicating a possible off‑timeline assertion.","{""question_relevance_1_5"":4,""trend_relevance_1_5"":5,""direction_1_5"":5,""gi_hallucination"":true,""formatting_hygiene_1_5"":3,""clinical_safety_1_5"":5,""internal_coherence_1_5"":4,""gi_details"":""The report claims a steady decline in energy during the last quarter, though the provided entries only cover up to early May, indicating a possible off‑timeline assertion.""}"
+rag_ab_fixed_llm,49,false,/Users/jan-hsuanchu/dsai/JournalAnalyzer/reports/journal_report_20260509_201749.html,8,4,5,4,False,False,5,5,4,16.032,"The insights tightly follow the journal, mentioning energy dips, routines, and depression keyword counts. No unsupported dates or claims are made; all suggestions derive from recorded habits.","{
+  ""question_relevance_1_5"": 4,
+  ""trend_relevance_1_5"": 5,
+  ""direction_1_5"": 4,
+  ""gi_hallucination"": false,
+  ""formatting_hygiene_1_5"": 4,
+  ""clinical_safety_1_5"": 5,
+  ""internal_coherence_1_5"": 5,
+  ""gi_details"": ""The insights tightly follow the journal, mentioning energy dips, routines, and depression keyword counts. No unsupported dates or claims are made; all suggestions derive from recorded habits.""
+}"

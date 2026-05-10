@@ -4,8 +4,12 @@
 from __future__ import annotations
 
 import json
+import os
+from pathlib import Path
 
 import pandas as pd
+
+_JOURNAL_ANALYZER_ROOT = Path(__file__).resolve().parent.parent
 
 from agents.correlations import compute_correlation_pair, find_correlations_all_pairs, list_metrics_impl
 from context_builder import build_agent2_context_bundle, split_window_halves
@@ -73,6 +77,35 @@ Qualitative insights only unless backed by tool results for numbers.
 Do not quote journal text verbatim."""
 
 
+def resolved_agent2_system_message() -> str:
+    """
+    Default: built-in AGENT2_SYSTEM.
+    Override via AGENT2_SYSTEM_PROMPT_PATH: UTF-8 file; path relative to JournalAnalyzer
+    root unless absolute. Used by QC prompt sweeps and optional .env in deployment.
+    """
+    raw = (os.environ.get("AGENT2_SYSTEM_PROMPT_PATH") or "").strip()
+    if not raw:
+        return AGENT2_SYSTEM
+    path = Path(raw)
+    if not path.is_absolute():
+        path = _JOURNAL_ANALYZER_ROOT / path
+    if not path.is_file():
+        print(
+            f"Warning: AGENT2_SYSTEM_PROMPT_PATH not found ({path}); using built-in Agent 2 system prompt.",
+            flush=True,
+        )
+        return AGENT2_SYSTEM
+    try:
+        text = path.read_text(encoding="utf-8-sig").strip()
+    except OSError as exc:
+        print(
+            f"Warning: could not read AGENT2_SYSTEM_PROMPT_PATH ({path}): {exc}; using built-in.",
+            flush=True,
+        )
+        return AGENT2_SYSTEM
+    return text or AGENT2_SYSTEM
+
+
 def run_agent2_insight(
     df_analysis: pd.DataFrame,
     user_query: str | None,
@@ -125,7 +158,7 @@ def run_agent2_insight(
     }
 
     messages = [
-        {"role": "system", "content": AGENT2_SYSTEM},
+        {"role": "system", "content": resolved_agent2_system_message()},
         {"role": "user", "content": user_block},
     ]
 

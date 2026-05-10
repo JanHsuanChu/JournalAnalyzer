@@ -130,6 +130,9 @@ Ollama **chat** + **tools** for Agents 1–2; orchestrator fills **`correlation_
 | `OLLAMA_MODEL_AGENT1`, `OLLAMA_MODEL_AGENT2` | Optional | Default e.g. `nemotron-3-nano:30b-cloud` (same value for both is fine) |
 | `OLLAMA_MODEL_AGENT3` | Optional | Default `gpt-oss:20b-cloud` |
 | `OLLAMA_HOST` | Optional | Ollama API base (default `https://ollama.com`) |
+| `AGENT1_SYSTEM_PROMPT_PATH` | Optional | UTF-8 file path overriding Agent 1’s **system** message (fallback: built-in [`agents/agent1_k10.py`](agents/agent1_k10.py)). Relative to `JournalAnalyzer/` unless absolute. Set via QC **`prompt_env`** (see [`Quality Control Workflow/qc_config.prompt_sweep.example.yaml`](Quality%20Control%20Workflow/qc_config.prompt_sweep.example.yaml)) or global `.env`. |
+| `AGENT2_SYSTEM_PROMPT_PATH` | Optional | UTF-8 file path overriding Agent 2’s **system** message (fallback: built-in [`agents/agent2_insight.py`](agents/agent2_insight.py)). Relative to `JournalAnalyzer/` unless absolute. Set via QC **`prompt_env`** (see [`Quality Control Workflow/qc_config.agent2_prompt_sweep.example.yaml`](Quality%20Control%20Workflow/qc_config.agent2_prompt_sweep.example.yaml)) or global `.env`. |
+| `OLLAMA_MODEL_GI_QC_GRADER` | Optional | Model for General Insights JSON QC grader in batch runs (default `gpt-oss:20b-cloud`). |
 
 ### API endpoints ([api.py](api.py))
 

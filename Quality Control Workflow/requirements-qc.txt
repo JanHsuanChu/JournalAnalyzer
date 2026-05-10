@@ -5,3 +5,4 @@ python-dotenv>=1.0
 PyYAML>=6.0
 scipy>=1.10
 pingouin>=0.5
+matplotlib>=3.7

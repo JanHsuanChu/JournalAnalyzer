@@ -2,7 +2,7 @@
 # Do not put API keys here; use JournalAnalyzer/.env for secrets.
 
 # How many times the workflow runs the full pipeline + QC for each experimental variant 
-replicates_per_variant: 30
+replicates_per_variant: 50
 
 # first = print raw+parsed QC for the first completed run (like 02_ai_quality_control.R)
 qc_summary_run: first
@@ -27,4 +27,4 @@ variants:
   - label: LLM_c_qwen
     OLLAMA_MODEL_AGENT1: qwen3.5:cloud
     OLLAMA_MODEL_AGENT2: qwen3.5:cloud
-    OLLAMA_MODEL_AGENT3: gpt-oss:20b-cloud  
+    OLLAMA_MODEL_AGENT3: qwen3.5:cloud  

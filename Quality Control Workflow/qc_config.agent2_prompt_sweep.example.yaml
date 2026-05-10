@@ -1,0 +1,41 @@
+# Example: Agent 2 system prompt sweep — baseline vs therapist framing.
+# Same models every variant; only `prompt_env.AGENT2_SYSTEM_PROMPT_PATH` changes.
+# Use a **new** `--csv` path (GI QC schema); do not append into historical K-10-only CSVs.
+#
+# Run (from JournalAnalyzer/):
+#   python "Quality Control Workflow/run_variants.py" \
+#     --config "Quality Control Workflow/qc_config.agent2_prompt_sweep.example.yaml" \
+#     --csv "Quality Control Workflow/qc_experiment_scores_agent2_prompt_gi.csv"
+#
+# Design: see general_insights_qc plan (General Insights QC).
+
+replicates_per_variant: 50
+qc_summary_run: first
+# k10_gi = K-10 grader columns + GI. For GI-only CSV rows (no K-10 grader call): qc_output_schema: gi_only
+qc_output_schema: gi_only
+enable_gi_qc: true
+qc_journal_context:
+  mode: analysis_window
+
+shared:
+  date_from: "2025-01-01"
+  date_to: "2025-12-31"
+  trend_keywords: [depression]
+  user_question: "How is my energy going?"
+  include_k10_section: false
+  include_k10_trends: false
+
+variants:
+  - label: agent2_baseline
+    OLLAMA_MODEL_AGENT1: gpt-oss:20b-cloud
+    OLLAMA_MODEL_AGENT2: gpt-oss:20b-cloud
+    OLLAMA_MODEL_AGENT3: gpt-oss:20b-cloud
+    prompt_env:
+      AGENT2_SYSTEM_PROMPT_PATH: Quality Control Workflow/prompt_profiles/agent2_baseline.md
+
+  - label: agent2_therapist_notes
+    OLLAMA_MODEL_AGENT1: gpt-oss:20b-cloud
+    OLLAMA_MODEL_AGENT2: gpt-oss:20b-cloud
+    OLLAMA_MODEL_AGENT3: gpt-oss:20b-cloud
+    prompt_env:
+      AGENT2_SYSTEM_PROMPT_PATH: Quality Control Workflow/prompt_profiles/agent2_therapist_notes.md

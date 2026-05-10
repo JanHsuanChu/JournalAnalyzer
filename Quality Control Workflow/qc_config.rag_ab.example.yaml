@@ -3,8 +3,10 @@
 # Keep one fixed LLM triple and shared: blocks; only the retrieval path differs (pass 1 vs 2 env).
 # Secrets stay in JournalAnalyzer/.env — not in this file.
 
-replicates_per_variant: 2
-qc_summary_run: first
+replicates_per_variant: 50
+# No per-batch rubric dumps (run_qc_rag_ab.py uses run_variants --quiet: progress lines + final “batch complete” line).
+qc_summary_run: none
+qc_output_schema: gi_rag_ab
 
 qc_journal_context:
   mode: analysis_window
@@ -14,7 +16,7 @@ shared:
   date_to: "2025-12-31"
   trend_keywords: [depression]
   user_question: "How is my energy going?"
-  include_k10_section: true
+  include_k10_section: false
   include_k10_trends: false
 
 # Single variant: fixed models; rag_env empty (TOP_K tweaks are not “RAG off”).

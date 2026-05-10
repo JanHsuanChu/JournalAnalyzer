@@ -1,6 +1,5 @@
 # run_qc_rag_ab.py
-# Two-pass QC batch: RAG on (full Supabase env) vs RAG off (Supabase stripped in QC process only).
-# Same qc_config.yaml for both; separate CSV outputs for clean analysis vs LLM-sweep runs.
+# Two-pass QC batch: RAG on vs RAG off (same config), one CSV with rag_on column (gi_rag_ab template).
 
 from __future__ import annotations
 
@@ -31,7 +30,7 @@ def _merge_dotenv(base: dict[str, str]) -> dict[str, str]:
     merged = dict(base)
     for k, v in dotenv_values(DOTENV_PATH).items():
         if v is not None:
-            merged[k] = v
+            merged[k] = str(v)
     return merged
 
 
@@ -73,14 +72,12 @@ def _print_diff(env_on: dict[str, str], env_off: dict[str, str]) -> None:
 
 def run_both(
     config: Path,
-    csv_on: Path,
-    csv_off: Path,
+    csv_out: Path,
     *,
     dry_run: bool,
 ) -> int:
     config = config.resolve()
-    csv_on = csv_on.resolve()
-    csv_off = csv_off.resolve()
+    csv_out = csv_out.resolve()
     if not config.is_file():
         print(f"Error: config not found: {config}", file=sys.stderr)
         return 1
@@ -102,28 +99,38 @@ def run_both(
         "--config",
         str(config),
         "--csv",
+        str(csv_out),
+        "--output-schema",
+        "gi_rag_ab",
+        "--quiet",
     ]
 
-    print("=== Pass 1: RAG on (Supabase present in QC process) ===")
-    r1 = subprocess.run(cmd_base + [str(csv_on)], cwd=str(JA_ROOT), env=env_on)
+    print("=== Pass 1: RAG on ===")
+    env_pass1 = dict(env_on)
+    env_pass1["QC_RAG_ON"] = "true"
+    r1 = subprocess.run(cmd_base + ["--rag-on", "true"], cwd=str(JA_ROOT), env=env_pass1)
     if r1.returncode != 0:
         print(f"Pass 1 failed with exit code {r1.returncode}", file=sys.stderr)
         return r1.returncode
 
-    print("=== Pass 2: RAG off (Supabase stripped in QC process) ===")
-    r2 = subprocess.run(cmd_base + [str(csv_off)], cwd=str(JA_ROOT), env=env_off)
+    print("=== Pass 2: RAG off ===")
+    env_pass2 = dict(env_off)
+    env_pass2["QC_RAG_ON"] = "false"
+    r2 = subprocess.run(cmd_base + ["--rag-on", "false"], cwd=str(JA_ROOT), env=env_pass2)
     if r2.returncode != 0:
         print(f"Pass 2 failed with exit code {r2.returncode}", file=sys.stderr)
         return r2.returncode
 
-    print("Done. RAG on:", csv_on)
-    print("      RAG off:", csv_off)
+    print("Done. Single CSV:", csv_out)
     return 0
 
 
 def main() -> None:
     p = argparse.ArgumentParser(
-        description="Run QC twice: RAG available vs RAG unavailable (same config, two CSVs)."
+        description=(
+            "Run QC twice (RAG available vs unavailable) with the same config; "
+            "append both passes to one CSV (gi_rag_ab: Set B columns + rag_on)."
+        )
     )
     p.add_argument(
         "--config",
@@ -132,18 +139,10 @@ def main() -> None:
         help="Path to QC YAML (same file for both passes)",
     )
     p.add_argument(
-        "--csv-on",
+        "--csv",
         type=Path,
-        default=QC_ROOT / "qc_experiment_scores_rag_on.csv",
-        dest="csv_on",
-        help="Output CSV for RAG-on pass",
-    )
-    p.add_argument(
-        "--csv-off",
-        type=Path,
-        default=QC_ROOT / "qc_experiment_scores_rag_off.csv",
-        dest="csv_off",
-        help="Output CSV for RAG-off pass",
+        default=QC_ROOT / "qc_experiment_scores_rag_ab.csv",
+        help="Single output CSV (gi_rag_ab header; both passes append here)",
     )
     p.add_argument(
         "--dry-run",
@@ -151,14 +150,7 @@ def main() -> None:
         help="Print env diff only; do not run run_variants.py",
     )
     args = p.parse_args()
-    raise SystemExit(
-        run_both(
-            args.config,
-            args.csv_on,
-            args.csv_off,
-            dry_run=args.dry_run,
-        )
-    )
+    raise SystemExit(run_both(args.config, args.csv, dry_run=args.dry_run))
 
 
 if __name__ == "__main__":

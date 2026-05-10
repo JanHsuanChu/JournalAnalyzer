@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import os
+from pathlib import Path
 
 import pandas as pd
 
@@ -16,6 +17,9 @@ from context_builder import (
 )
 from k10_utils import tool_estimate_k10_from_journal_for_blob
 from ollama_client import chat_completion
+
+# JournalAnalyzer/ (this file lives in agents/).
+_JOURNAL_ANALYZER_ROOT = Path(__file__).resolve().parent.parent
 
 TOOL_ESTIMATE_K10 = {
     "type": "function",
@@ -105,6 +109,41 @@ Output:
 - Do not produce any text outside the tool call."""
 
 
+def resolved_agent1_system_message() -> str:
+    """
+    Default: built-in AGENT1_SYSTEM.
+    Override via AGENT1_SYSTEM_PROMPT_PATH: UTF-8 file; path relative to JournalAnalyzer
+    root unless absolute. Used by QC prompt sweeps and optional .env in deployment.
+    """
+    raw = (os.environ.get("AGENT1_SYSTEM_PROMPT_PATH") or "").strip()
+    if not raw:
+        return AGENT1_SYSTEM
+    path = Path(raw)
+    if not path.is_absolute():
+        path = _JOURNAL_ANALYZER_ROOT / path
+    if not path.is_file():
+        print(
+            f"Warning: AGENT1_SYSTEM_PROMPT_PATH not found ({path}); using built-in Agent 1 system prompt.",
+            flush=True,
+        )
+        return AGENT1_SYSTEM
+    try:
+        text = path.read_text(encoding="utf-8-sig").strip()
+    except OSError as exc:
+        print(
+            f"Warning: could not read AGENT1_SYSTEM_PROMPT_PATH ({path}): {exc}; using built-in.",
+            flush=True,
+        )
+        return AGENT1_SYSTEM
+    if not text:
+        print(
+            f"Warning: empty file for AGENT1_SYSTEM_PROMPT_PATH ({path}); using built-in.",
+            flush=True,
+        )
+        return AGENT1_SYSTEM
+    return text
+
+
 def _user_task(corpus_note: str, diary_blob: str) -> str:
     return (
         f"{corpus_note}\n\n"
@@ -191,7 +230,7 @@ def run_agent1_k10(
         user_task = _user_task(note, blob)
         registry = {"estimate_k10_from_journal": tool_estimate_k10_from_journal_for_blob(blob)}
         messages = [
-            {"role": "system", "content": AGENT1_SYSTEM},
+            {"role": "system", "content": resolved_agent1_system_message()},
             {"role": "user", "content": user_task},
         ]
         try:
