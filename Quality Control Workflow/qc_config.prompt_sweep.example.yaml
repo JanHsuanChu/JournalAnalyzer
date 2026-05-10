@@ -1,0 +1,49 @@
+# Example: Agent 1 prompt sweep — exactly THREE prompts (baseline + 2 alternatives).
+# Same LLM tags every variant; only `prompt_env` changes.
+# Do not commit API keys; use JournalAnalyzer/.env.
+#
+# Run (from JournalAnalyzer/):
+#   python "Quality Control Workflow/run_variants.py" \
+#     --config "Quality Control Workflow/qc_config.prompt_sweep.example.yaml" \
+#     --csv "Quality Control Workflow/qc_experiment_scores_prompt_sweep.csv"
+#
+# Default CSV template is k10_only (see qc_output_schema). For GI + latency columns,
+# set qc_output_schema: k10_gi in YAML or pass --output-schema k10_gi (use a separate CSV).
+#
+# Design: see Quality Control Workflow/prompt_profiles/agent1_alternative_rationale.md
+
+replicates_per_variant: 50
+qc_summary_run: first
+
+qc_journal_context:
+  mode: analysis_window
+
+shared:
+  date_from: "2026-03-01"
+  date_to: "2026-04-12"
+  trend_keywords: []
+  user_question: ""
+  include_k10_section: true
+  include_k10_trends: false
+
+variants:
+  - label: prompt_baseline
+    OLLAMA_MODEL_AGENT1: gpt-oss:20b-cloud
+    OLLAMA_MODEL_AGENT2: gpt-oss:20b-cloud
+    OLLAMA_MODEL_AGENT3: gpt-oss:20b-cloud
+    prompt_env:
+      AGENT1_SYSTEM_PROMPT_PATH: Quality Control Workflow/prompt_profiles/agent1_baseline.md
+
+  - label: prompt_alternative_explicit_calibration
+    OLLAMA_MODEL_AGENT1: gpt-oss:20b-cloud
+    OLLAMA_MODEL_AGENT2: gpt-oss:20b-cloud
+    OLLAMA_MODEL_AGENT3: gpt-oss:20b-cloud
+    prompt_env:
+      AGENT1_SYSTEM_PROMPT_PATH: Quality Control Workflow/prompt_profiles/agent1_alternative_explicit_calibration.md
+
+  - label: prompt_alternative_rhetoric
+    OLLAMA_MODEL_AGENT1: gpt-oss:20b-cloud
+    OLLAMA_MODEL_AGENT2: gpt-oss:20b-cloud
+    OLLAMA_MODEL_AGENT3: gpt-oss:20b-cloud
+    prompt_env:
+      AGENT1_SYSTEM_PROMPT_PATH: Quality Control Workflow/prompt_profiles/agent1_alternative_rhetoric.md

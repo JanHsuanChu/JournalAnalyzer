@@ -1,27 +1,19 @@
-# Environment and secrets
-.env
-.connect.env
-.rsconnect/
-.connect_python_pkgs/
-rsconnect-python/
+# Stray matplotlib font-cache folder name (never commit)
+.../
 
-# macOS
+# Local / tooling (do not commit)
 .DS_Store
+.connect.env
+.connect_python_pkgs/
 
-# Generated reports
-reports/
+.venv/
+.env
+.env.*
+!.env.example
 
-# Local vector indices / caches
-data/*.db
-
-# Python
 __pycache__/
 *.pyc
-.Python
-*.egg-info/
-.eggs/
 
-# Virtual environments
-venv/
-env/
-.venv/
+# Generated HTML reports / Posit publish metadata (local only)
+reports/
+rsconnect-python/

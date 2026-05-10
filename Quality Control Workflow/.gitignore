@@ -1,0 +1,8 @@
+*.pyc
+__pycache__/
+.qc_outputs/
+.mplconfig/
+
+# Reproducible artifacts from statistical_comparison.py / plot_qc_variants.py
+plots/*
+!plots/.gitkeep
