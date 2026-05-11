@@ -1,0 +1,381 @@
+📎 Detected QC CSV template: gi_rag_ab (columns=16)
+
+📎 RAG A/B grouping: comparing rag_on levels (RAG_off, RAG_on) — YAML variant_label was uniform ('rag_ab_fixed_llm'). All tests use these two row groups.
+
+==============================================================================
+📋 PART 1 — SUMMARY
+Means & rates snapshot + Welch t / Welch ANOVA headline (preview before Part 2)
+==============================================================================
+📊 Set A — K-10 report QC
+
+📊 Set B — General Insights QC (columns present only)
+
+📈 trend_keyword_total_count — Deterministic: sum of trend chart bar heights
+                n  mean
+variant_label          
+RAG_off        50   8.0
+RAG_on         50   8.0
+
+   Mean difference ('RAG_off' − 'RAG_on'): +0.000
+   ⚠️ Both groups are constant (zero within-group variance); Welch t is undefined — using p = 1.0 (no detectable mean difference).
+📋 Welch t-test ('RAG_off' vs 'RAG_on'): t = 0.0000, p = 1.000000
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 1.000000).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 question_relevance_1_5 — GI: question relevance (1–5)
+                n  mean
+variant_label          
+RAG_off        50  4.34
+RAG_on         50  4.30
+
+   Mean difference ('RAG_off' − 'RAG_on'): +0.040
+📋 Welch t-test ('RAG_off' vs 'RAG_on'): t = 0.3761, p = 0.707694
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 0.707694).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 trend_relevance_1_5 — GI: trend relevance (1–5)
+                n  mean
+variant_label          
+RAG_off        50  4.54
+RAG_on         50  4.54
+
+   Mean difference ('RAG_off' − 'RAG_on'): +0.000
+📋 Welch t-test ('RAG_off' vs 'RAG_on'): t = 0.0000, p = 1.000000
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 1.000000).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 direction_1_5 — GI: direction / valence alignment (1–5)
+                n  mean
+variant_label          
+RAG_off        50  4.48
+RAG_on         50  4.56
+
+   Mean difference ('RAG_off' − 'RAG_on'): -0.080
+📋 Welch t-test ('RAG_off' vs 'RAG_on'): t = -0.4578, p = 0.648081
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 0.648081).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 clinical_safety_1_5 — GI: clinical stance / safety (1–5)
+                n  mean
+variant_label          
+RAG_off        50   5.0
+RAG_on         50   5.0
+
+   Mean difference ('RAG_off' − 'RAG_on'): +0.000
+   ⚠️ Both groups are constant (zero within-group variance); Welch t is undefined — using p = 1.0 (no detectable mean difference).
+📋 Welch t-test ('RAG_off' vs 'RAG_on'): t = 0.0000, p = 1.000000
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 1.000000).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 internal_coherence_1_5 — GI: internal coherence (1–5)
+                n  mean
+variant_label          
+RAG_off        50  4.58
+RAG_on         50  4.64
+
+   Mean difference ('RAG_off' − 'RAG_on'): -0.060
+📋 Welch t-test ('RAG_off' vs 'RAG_on'): t = -0.5858, p = 0.559354
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 0.559354).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 formatting_hygiene_1_5 — GI: formatting / schema hygiene (1–5)
+                n  mean
+variant_label          
+RAG_off        50   3.2
+RAG_on         50   3.3
+
+   Mean difference ('RAG_off' − 'RAG_on'): -0.100
+📋 Welch t-test ('RAG_off' vs 'RAG_on'): t = -0.7420, p = 0.459927
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 0.459927).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 replicate_duration_s — Harness: replicate wall-clock seconds
+                n     mean
+variant_label             
+RAG_off        50  20.3657
+RAG_on         50  19.5216
+
+   Mean difference ('RAG_off' − 'RAG_on'): +0.844
+📋 Welch t-test ('RAG_off' vs 'RAG_on'): t = 1.0792, p = 0.283136
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 0.283136).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📊 gi_hallucination — GI scope: hallucination vs journal excerpt
+              TRUE_n  rate
+variant_label             
+RAG_off        13/50  0.26
+RAG_on         11/50  0.22
+
+📋 Fisher exact (× variant_label): OR = 0.8028, p = 0.815259
+💡 Interpretation:
+   ❌ No convincing association at conventional α (p = 0.815259): observed proportions may reflect sampling variability.
+   ❌ Avoid strong claims about variant superiority on this QC flag without more evidence.
+   📌 Each table cell aggregates independent replicates per variant × outcome.
+
+📊 correlation_analysis_present — Deterministic: substantive correlation list rows
+              TRUE_n  rate
+variant_label             
+RAG_off         3/50  0.06
+RAG_on          3/50  0.06
+
+📋 Fisher exact (× variant_label): OR = 1.0000, p = 1.000000
+💡 Interpretation:
+   ❌ No convincing association at conventional α (p = 1.000000): observed proportions may reflect sampling variability.
+   ❌ Avoid strong claims about variant superiority on this QC flag without more evidence.
+   📌 Each table cell aggregates independent replicates per variant × outcome.
+
+
+==============================================================================
+📋 PART 2 — DETAILED
+Lesson-style blocks: 🔍 variance check, 📋 test tables, 💡 takeaway lines
+==============================================================================
+
+------------------------------------------------------------------------------
+📊 trend_keyword_total_count — Deterministic: sum of trend chart bar heights
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+               mean  std  count
+variant_label                  
+RAG_off         8.0  0.0     50
+RAG_on          8.0  0.0     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = nan, p-value = nan
+
+📊 Equal-variance heuristic: ❌ Variances appear unequal (p < 0.05) — prefer Welch t / Welch ANOVA; still print ordinary ANOVA below for coursework comparison.
+
+📋 Two-sample preview: mean 'RAG_off' = 8.0000, mean 'RAG_on' = 8.0000; difference ('RAG_off' − 'RAG_on') = +0.0000
+
+📋 Welch t-test ('RAG_off' vs 'RAG_on') — results:
+  T  dof alternative  p_val       CI95  cohen_d  power BF10
+NaN  1.0   two-sided    NaN [nan, nan]      NaN    NaN  nan
+   ⚠️ Both groups are constant (zero within-group variance); t-test p/t undefined — using p = 1.0 for interpretation.
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'RAG_off' and 'RAG_on' at α = 0.05 (p = 1.000000).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 question_relevance_1_5 — GI: question relevance (1–5)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+               mean     std  count
+variant_label                     
+RAG_off        4.34  0.5194     50
+RAG_on         4.30  0.5440     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 0.1035, p-value = 0.747629
+
+📊 Equal-variance heuristic: ✅ Can treat variances as plausibly equal (p ≥ 0.05) — classic ANOVA is coherent.
+
+📋 Two-sample preview: mean 'RAG_off' = 4.3400, mean 'RAG_on' = 4.3000; difference ('RAG_off' − 'RAG_on') = +0.0400
+
+📋 Student t-test ('RAG_off' vs 'RAG_on') — results:
+       T  dof alternative    p_val          CI95  cohen_d    power  BF10
+0.376051   98   two-sided 0.707692 [-0.17, 0.25]  0.07521 0.066031 0.225
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'RAG_off' and 'RAG_on' at α = 0.05 (p = 0.707692).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 trend_relevance_1_5 — GI: trend relevance (1–5)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+               mean     std  count
+variant_label                     
+RAG_off        4.54  0.7343     50
+RAG_on         4.54  0.7879     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 0.2408, p-value = 0.623621
+
+📊 Equal-variance heuristic: ✅ Can treat variances as plausibly equal (p ≥ 0.05) — classic ANOVA is coherent.
+
+📋 Two-sample preview: mean 'RAG_off' = 4.5400, mean 'RAG_on' = 4.5400; difference ('RAG_off' − 'RAG_on') = +0.0000
+
+📋 Student t-test ('RAG_off' vs 'RAG_on') — results:
+  T  dof alternative  p_val        CI95  cohen_d  power  BF10
+0.0   98   two-sided    1.0 [-0.3, 0.3]      0.0   0.05 0.211
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'RAG_off' and 'RAG_on' at α = 0.05 (p = 1.000000).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 direction_1_5 — GI: direction / valence alignment (1–5)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+               mean     std  count
+variant_label                     
+RAG_off        4.48  0.9089     50
+RAG_on         4.56  0.8369     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 0.3301, p-value = 0.565611
+
+📊 Equal-variance heuristic: ✅ Can treat variances as plausibly equal (p ≥ 0.05) — classic ANOVA is coherent.
+
+📋 Two-sample preview: mean 'RAG_off' = 4.4800, mean 'RAG_on' = 4.5600; difference ('RAG_off' − 'RAG_on') = -0.0800
+
+📋 Student t-test ('RAG_off' vs 'RAG_on') — results:
+        T  dof alternative    p_val          CI95  cohen_d    power  BF10
+-0.457849   98   two-sided 0.648074 [-0.43, 0.27]  0.09157 0.073862 0.231
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'RAG_off' and 'RAG_on' at α = 0.05 (p = 0.648074).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 clinical_safety_1_5 — GI: clinical stance / safety (1–5)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+               mean  std  count
+variant_label                  
+RAG_off         5.0  0.0     50
+RAG_on          5.0  0.0     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = nan, p-value = nan
+
+📊 Equal-variance heuristic: ❌ Variances appear unequal (p < 0.05) — prefer Welch t / Welch ANOVA; still print ordinary ANOVA below for coursework comparison.
+
+📋 Two-sample preview: mean 'RAG_off' = 5.0000, mean 'RAG_on' = 5.0000; difference ('RAG_off' − 'RAG_on') = +0.0000
+
+📋 Welch t-test ('RAG_off' vs 'RAG_on') — results:
+  T  dof alternative  p_val       CI95  cohen_d  power BF10
+NaN  1.0   two-sided    NaN [nan, nan]      NaN    NaN  nan
+   ⚠️ Both groups are constant (zero within-group variance); t-test p/t undefined — using p = 1.0 for interpretation.
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'RAG_off' and 'RAG_on' at α = 0.05 (p = 1.000000).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 internal_coherence_1_5 — GI: internal coherence (1–5)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+               mean     std  count
+variant_label                     
+RAG_off        4.58  0.5379     50
+RAG_on         4.64  0.4849     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 0.5224, p-value = 0.469811
+
+📊 Equal-variance heuristic: ✅ Can treat variances as plausibly equal (p ≥ 0.05) — classic ANOVA is coherent.
+
+📋 Two-sample preview: mean 'RAG_off' = 4.5800, mean 'RAG_on' = 4.6400; difference ('RAG_off' − 'RAG_on') = -0.0600
+
+📋 Student t-test ('RAG_off' vs 'RAG_on') — results:
+        T  dof alternative   p_val          CI95  cohen_d    power  BF10
+-0.585825   98   two-sided 0.55934 [-0.26, 0.14] 0.117165 0.089356 0.246
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'RAG_off' and 'RAG_on' at α = 0.05 (p = 0.559340).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 formatting_hygiene_1_5 — GI: formatting / schema hygiene (1–5)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+               mean     std  count
+variant_label                     
+RAG_off         3.2  0.6061     50
+RAG_on          3.3  0.7354     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 1.8028, p-value = 0.179373
+
+📊 Equal-variance heuristic: ✅ Can treat variances as plausibly equal (p ≥ 0.05) — classic ANOVA is coherent.
+
+📋 Two-sample preview: mean 'RAG_off' = 3.2000, mean 'RAG_on' = 3.3000; difference ('RAG_off' − 'RAG_on') = -0.1000
+
+📋 Student t-test ('RAG_off' vs 'RAG_on') — results:
+        T  dof alternative    p_val          CI95  cohen_d    power  BF10
+-0.741999   98   two-sided 0.459863 [-0.37, 0.17]   0.1484 0.113769 0.269
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'RAG_off' and 'RAG_on' at α = 0.05 (p = 0.459863).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 replicate_duration_s — Harness: replicate wall-clock seconds
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                  mean     std  count
+variant_label                        
+RAG_off        20.3657  3.8802     50
+RAG_on         19.5216  3.9411     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 0.0118, p-value = 0.913673
+
+📊 Equal-variance heuristic: ✅ Can treat variances as plausibly equal (p ≥ 0.05) — classic ANOVA is coherent.
+
+📋 Two-sample preview: mean 'RAG_off' = 20.3657, mean 'RAG_on' = 19.5216; difference ('RAG_off' − 'RAG_on') = +0.8441
+
+📋 Student t-test ('RAG_off' vs 'RAG_on') — results:
+       T  dof alternative    p_val         CI95  cohen_d    power  BF10
+1.079228   98   two-sided 0.283135 [-0.71, 2.4] 0.215846 0.187615 0.354
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'RAG_off' and 'RAG_on' at α = 0.05 (p = 0.283135).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 gi_hallucination — GI scope: hallucination vs journal excerpt
+------------------------------------------------------------------------------
+📊 Crosstab (rows = variant_label, columns = value):
+_b             False  True 
+variant_label              
+RAG_off           37     13
+RAG_on            39     11
+
+📋 Fisher exact test (2×2 table):
+   odds ratio = 0.8028, p = 0.815259
+💡 Interpretation:
+   ❌ No convincing association at conventional α (p = 0.815259): observed proportions may reflect sampling variability.
+   ❌ Avoid strong claims about variant superiority on this QC flag without more evidence.
+   📌 Each table cell aggregates independent replicates per variant × outcome.
+
+------------------------------------------------------------------------------
+📊 correlation_analysis_present — Deterministic: substantive correlation list rows
+------------------------------------------------------------------------------
+📊 Crosstab (rows = variant_label, columns = value):
+_b             False  True 
+variant_label              
+RAG_off           47      3
+RAG_on            47      3
+
+📋 Fisher exact test (2×2 table):
+   odds ratio = 1.0000, p = 1.000000
+💡 Interpretation:
+   ❌ No convincing association at conventional α (p = 1.000000): observed proportions may reflect sampling variability.
+   ❌ Avoid strong claims about variant superiority on this QC flag without more evidence.
+   📌 Each table cell aggregates independent replicates per variant × outcome.
+
+------------------------------------------------------------------------------
+💡 Method note: with one categorical variant_label (no covariates), one-way Welch ANOVA answers the same question as OLS: DV ~ C(variant_label).
+💡 Key takeaway: p-values distinguish signal vs noise **on this sample**; substantive “better prompting” needs design validity + domain judgement, not a single asterisk.
+
+✅ statistical_comparison complete!
+💡 Reading guide — 📈 descriptive snapshot • 🔍 variance check • 📋 test output • 💡 takeaway.
+📄 Report saved: /Users/jan-hsuanchu/dsai/JournalAnalyzer/Quality Control Workflow/plots/qc_statistical_comparison_2.txt

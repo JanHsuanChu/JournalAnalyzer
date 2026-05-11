@@ -1,0 +1,180 @@
+📎 Detected QC CSV template: k10_only (columns=9)
+
+==============================================================================
+📋 PART 1 — SUMMARY
+Means & rates snapshot + Welch t / Welch ANOVA headline (preview before Part 2)
+==============================================================================
+📊 Set A — K-10 report QC
+
+📈 k10_total — K-10 total (parsed from report HTML)
+                                          n   mean
+variant_label                                     
+prompt_alternative_explicit_calibration  50  28.68
+prompt_alternative_rhetoric              50  28.30
+prompt_baseline                          50  28.56
+
+📋 Welch ANOVA (variant_label): F = 0.1192, p = 0.887768
+💡 Interpretation:
+   ❌ Welch ANOVA: omnibus not significant at α = 0.05 (F = 0.1192, p = 0.887768).
+   ❌ No strong evidence that variant means differ overall on this DV.
+
+📈 frequency_rubric_mean — Frequency rubric mean (per-item 1–5, reviewer)
+                                          n   mean
+variant_label                                     
+prompt_alternative_explicit_calibration  50  2.416
+prompt_alternative_rhetoric              50  2.266
+prompt_baseline                          50  2.494
+
+📋 Welch ANOVA (variant_label): F = 2.1839, p = 0.118050
+💡 Interpretation:
+   ❌ Welch ANOVA: omnibus not significant at α = 0.05 (F = 2.1839, p = 0.118050).
+   ❌ No strong evidence that variant means differ overall on this DV.
+
+📈 evidence_relevance_mean — Evidence relevance mean (per-item 1–5, reviewer)
+                                          n   mean
+variant_label                                     
+prompt_alternative_explicit_calibration  50  2.910
+prompt_alternative_rhetoric              50  2.876
+prompt_baseline                          50  3.062
+
+📋 Welch ANOVA (variant_label): F = 0.9601, p = 0.386426
+💡 Interpretation:
+   ❌ Welch ANOVA: omnibus not significant at α = 0.05 (F = 0.9601, p = 0.386426).
+   ❌ No strong evidence that variant means differ overall on this DV.
+
+📊 hallucination — K-10 scope: hallucination vs journal
+                                        TRUE_n  rate
+variant_label                                       
+prompt_alternative_explicit_calibration  13/50  0.26
+prompt_alternative_rhetoric               7/50  0.14
+prompt_baseline                           7/50  0.14
+
+📋 Chi-square: χ² = 3.2520, df = 2, p = 0.196712
+💡 Interpretation:
+   ❌ No convincing association at conventional α (p = 0.196712): observed proportions may reflect sampling variability.
+   ❌ Avoid strong claims about variant superiority on this QC flag without more evidence.
+   📌 Each table cell aggregates independent replicates per variant × outcome.
+
+
+==============================================================================
+📋 PART 2 — DETAILED
+Lesson-style blocks: 🔍 variance check, 📋 test tables, 💡 takeaway lines
+==============================================================================
+
+------------------------------------------------------------------------------
+📊 k10_total — K-10 total (parsed from report HTML)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                                          mean     std  count
+variant_label                                                
+prompt_alternative_explicit_calibration  28.68  3.7658     50
+prompt_alternative_rhetoric              28.30  4.0871     50
+prompt_baseline                          28.56  4.0161     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 0.3558, p-value = 0.837006
+
+📊 Equal-variance heuristic: ✅ Can treat variances as plausibly equal (p ≥ 0.05) — classic ANOVA is coherent.
+
+📋 One-way ANOVA (assumes equal variances — compare with Welch below):
+       Source  ddof1  ddof2        F    p_unc      np2
+variant_label      2    147 0.120389 0.886663 0.001635
+
+📋 Welch ANOVA (robust when variances or n differ by variant):
+       Source  ddof1     ddof2       F    p_unc      np2
+variant_label      2 97.874058 0.11919 0.887768 0.001635
+
+📊 Welch omnibus highlight: F = 0.1192, p = 0.887768
+
+💡 Interpretation:
+   ❌ No statistically significant omnibus effect across variants at α = 0.05 (F = 0.1192, p = 0.887768).
+   ❌ Treat visible mean gaps as exploratory unless you planned specific contrasts; avoid fishing pairwise tests after a non-significant omnibus.
+
+💡 Post-hoc: Games–Howell omitted — omnibus was not significant at α = 0.05 (avoid unprompted pairwise fishing).
+
+------------------------------------------------------------------------------
+📊 frequency_rubric_mean — Frequency rubric mean (per-item 1–5, reviewer)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                                          mean     std  count
+variant_label                                                
+prompt_alternative_explicit_calibration  2.416  0.5434     50
+prompt_alternative_rhetoric              2.266  0.5627     50
+prompt_baseline                          2.494  0.5377     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 0.1101, p-value = 0.946423
+
+📊 Equal-variance heuristic: ✅ Can treat variances as plausibly equal (p ≥ 0.05) — classic ANOVA is coherent.
+
+📋 One-way ANOVA (assumes equal variances — compare with Welch below):
+       Source  ddof1  ddof2        F    p_unc      np2
+variant_label      2    147 2.235587 0.110553 0.029518
+
+📋 Welch ANOVA (robust when variances or n differ by variant):
+       Source  ddof1     ddof2        F   p_unc      np2
+variant_label      2 97.964039 2.183936 0.11805 0.029518
+
+📊 Welch omnibus highlight: F = 2.1839, p = 0.118050
+
+💡 Interpretation:
+   ❌ No statistically significant omnibus effect across variants at α = 0.05 (F = 2.1839, p = 0.118050).
+   ❌ Treat visible mean gaps as exploratory unless you planned specific contrasts; avoid fishing pairwise tests after a non-significant omnibus.
+
+💡 Post-hoc: Games–Howell omitted — omnibus was not significant at α = 0.05 (avoid unprompted pairwise fishing).
+
+------------------------------------------------------------------------------
+📊 evidence_relevance_mean — Evidence relevance mean (per-item 1–5, reviewer)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                                          mean     std  count
+variant_label                                                
+prompt_alternative_explicit_calibration  2.910  0.6999     50
+prompt_alternative_rhetoric              2.876  0.8029     50
+prompt_baseline                          3.062  0.6779     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 1.6134, p-value = 0.446339
+
+📊 Equal-variance heuristic: ✅ Can treat variances as plausibly equal (p ≥ 0.05) — classic ANOVA is coherent.
+
+📋 One-way ANOVA (assumes equal variances — compare with Welch below):
+       Source  ddof1  ddof2        F    p_unc      np2
+variant_label      2    147 0.922992 0.399619 0.012402
+
+📋 Welch ANOVA (robust when variances or n differ by variant):
+       Source  ddof1     ddof2        F    p_unc      np2
+variant_label      2 97.524408 0.960146 0.386426 0.012402
+
+📊 Welch omnibus highlight: F = 0.9601, p = 0.386426
+
+💡 Interpretation:
+   ❌ No statistically significant omnibus effect across variants at α = 0.05 (F = 0.9601, p = 0.386426).
+   ❌ Treat visible mean gaps as exploratory unless you planned specific contrasts; avoid fishing pairwise tests after a non-significant omnibus.
+
+💡 Post-hoc: Games–Howell omitted — omnibus was not significant at α = 0.05 (avoid unprompted pairwise fishing).
+
+------------------------------------------------------------------------------
+📊 hallucination — K-10 scope: hallucination vs journal
+------------------------------------------------------------------------------
+📊 Crosstab (rows = variant_label, columns = value):
+_b                                       False  True 
+variant_label                                        
+prompt_alternative_explicit_calibration     37     13
+prompt_alternative_rhetoric                 43      7
+prompt_baseline                             43      7
+
+📋 Chi-square test of independence:
+   χ² = 3.2520, df = 2, p = 0.196712
+💡 Interpretation:
+   ❌ No convincing association at conventional α (p = 0.196712): observed proportions may reflect sampling variability.
+   ❌ Avoid strong claims about variant superiority on this QC flag without more evidence.
+   📌 Each table cell aggregates independent replicates per variant × outcome.
+
+------------------------------------------------------------------------------
+💡 Method note: with one categorical variant_label (no covariates), one-way Welch ANOVA answers the same question as OLS: DV ~ C(variant_label).
+💡 Key takeaway: p-values distinguish signal vs noise **on this sample**; substantive “better prompting” needs design validity + domain judgement, not a single asterisk.
+
+✅ statistical_comparison complete!
+💡 Reading guide — 📈 descriptive snapshot • 🔍 variance check • 📋 test output • 💡 takeaway.
+📄 Report saved: /Users/jan-hsuanchu/dsai/JournalAnalyzer/Quality Control Workflow/plots/qc_statistical_comparison.txt

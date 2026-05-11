@@ -1,0 +1,192 @@
+📎 Detected QC CSV template: k10_only (columns=9)
+
+==============================================================================
+📋 PART 1 — SUMMARY
+Means & rates snapshot + Welch t / Welch ANOVA headline (preview before Part 2)
+==============================================================================
+📊 Set A — K-10 report QC
+
+📈 k10_total — K-10 total (parsed from report HTML)
+                 n   mean
+variant_label            
+LLM_a_nemotron  50  40.54
+LLM_b_gpt-oss   50  29.92
+LLM_c_qwen      33  34.67
+
+📋 Welch ANOVA (variant_label): F = 76.9479, p = 8.29e-20
+💡 Interpretation:
+   ✅ Welch ANOVA: omnibus significant at α = 0.05 (F = 76.9479, p = 8.29e-20).
+   ✅ At least one variant mean differs; inspect Part 2 for Games–Howell (if run).
+
+📈 frequency_rubric_mean — Frequency rubric mean (per-item 1–5, reviewer)
+                 n   mean
+variant_label            
+LLM_a_nemotron  50  2.924
+LLM_b_gpt-oss   50  2.698
+LLM_c_qwen      32  3.250
+
+📋 Welch ANOVA (variant_label): F = 14.9045, p = 2.92e-06
+💡 Interpretation:
+   ✅ Welch ANOVA: omnibus significant at α = 0.05 (F = 14.9045, p = 2.92e-06).
+   ✅ At least one variant mean differs; inspect Part 2 for Games–Howell (if run).
+
+📈 evidence_relevance_mean — Evidence relevance mean (per-item 1–5, reviewer)
+                 n   mean
+variant_label            
+LLM_a_nemotron  50  2.524
+LLM_b_gpt-oss   50  3.188
+LLM_c_qwen      32  3.791
+
+📋 Welch ANOVA (variant_label): F = 20.1765, p = 7.66e-08
+💡 Interpretation:
+   ✅ Welch ANOVA: omnibus significant at α = 0.05 (F = 20.1765, p = 7.66e-08).
+   ✅ At least one variant mean differs; inspect Part 2 for Games–Howell (if run).
+
+📊 hallucination — K-10 scope: hallucination vs journal
+               TRUE_n   rate
+variant_label               
+LLM_a_nemotron  27/50  0.540
+LLM_b_gpt-oss   14/50  0.280
+LLM_c_qwen       6/32  0.188
+
+📋 Chi-square: χ² = 12.6053, df = 2, p = 0.001831
+💡 Interpretation:
+   ✅ Association test significant at α = 0.05 (p = 0.001831): rates differ across variant_label.
+   ✅ Next: inspect which cells drive the discrepancy (risk/proportion contrasts).
+   📌 Each table cell aggregates independent replicates per variant × outcome.
+
+
+==============================================================================
+📋 PART 2 — DETAILED
+Lesson-style blocks: 🔍 variance check, 📋 test tables, 💡 takeaway lines
+==============================================================================
+
+------------------------------------------------------------------------------
+📊 k10_total — K-10 total (parsed from report HTML)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                   mean     std  count
+variant_label                         
+LLM_a_nemotron  40.5400  4.8706     50
+LLM_b_gpt-oss   29.9200  3.6300     50
+LLM_c_qwen      34.6667  2.7576     33
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 12.0895, p-value = 0.002370
+
+📊 Equal-variance heuristic: ❌ Variances appear unequal (p < 0.05) — prefer Welch t / Welch ANOVA; still print ordinary ANOVA below for coursework comparison.
+
+📋 One-way ANOVA (assumes equal variances — compare with Welch below):
+       Source  ddof1  ddof2         F        p_unc      np2
+variant_label      2    130 89.589291 3.489047e-25 0.579531
+
+📋 Welch ANOVA (robust when variances or n differ by variant):
+       Source  ddof1     ddof2         F        p_unc      np2
+variant_label      2 85.092943 76.947911 8.290692e-20 0.579531
+
+📊 Welch omnibus highlight: F = 76.9479, p = 8.29e-20
+
+💡 Interpretation:
+   ✅ At least one variant differs on 'k10_total' (Welch omnibus F = 76.9479, p = 8.29e-20).
+   ✅ Follow up with planned contrasts or pairwise post-hoc tests (e.g. Games–Howell printed below).
+
+📋 Pairwise Games–Howell (post-hoc; use multiplicity caution):
+             A             B  mean_A    mean_B      diff       se         T        df         pval    hedges
+LLM_a_nemotron LLM_b_gpt-oss   40.54 29.920000 10.620000 0.859069 12.362216 90.600067 3.619327e-14  2.453473
+LLM_a_nemotron    LLM_c_qwen   40.54 34.666667  5.873333 0.839575  6.995602 79.455477 2.228451e-09  1.396754
+ LLM_b_gpt-oss    LLM_c_qwen   29.92 34.666667 -4.746667 0.702832 -6.753634 79.307283 6.498537e-09 -1.419465
+
+------------------------------------------------------------------------------
+📊 frequency_rubric_mean — Frequency rubric mean (per-item 1–5, reviewer)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                 mean     std  count
+variant_label                       
+LLM_a_nemotron  2.924  0.7422     50
+LLM_b_gpt-oss   2.698  0.5097     50
+LLM_c_qwen      3.250  0.4008     32
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 15.0699, p-value = 0.000534
+
+📊 Equal-variance heuristic: ❌ Variances appear unequal (p < 0.05) — prefer Welch t / Welch ANOVA; still print ordinary ANOVA below for coursework comparison.
+
+📋 One-way ANOVA (assumes equal variances — compare with Welch below):
+       Source  ddof1  ddof2        F    p_unc      np2
+variant_label      2    129 8.583826 0.000316 0.117452
+
+📋 Welch ANOVA (robust when variances or n differ by variant):
+       Source  ddof1     ddof2         F    p_unc      np2
+variant_label      2 83.483225 14.904491 0.000003 0.117452
+
+📊 Welch omnibus highlight: F = 14.9045, p = 2.92e-06
+
+💡 Interpretation:
+   ✅ At least one variant differs on 'frequency_rubric_mean' (Welch omnibus F = 14.9045, p = 2.92e-06).
+   ✅ Follow up with planned contrasts or pairwise post-hoc tests (e.g. Games–Howell printed below).
+
+📋 Pairwise Games–Howell (post-hoc; use multiplicity caution):
+             A             B  mean_A  mean_B   diff       se         T        df     pval    hedges
+LLM_a_nemotron LLM_b_gpt-oss   2.924   2.698  0.226 0.127329  1.774931 86.809460 0.184051  0.352262
+LLM_a_nemotron    LLM_c_qwen   2.924   3.250 -0.326 0.126637 -2.574283 78.173716 0.031668 -0.510834
+ LLM_b_gpt-oss    LLM_c_qwen   2.698   3.250 -0.552 0.101074 -5.461333 76.519500 0.000002 -1.162181
+
+------------------------------------------------------------------------------
+📊 evidence_relevance_mean — Evidence relevance mean (per-item 1–5, reviewer)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                  mean     std  count
+variant_label                        
+LLM_a_nemotron  2.5240  1.1785     50
+LLM_b_gpt-oss   3.1880  0.7361     50
+LLM_c_qwen      3.7906  0.6567     32
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 16.8658, p-value = 0.000218
+
+📊 Equal-variance heuristic: ❌ Variances appear unequal (p < 0.05) — prefer Welch t / Welch ANOVA; still print ordinary ANOVA below for coursework comparison.
+
+📋 One-way ANOVA (assumes equal variances — compare with Welch below):
+       Source  ddof1  ddof2         F        p_unc      np2
+variant_label      2    129 19.234933 4.887886e-08 0.229712
+
+📋 Welch ANOVA (robust when variances or n differ by variant):
+       Source  ddof1     ddof2         F        p_unc      np2
+variant_label      2 81.330475 20.176467 7.664355e-08 0.229712
+
+📊 Welch omnibus highlight: F = 20.1765, p = 7.66e-08
+
+💡 Interpretation:
+   ✅ At least one variant differs on 'evidence_relevance_mean' (Welch omnibus F = 20.1765, p = 7.66e-08).
+   ✅ Follow up with planned contrasts or pairwise post-hoc tests (e.g. Games–Howell printed below).
+
+📋 Pairwise Games–Howell (post-hoc; use multiplicity caution):
+             A             B  mean_A   mean_B      diff       se         T        df         pval    hedges
+LLM_a_nemotron LLM_b_gpt-oss   2.524 3.188000 -0.664000 0.196504 -3.379064 82.186006 3.165749e-03 -0.670627
+LLM_a_nemotron    LLM_c_qwen   2.524 3.790625 -1.266625 0.203103 -6.236356 78.771457 6.227060e-08 -1.243736
+ LLM_b_gpt-oss    LLM_c_qwen   3.188 3.790625 -0.602625 0.155926 -3.864818 71.612143 7.005987e-04 -0.845071
+
+------------------------------------------------------------------------------
+📊 hallucination — K-10 scope: hallucination vs journal
+------------------------------------------------------------------------------
+📊 Crosstab (rows = variant_label, columns = value):
+_b              False  True 
+variant_label               
+LLM_a_nemotron     23     27
+LLM_b_gpt-oss      36     14
+LLM_c_qwen         26      6
+
+📋 Chi-square test of independence:
+   χ² = 12.6053, df = 2, p = 0.001831
+💡 Interpretation:
+   ✅ Association test significant at α = 0.05 (p = 0.001831): rates differ across variant_label.
+   ✅ Next: inspect which cells drive the discrepancy (risk/proportion contrasts).
+   📌 Each table cell aggregates independent replicates per variant × outcome.
+
+------------------------------------------------------------------------------
+💡 Method note: with one categorical variant_label (no covariates), one-way Welch ANOVA answers the same question as OLS: DV ~ C(variant_label).
+💡 Key takeaway: p-values distinguish signal vs noise **on this sample**; substantive “better prompting” needs design validity + domain judgement, not a single asterisk.
+
+✅ statistical_comparison complete!
+💡 Reading guide — 📈 descriptive snapshot • 🔍 variance check • 📋 test output • 💡 takeaway.
+📄 Report saved: /Users/jan-hsuanchu/dsai/JournalAnalyzer/Quality Control Workflow/plots/qc_statistical_comparison.txt

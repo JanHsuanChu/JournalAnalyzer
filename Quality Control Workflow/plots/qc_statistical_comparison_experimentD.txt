@@ -1,0 +1,379 @@
+📎 Detected QC CSV template: gi_only (columns=15)
+
+==============================================================================
+📋 PART 1 — SUMMARY
+Means & rates snapshot + Welch t / Welch ANOVA headline (preview before Part 2)
+==============================================================================
+📊 Set A — K-10 report QC
+
+📊 Set B — General Insights QC (columns present only)
+
+📈 trend_keyword_total_count — Deterministic: sum of trend chart bar heights
+                         n  mean
+variant_label                   
+agent2_baseline         50   8.0
+agent2_therapist_notes  50   8.0
+
+   Mean difference ('agent2_baseline' − 'agent2_therapist_notes'): +0.000
+   ⚠️ Both groups are constant (zero within-group variance); Welch t is undefined — using p = 1.0 (no detectable mean difference).
+📋 Welch t-test ('agent2_baseline' vs 'agent2_therapist_notes'): t = 0.0000, p = 1.000000
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 1.000000).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 question_relevance_1_5 — GI: question relevance (1–5)
+                         n  mean
+variant_label                   
+agent2_baseline         50  4.34
+agent2_therapist_notes  50  4.40
+
+   Mean difference ('agent2_baseline' − 'agent2_therapist_notes'): -0.060
+📋 Welch t-test ('agent2_baseline' vs 'agent2_therapist_notes'): t = -0.5494, p = 0.583978
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 0.583978).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 trend_relevance_1_5 — GI: trend relevance (1–5)
+                         n  mean
+variant_label                   
+agent2_baseline         50  4.56
+agent2_therapist_notes  50  4.54
+
+   Mean difference ('agent2_baseline' − 'agent2_therapist_notes'): +0.020
+📋 Welch t-test ('agent2_baseline' vs 'agent2_therapist_notes'): t = 0.1418, p = 0.887562
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 0.887562).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 direction_1_5 — GI: direction / valence alignment (1–5)
+                         n  mean
+variant_label                   
+agent2_baseline         50  4.52
+agent2_therapist_notes  50  4.36
+
+   Mean difference ('agent2_baseline' − 'agent2_therapist_notes'): +0.160
+📋 Welch t-test ('agent2_baseline' vs 'agent2_therapist_notes'): t = 0.9748, p = 0.332136
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 0.332136).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 clinical_safety_1_5 — GI: clinical stance / safety (1–5)
+                         n  mean
+variant_label                   
+agent2_baseline         50   5.0
+agent2_therapist_notes  50   5.0
+
+   Mean difference ('agent2_baseline' − 'agent2_therapist_notes'): +0.000
+   ⚠️ Both groups are constant (zero within-group variance); Welch t is undefined — using p = 1.0 (no detectable mean difference).
+📋 Welch t-test ('agent2_baseline' vs 'agent2_therapist_notes'): t = 0.0000, p = 1.000000
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 1.000000).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 internal_coherence_1_5 — GI: internal coherence (1–5)
+                         n  mean
+variant_label                   
+agent2_baseline         50  4.58
+agent2_therapist_notes  50  4.54
+
+   Mean difference ('agent2_baseline' − 'agent2_therapist_notes'): +0.040
+📋 Welch t-test ('agent2_baseline' vs 'agent2_therapist_notes'): t = 0.3992, p = 0.690625
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 0.690625).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 formatting_hygiene_1_5 — GI: formatting / schema hygiene (1–5)
+                         n  mean
+variant_label                   
+agent2_baseline         50  3.38
+agent2_therapist_notes  50  3.24
+
+   Mean difference ('agent2_baseline' − 'agent2_therapist_notes'): +0.140
+📋 Welch t-test ('agent2_baseline' vs 'agent2_therapist_notes'): t = 0.9713, p = 0.333792
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 0.333792).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📈 replicate_duration_s — Harness: replicate wall-clock seconds
+                         n     mean
+variant_label                      
+agent2_baseline         50  20.6460
+agent2_therapist_notes  50  21.8175
+
+   Mean difference ('agent2_baseline' − 'agent2_therapist_notes'): -1.171
+📋 Welch t-test ('agent2_baseline' vs 'agent2_therapist_notes'): t = -0.7366, p = 0.463901
+💡 Interpretation:
+   ❌ Welch t-test: no significant difference at α = 0.05 (p = 0.463901).
+   ❌ Part 2 prints the full test table and direction-neutral wording.
+
+📊 gi_hallucination — GI scope: hallucination vs journal excerpt
+                       TRUE_n  rate
+variant_label                      
+agent2_baseline         11/50  0.22
+agent2_therapist_notes  12/50  0.24
+
+📋 Fisher exact (× variant_label): OR = 1.1196, p = 1.000000
+💡 Interpretation:
+   ❌ No convincing association at conventional α (p = 1.000000): observed proportions may reflect sampling variability.
+   ❌ Avoid strong claims about variant superiority on this QC flag without more evidence.
+   📌 Each table cell aggregates independent replicates per variant × outcome.
+
+📊 correlation_analysis_present — Deterministic: substantive correlation list rows
+                       TRUE_n  rate
+variant_label                      
+agent2_baseline          5/50  0.10
+agent2_therapist_notes   2/50  0.04
+
+📋 Fisher exact (× variant_label): OR = 0.3750, p = 0.436032
+💡 Interpretation:
+   ❌ No convincing association at conventional α (p = 0.436032): observed proportions may reflect sampling variability.
+   ❌ Avoid strong claims about variant superiority on this QC flag without more evidence.
+   📌 Each table cell aggregates independent replicates per variant × outcome.
+
+
+==============================================================================
+📋 PART 2 — DETAILED
+Lesson-style blocks: 🔍 variance check, 📋 test tables, 💡 takeaway lines
+==============================================================================
+
+------------------------------------------------------------------------------
+📊 trend_keyword_total_count — Deterministic: sum of trend chart bar heights
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                        mean  std  count
+variant_label                           
+agent2_baseline          8.0  0.0     50
+agent2_therapist_notes   8.0  0.0     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = nan, p-value = nan
+
+📊 Equal-variance heuristic: ❌ Variances appear unequal (p < 0.05) — prefer Welch t / Welch ANOVA; still print ordinary ANOVA below for coursework comparison.
+
+📋 Two-sample preview: mean 'agent2_baseline' = 8.0000, mean 'agent2_therapist_notes' = 8.0000; difference ('agent2_baseline' − 'agent2_therapist_notes') = +0.0000
+
+📋 Welch t-test ('agent2_baseline' vs 'agent2_therapist_notes') — results:
+  T  dof alternative  p_val       CI95  cohen_d  power BF10
+NaN  1.0   two-sided    NaN [nan, nan]      NaN    NaN  nan
+   ⚠️ Both groups are constant (zero within-group variance); t-test p/t undefined — using p = 1.0 for interpretation.
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'agent2_baseline' and 'agent2_therapist_notes' at α = 0.05 (p = 1.000000).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 question_relevance_1_5 — GI: question relevance (1–5)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                        mean     std  count
+variant_label                              
+agent2_baseline         4.34  0.5573     50
+agent2_therapist_notes  4.40  0.5345     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 0.0846, p-value = 0.771118
+
+📊 Equal-variance heuristic: ✅ Can treat variances as plausibly equal (p ≥ 0.05) — classic ANOVA is coherent.
+
+📋 Two-sample preview: mean 'agent2_baseline' = 4.3400, mean 'agent2_therapist_notes' = 4.4000; difference ('agent2_baseline' − 'agent2_therapist_notes') = -0.0600
+
+📋 Student t-test ('agent2_baseline' vs 'agent2_therapist_notes') — results:
+        T  dof alternative    p_val          CI95  cohen_d    power  BF10
+-0.549407   98   two-sided 0.583976 [-0.28, 0.16] 0.109881 0.084539 0.241
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'agent2_baseline' and 'agent2_therapist_notes' at α = 0.05 (p = 0.583976).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 trend_relevance_1_5 — GI: trend relevance (1–5)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                        mean     std  count
+variant_label                              
+agent2_baseline         4.56  0.5771     50
+agent2_therapist_notes  4.54  0.8134     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 5.6042, p-value = 0.017917
+
+📊 Equal-variance heuristic: ❌ Variances appear unequal (p < 0.05) — prefer Welch t / Welch ANOVA; still print ordinary ANOVA below for coursework comparison.
+
+📋 Two-sample preview: mean 'agent2_baseline' = 4.5600, mean 'agent2_therapist_notes' = 4.5400; difference ('agent2_baseline' − 'agent2_therapist_notes') = +0.0200
+
+📋 Welch t-test ('agent2_baseline' vs 'agent2_therapist_notes') — results:
+       T       dof alternative    p_val         CI95  cohen_d    power  BF10
+0.141798 88.358812   two-sided 0.887562 [-0.26, 0.3]  0.02836 0.052262 0.213
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'agent2_baseline' and 'agent2_therapist_notes' at α = 0.05 (p = 0.887562).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 direction_1_5 — GI: direction / valence alignment (1–5)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                        mean     std  count
+variant_label                              
+agent2_baseline         4.52  0.7351     50
+agent2_therapist_notes  4.36  0.8981     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 1.9314, p-value = 0.164605
+
+📊 Equal-variance heuristic: ✅ Can treat variances as plausibly equal (p ≥ 0.05) — classic ANOVA is coherent.
+
+📋 Two-sample preview: mean 'agent2_baseline' = 4.5200, mean 'agent2_therapist_notes' = 4.3600; difference ('agent2_baseline' − 'agent2_therapist_notes') = +0.1600
+
+📋 Student t-test ('agent2_baseline' vs 'agent2_therapist_notes') — results:
+       T  dof alternative    p_val          CI95  cohen_d    power  BF10
+0.974835   98   two-sided 0.332042 [-0.17, 0.49] 0.194967 0.161672 0.322
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'agent2_baseline' and 'agent2_therapist_notes' at α = 0.05 (p = 0.332042).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 clinical_safety_1_5 — GI: clinical stance / safety (1–5)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                        mean  std  count
+variant_label                           
+agent2_baseline          5.0  0.0     50
+agent2_therapist_notes   5.0  0.0     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = nan, p-value = nan
+
+📊 Equal-variance heuristic: ❌ Variances appear unequal (p < 0.05) — prefer Welch t / Welch ANOVA; still print ordinary ANOVA below for coursework comparison.
+
+📋 Two-sample preview: mean 'agent2_baseline' = 5.0000, mean 'agent2_therapist_notes' = 5.0000; difference ('agent2_baseline' − 'agent2_therapist_notes') = +0.0000
+
+📋 Welch t-test ('agent2_baseline' vs 'agent2_therapist_notes') — results:
+  T  dof alternative  p_val       CI95  cohen_d  power BF10
+NaN  1.0   two-sided    NaN [nan, nan]      NaN    NaN  nan
+   ⚠️ Both groups are constant (zero within-group variance); t-test p/t undefined — using p = 1.0 for interpretation.
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'agent2_baseline' and 'agent2_therapist_notes' at α = 0.05 (p = 1.000000).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 internal_coherence_1_5 — GI: internal coherence (1–5)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                        mean     std  count
+variant_label                              
+agent2_baseline         4.58  0.4986     50
+agent2_therapist_notes  4.54  0.5035     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 0.0046, p-value = 0.945827
+
+📊 Equal-variance heuristic: ✅ Can treat variances as plausibly equal (p ≥ 0.05) — classic ANOVA is coherent.
+
+📋 Two-sample preview: mean 'agent2_baseline' = 4.5800, mean 'agent2_therapist_notes' = 4.5400; difference ('agent2_baseline' − 'agent2_therapist_notes') = +0.0400
+
+📋 Student t-test ('agent2_baseline' vs 'agent2_therapist_notes') — results:
+       T  dof alternative    p_val          CI95  cohen_d    power  BF10
+0.399186   98   two-sided 0.690625 [-0.16, 0.24] 0.079837 0.068085 0.226
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'agent2_baseline' and 'agent2_therapist_notes' at α = 0.05 (p = 0.690625).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 formatting_hygiene_1_5 — GI: formatting / schema hygiene (1–5)
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                        mean     std  count
+variant_label                              
+agent2_baseline         3.38  0.7253     50
+agent2_therapist_notes  3.24  0.7160     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 0.0082, p-value = 0.928041
+
+📊 Equal-variance heuristic: ✅ Can treat variances as plausibly equal (p ≥ 0.05) — classic ANOVA is coherent.
+
+📋 Two-sample preview: mean 'agent2_baseline' = 3.3800, mean 'agent2_therapist_notes' = 3.2400; difference ('agent2_baseline' − 'agent2_therapist_notes') = +0.1400
+
+📋 Student t-test ('agent2_baseline' vs 'agent2_therapist_notes') — results:
+       T  dof alternative    p_val          CI95  cohen_d   power  BF10
+0.971297   98   two-sided 0.333791 [-0.15, 0.43] 0.194259 0.16084 0.321
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'agent2_baseline' and 'agent2_therapist_notes' at α = 0.05 (p = 0.333791).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 replicate_duration_s — Harness: replicate wall-clock seconds
+------------------------------------------------------------------------------
+📈 Descriptives (mean, std, count) by variant_label:
+                           mean      std  count
+variant_label                                  
+agent2_baseline         20.6460   4.5663     50
+agent2_therapist_notes  21.8175  10.2766     50
+
+🔍 Bartlett test (homogeneity of variance across variant_label levels):
+   statistic = 28.9290, p-value = 7.51e-08
+
+📊 Equal-variance heuristic: ❌ Variances appear unequal (p < 0.05) — prefer Welch t / Welch ANOVA; still print ordinary ANOVA below for coursework comparison.
+
+📋 Two-sample preview: mean 'agent2_baseline' = 20.6460, mean 'agent2_therapist_notes' = 21.8175; difference ('agent2_baseline' − 'agent2_therapist_notes') = -1.1715
+
+📋 Welch t-test ('agent2_baseline' vs 'agent2_therapist_notes') — results:
+       T      dof alternative    p_val         CI95  cohen_d    power  BF10
+-0.73662 67.62276   two-sided 0.463901 [-4.35, 2.0] 0.147324 0.112826 0.268
+
+💡 Interpretation:
+   ❌ No statistically significant difference between 'agent2_baseline' and 'agent2_therapist_notes' at α = 0.05 (p = 0.463901).
+   ❌ You cannot reliably conclude which variant scores higher on this outcome from this comparison alone—the gap may be sampling noise.
+
+
+------------------------------------------------------------------------------
+📊 gi_hallucination — GI scope: hallucination vs journal excerpt
+------------------------------------------------------------------------------
+📊 Crosstab (rows = variant_label, columns = value):
+_b                      False  True 
+variant_label                       
+agent2_baseline            39     11
+agent2_therapist_notes     38     12
+
+📋 Fisher exact test (2×2 table):
+   odds ratio = 1.1196, p = 1.000000
+💡 Interpretation:
+   ❌ No convincing association at conventional α (p = 1.000000): observed proportions may reflect sampling variability.
+   ❌ Avoid strong claims about variant superiority on this QC flag without more evidence.
+   📌 Each table cell aggregates independent replicates per variant × outcome.
+
+------------------------------------------------------------------------------
+📊 correlation_analysis_present — Deterministic: substantive correlation list rows
+------------------------------------------------------------------------------
+📊 Crosstab (rows = variant_label, columns = value):
+_b                      False  True 
+variant_label                       
+agent2_baseline            45      5
+agent2_therapist_notes     48      2
+
+📋 Fisher exact test (2×2 table):
+   odds ratio = 0.3750, p = 0.436032
+💡 Interpretation:
+   ❌ No convincing association at conventional α (p = 0.436032): observed proportions may reflect sampling variability.
+   ❌ Avoid strong claims about variant superiority on this QC flag without more evidence.
+   📌 Each table cell aggregates independent replicates per variant × outcome.
+
+------------------------------------------------------------------------------
+💡 Method note: with one categorical variant_label (no covariates), one-way Welch ANOVA answers the same question as OLS: DV ~ C(variant_label).
+💡 Key takeaway: p-values distinguish signal vs noise **on this sample**; substantive “better prompting” needs design validity + domain judgement, not a single asterisk.
+
+✅ statistical_comparison complete!
+💡 Reading guide — 📈 descriptive snapshot • 🔍 variance check • 📋 test output • 💡 takeaway.
+📄 Report saved: /Users/jan-hsuanchu/dsai/JournalAnalyzer/Quality Control Workflow/plots/qc_statistical_comparison_1.txt
